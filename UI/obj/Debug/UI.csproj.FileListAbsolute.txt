@@ -1,0 +1,9 @@
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\bin\Debug\UI.exe.config
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\bin\Debug\UI.exe
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\bin\Debug\UI.pdb
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.csproj.GenerateResource.cache
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.exe
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.pdb

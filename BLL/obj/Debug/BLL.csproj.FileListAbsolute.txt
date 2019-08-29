@@ -1,0 +1,6 @@
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\BLL\bin\Debug\BLL.dll
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\BLL\bin\Debug\BLL.pdb
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\BLL\obj\Debug\BLL.dll
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\BLL\obj\Debug\BLL.pdb
