@@ -4,3 +4,8 @@ C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\BLL\obj\Debug\BLL.csprojAssembly
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\BLL\obj\Debug\BLL.dll
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\BLL\obj\Debug\BLL.pdb
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\BLL\bin\Debug\DAL.dll
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\BLL\bin\Debug\DTO.dll
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\BLL\bin\Debug\DAL.pdb
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\BLL\bin\Debug\DTO.pdb
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\BLL\obj\Debug\BLL.csproj.CopyComplete

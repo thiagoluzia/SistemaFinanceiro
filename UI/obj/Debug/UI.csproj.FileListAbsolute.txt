@@ -15,3 +15,10 @@ C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.frmCategoriaDesp
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.frmCategoriaReceita.resources
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.frmDespesas.resources
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.frmConta.resources
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\bin\Debug\BLL.dll
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\bin\Debug\DTO.dll
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\bin\Debug\DAL.dll
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\bin\Debug\BLL.pdb
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\bin\Debug\DTO.pdb
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\bin\Debug\DAL.pdb
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.csproj.CopyComplete

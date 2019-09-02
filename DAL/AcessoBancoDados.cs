@@ -15,14 +15,14 @@ namespace DAL
         #region Procedimento de conexao com o banco
         public void Conectar()
         {
-            string stringConexao = string.Format(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\thiag\Documents\Financeiro.mdf;Integrated Security=True;Connect Timeout=30");
-
             if (conn != null)
                 conn.Close();
+            string stringConexao = string.Format(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\thiag\Documents\Financeiro.mdf;Integrated Security=True;Connect Timeout=30");
+
             try
             {
-                SqlConnection conexao = new SqlConnection(stringConexao);
-                conexao.Open();
+                conn = new SqlConnection(stringConexao);
+                conn.Open();
             }
             catch (Exception ex)
             {
