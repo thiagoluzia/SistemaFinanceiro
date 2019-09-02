@@ -7,3 +7,11 @@ C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.csproj.GenerateR
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.exe
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.pdb
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.frmCadDespesa.resources
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.frmHome.resources
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.frmCadReceita.resources
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.FrmReceitas.resources
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.frmCategoriaDespesa.resources
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.frmCategoriaReceita.resources
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.frmDespesas.resources
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.frmConta.resources

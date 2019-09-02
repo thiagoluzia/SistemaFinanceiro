@@ -46,14 +46,80 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmCadDespesa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmCadDespesa.Designer.cs">
+      <DependentUpon>frmCadDespesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadReceitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadReceitas.Designer.cs">
+      <DependentUpon>frmCadReceitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCategoriaDespesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategoriaDespesa.Designer.cs">
+      <DependentUpon>frmCategoriaDespesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCategoriaReceita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategoriaReceita.Designer.cs">
+      <DependentUpon>frmCategoriaReceita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConta.Designer.cs">
+      <DependentUpon>frmConta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDespesas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDespesas.Designer.cs">
+      <DependentUpon>frmDespesas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReceitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReceitas.Designer.cs">
+      <DependentUpon>frmReceitas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCadDespesa.resx">
+      <DependentUpon>frmCadDespesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadReceitas.resx">
+      <DependentUpon>frmCadReceitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCategoriaDespesa.resx">
+      <DependentUpon>frmCategoriaDespesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCategoriaReceita.resx">
+      <DependentUpon>frmCategoriaReceita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConta.resx">
+      <DependentUpon>frmConta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDespesas.resx">
+      <DependentUpon>frmDespesas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReceitas.resx">
+      <DependentUpon>frmReceitas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +128,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -75,6 +142,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_dashboard_white_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_dashboard_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_account_balance_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_local_offer_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_trending_up_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_trending_down_black_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_local_atm_white_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_local_atm_white_36dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_trending_down_white_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_trending_up_white_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\baseline_notification_important_white_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\github-logo_318-10832.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\61109.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
