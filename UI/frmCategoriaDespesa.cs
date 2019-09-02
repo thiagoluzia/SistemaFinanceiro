@@ -43,6 +43,7 @@ namespace UI
                 dto.Descricao = txtCadastrarDespesaReceita.Text;
                 bll.AtualizarCategoria(dto);
                 MessageBox.Show("Categoria Atualizado com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dto.Id = 0;
             }
             else
             {

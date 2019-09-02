@@ -69,6 +69,7 @@
             this.btnSalvar.TabIndex = 16;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // txtCadastrarCategoriaReceita
             // 
@@ -91,6 +92,7 @@
             this.btnExcluir.TabIndex = 14;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
@@ -105,6 +107,7 @@
             this.btnAlterar.TabIndex = 13;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // dgvLisCategoriaReceita
             // 
@@ -146,6 +149,7 @@
             this.Name = "FrmCategoriaReceita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Categoria De Receita";
+            this.Load += new System.EventHandler(this.FrmCategoriaReceita_Load);
             this.PnlCadCategoriaReceita.ResumeLayout(false);
             this.PnlCadCategoriaReceita.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLisCategoriaReceita)).EndInit();
