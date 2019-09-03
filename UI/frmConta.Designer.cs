@@ -72,6 +72,7 @@
             this.btnSalvar.TabIndex = 15;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // txtObservacaoCadConta
             // 
@@ -144,6 +145,7 @@
             this.btnExcluir.TabIndex = 17;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
@@ -158,6 +160,7 @@
             this.btnAlterar.TabIndex = 16;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // DgvListConta
             // 
@@ -181,6 +184,7 @@
             this.Name = "frmConta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Conta ";
+            this.Load += new System.EventHandler(this.frmConta_Load);
             this.PnlCadConta.ResumeLayout(false);
             this.PnlCadConta.PerformLayout();
             this.panel2.ResumeLayout(false);

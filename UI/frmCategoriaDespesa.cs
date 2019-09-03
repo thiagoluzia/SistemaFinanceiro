@@ -26,14 +26,6 @@ namespace UI
             CarregarCategoriasDespesa();
         }
 
-        private void CarregarCategoriasDespesa()
-        {
-            dgvListDespesa.DataSource = bll.SelecionarCategoria();
-        }
-        private void LimparCampos()
-        {
-            txtCadastrarDespesaReceita.Text = "";
-        }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -50,7 +42,6 @@ namespace UI
                 dto.Descricao = txtCadastrarDespesaReceita.Text;
                 bll.InserirCategoria(dto);
                 MessageBox.Show("Categoria Cadastrada com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
             CarregarCategoriasDespesa();
             LimparCampos();
@@ -66,6 +57,15 @@ namespace UI
             dto.Descricao = dgvListDespesa.CurrentRow.Cells[1].ToString();
             bll.Excluir(dto);
             CarregarCategoriasDespesa();
+        }
+
+        private void CarregarCategoriasDespesa()
+        {
+            dgvListDespesa.DataSource = bll.SelecionarCategoria();
+        }
+        private void LimparCampos()
+        {
+            txtCadastrarDespesaReceita.Text = "";
         }
     }
 }
