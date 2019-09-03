@@ -45,6 +45,7 @@
     <Compile Include="CategoriaReceitaBLL.cs" />
     <Compile Include="ContaBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
