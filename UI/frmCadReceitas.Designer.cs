@@ -186,6 +186,7 @@
             this.PnlCadReceita.Name = "PnlCadReceita";
             this.PnlCadReceita.Size = new System.Drawing.Size(380, 348);
             this.PnlCadReceita.TabIndex = 1;
+            this.PnlCadReceita.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlCadReceita_Paint);
             // 
             // btnSalvar
             // 
@@ -200,6 +201,7 @@
             this.btnSalvar.TabIndex = 20;
             this.btnSalvar.Text = "Salvar Receita";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnCadastrarCategoriaReceita
             // 
@@ -246,6 +248,7 @@
             this.Name = "FrmCadReceita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Receitas";
+            this.Load += new System.EventHandler(this.FrmCadReceita_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.PnlCadReceita.ResumeLayout(false);

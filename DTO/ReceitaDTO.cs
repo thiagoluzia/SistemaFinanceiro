@@ -12,8 +12,8 @@ namespace DTO
         private int id;
         private string descricao;
         private double valor;
-        private List<CategoriaReceitaDTO> categoriaReceita;
-        private List<ContaDTO> listConta;
+        private int categoriaReceita;
+        private int conta;
         private DateTime dataVencimento;
         private string observacao;
         #endregion
@@ -22,8 +22,8 @@ namespace DTO
         public int Id { get => id; set => id = value; }
         public string Descricao { get => descricao; set => descricao = value; }
         public double Valor { get => valor; set => valor = value; }
-        public List<CategoriaReceitaDTO> CategoriaReceita { get => categoriaReceita; set => categoriaReceita = value; }
-        public List<ContaDTO> ListConta { get => listConta; set => listConta = value; }
+        public int CategoriaReceita { get => categoriaReceita; set => categoriaReceita = value; }
+        public int Conta { get => conta; set => conta = value; }
         public DateTime DataVencimento { get => dataVencimento; set => dataVencimento = value; }
         public string Observacao { get => observacao; set => observacao = value; }
         #endregion
