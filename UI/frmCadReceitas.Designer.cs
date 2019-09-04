@@ -186,7 +186,6 @@
             this.PnlCadReceita.Name = "PnlCadReceita";
             this.PnlCadReceita.Size = new System.Drawing.Size(380, 348);
             this.PnlCadReceita.TabIndex = 1;
-            this.PnlCadReceita.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlCadReceita_Paint);
             // 
             // btnSalvar
             // 

@@ -86,6 +86,7 @@
             this.btnAlterar.TabIndex = 18;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // DgvCadListReceita
             // 
@@ -151,7 +152,7 @@
             this.btnNovaReceita.TabIndex = 1;
             this.btnNovaReceita.Text = "Nova Transação";
             this.btnNovaReceita.UseVisualStyleBackColor = false;
-            this.btnNovaReceita.Click += new System.EventHandler(this.button1_Click);
+            this.btnNovaReceita.Click += new System.EventHandler(this.CadReceita_Click);
             // 
             // label2
             // 

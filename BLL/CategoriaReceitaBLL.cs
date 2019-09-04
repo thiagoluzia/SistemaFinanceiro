@@ -35,7 +35,7 @@ namespace BLL
         {
             banco = new AcessoBancoDados();
             banco.Conectar();
-            string comando = "UPDATE categoria_receita SET des_categoria_receita = '" + dto.Descricao + "' WHERE id = '" + dto.Id + "'";
+            string comando = "UPDATE categoria_receita SET des_categoria_receita = '" + dto.Descricao + "' WHERE Id = '" + dto.Id + "'";
             banco.ExecutarComandoSql(comando);
         }
         #endregion
@@ -45,7 +45,7 @@ namespace BLL
         {
             banco = new AcessoBancoDados();
             banco.Conectar();
-            string comando = "DELETE FROM categoria_receita WHERE id = '"+dto.Id+"'";
+            string comando = "DELETE FROM categoria_receita WHERE Id = '"+dto.Id+"'";
             banco.ExecutarComandoSql(comando);
         }
         #endregion

@@ -27,45 +27,90 @@ namespace UI
         {
             InitializeComponent();
         }
+        public FrmCadReceita(ReceitaDTO dto)
+        {
+            InitializeComponent();
+            txtDescricaoReceita.Text = dto.Descricao;
+            txtValorReceita.Text = Convert.ToString(dto.Valor);
+            cboCategoriaReceita.SelectedValue = dto.CategoriaReceita.ToString();
+            cboConta.SelectedValue = dto.Conta;
+            dtpDataVencimentoReceita.Text = dto.DataVencimento.ToString();
+            txtObservacaoReceita.Text = dto.Observacao;
+        }
+        private void FrmCadReceita_Load(object sender, EventArgs e)
+        {
+            CarregarCombos();
+        }
 
         private void BtnCategoriaReceita_Click(object sender, EventArgs e)
         {
             FrmCategoriaReceita categoriaReceita = new FrmCategoriaReceita();
             categoriaReceita.ShowDialog();
         }
-
-        private void PnlCadReceita_Paint(object sender, PaintEventArgs e)
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
+            
+            if (dto.Id > 0)
+            {
 
+                dto.Descricao = txtDescricaoReceita.Text;
+                dto.Valor = double.Parse(txtValorReceita.Text);
+                dto.CategoriaReceita = (int)cboCategoriaReceita.SelectedValue;
+                dto.Conta = (int)cboConta.SelectedValue;
+                dto.DataVencimento = DateTime.Parse(dtpDataVencimentoReceita.Text);
+                dto.Observacao = txtObservacaoReceita.Text;
+                bll.Atualizar(dto);
+            }
+            else
+            {
+
+                dto.Descricao = txtDescricaoReceita.Text;
+                dto.Valor = double.Parse(txtValorReceita.Text);
+                dto.CategoriaReceita = (int)cboCategoriaReceita.SelectedValue;
+                dto.Conta = (int)cboConta.SelectedValue;
+                dto.DataVencimento = DateTime.Parse(dtpDataVencimentoReceita.Text);
+                dto.Observacao = txtObservacaoReceita.Text;
+                bll.Inserir(dto);
+            }
+            LimparCampos();
         }
 
-        private void FrmCadReceita_Load(object sender, EventArgs e)
+        #region Procedimentos
+        private void CarregarCombos()
         {
-            //carrega o combo box categoria
             cboCategoriaReceita.DataSource = catBll.Exibir();
             cboCategoriaReceita.DisplayMember = "des_categoria_receita";
             cboCategoriaReceita.ValueMember = "id";
 
-            
-            //cboCategoriaReceita.DataValueField = "id";
-            //cboCategoriaReceita.DataBind();
-
-            //carrega o combo box conta
             cboConta.DataSource = contBll.Exibir();
             cboConta.DisplayMember = "desc_conta";
             cboConta.ValueMember = "id";
         }
+        //private void DtoPreenchido()
+        //{
+        //    dto.Descricao = txtDescricaoReceita.Text;
+        //    dto.Valor = double.Parse(txtValorReceita.Text);
+        //    dto.CategoriaReceita = (int)cboCategoriaReceita.SelectedValue;
+        //    dto.Conta = (int)cboConta.SelectedValue;
+        //    dto.DataVencimento = DateTime.Parse(dtpDataVencimentoReceita.Text);
+        //    dto.Observacao = txtObservacaoReceita.Text;
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        //}
+        private void LimparCampos()
         {
-            dto.Descricao = txtDescricaoReceita.Text;
-            dto.Valor = double.Parse(txtValorReceita.Text);
-            
-            dto.CategoriaReceita = cboCategoriaReceita.SelectedIndex;
-            dto.Conta = cboConta.SelectedIndex;
-            dto.DataVencimento = DateTime.Parse(dtpDataVencimentoReceita.Text);
-            dto.Observacao = txtObservacaoReceita.Text;
-            bll.Inserir(dto);
+            txtDescricaoReceita.Text = "";
+            txtValorReceita.Text = "";
+            //cboCategoriaReceita.SelectedValue = null;
+            //cboConta.SelectedValue = null;
+            dtpDataVencimentoReceita.Text = "";
+            txtObservacaoReceita.Text = "";
+
+            dto.Id = 0;
         }
+        private void CarregarCampos()
+        {
+            
+        }
+        #endregion
     }
 }
