@@ -86,6 +86,10 @@ namespace UI
         {
             dgvResumoReceitaHome.DataSource = bll.Exibir();
             this.dgvResumoReceitaHome.Columns[0].Visible = false;
+            this.dgvResumoReceitaHome.Columns[3].Visible = false;
+            this.dgvResumoReceitaHome.Columns[5].Visible = false;
+            this.dgvResumoReceitaHome.Columns[6].Visible = false;
+            this.dgvResumoReceitaHome.Columns[8].Visible = false;
         }
 
 

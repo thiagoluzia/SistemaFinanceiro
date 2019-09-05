@@ -50,8 +50,12 @@ namespace UI
         }
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            CarregarDto();
+            int id = (int)DgvCadListReceita.CurrentRow.Cells[0].Value;
+            dto.Id = id;
             bll.Excluir(dto);
+            MessageBox.Show("Receita excluida com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            CarregarGrid();
+
         }
         #endregion
 
@@ -59,9 +63,9 @@ namespace UI
         public void CarregarGrid()
         {
             DgvCadListReceita.DataSource = bll.Exibir();
-            this.DgvCadListReceita.Columns[0].Visible = true;
-            this.DgvCadListReceita.Columns[3].Visible = true;
-            this.DgvCadListReceita.Columns[5].Visible = true;
+            this.DgvCadListReceita.Columns[0].Visible = false;
+            this.DgvCadListReceita.Columns[3].Visible = false;
+            this.DgvCadListReceita.Columns[5].Visible = false;
         }
         public void CarregarDto()
         {
