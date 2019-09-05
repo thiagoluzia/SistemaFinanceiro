@@ -45,6 +45,7 @@
             this.btnCadastrarCategoriaReceita = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.dtpDataVencimentoReceita = new System.Windows.Forms.DateTimePicker();
+            this.txtIdReceita = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.PnlCadReceita.SuspendLayout();
             this.SuspendLayout();
@@ -167,6 +168,7 @@
             // 
             this.PnlCadReceita.BackColor = System.Drawing.Color.White;
             this.PnlCadReceita.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PnlCadReceita.Controls.Add(this.txtIdReceita);
             this.PnlCadReceita.Controls.Add(this.btnSalvar);
             this.PnlCadReceita.Controls.Add(this.btnCadastrarCategoriaReceita);
             this.PnlCadReceita.Controls.Add(this.label6);
@@ -236,6 +238,15 @@
             this.dtpDataVencimentoReceita.Size = new System.Drawing.Size(119, 23);
             this.dtpDataVencimentoReceita.TabIndex = 17;
             // 
+            // txtIdReceita
+            // 
+            this.txtIdReceita.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdReceita.Location = new System.Drawing.Point(85, 53);
+            this.txtIdReceita.Name = "txtIdReceita";
+            this.txtIdReceita.Size = new System.Drawing.Size(86, 23);
+            this.txtIdReceita.TabIndex = 21;
+            this.txtIdReceita.Visible = false;
+            // 
             // FrmCadReceita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -274,5 +285,6 @@
         private System.Windows.Forms.DateTimePicker dtpDataVencimentoReceita;
         private System.Windows.Forms.Button btnCadastrarCategoriaReceita;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.TextBox txtIdReceita;
     }
 }

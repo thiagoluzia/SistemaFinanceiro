@@ -29,10 +29,11 @@ namespace BLL
         {
             banco = new AcessoBancoDados();
             banco.Conectar();
-            string comando = "SELECT receita.id, receita.desc_receita as 'RECEITA', receita.valor as 'VALOR', categoria_receita.des_categoria_receita as 'CATEGORIA', conta.desc_conta as 'CONTA', receita.data_vencimento as 'VENCIMENTO', receita.observacao as 'OBSERVAÇÃO' " +
+            string comando = "SELECT receita.id, receita.desc_receita as 'RECEITA', receita.valor as 'VALOR', categoria_receita.Id as 'ID CATEGORIA', categoria_receita.des_categoria_receita as 'CATEGORIA', conta.id as 'CONTA ID', conta.desc_conta as 'CONTA', receita.data_vencimento as 'VENCIMENTO', receita.observacao as 'OBSERVAÇÃO' " +
                 "FROM receita " +
                 "INNER JOIN categoria_receita ON categoria_receita.Id = receita.id_categoria_receita " +
-                "INNER JOIN conta ON conta.id = receita.id_conta";
+                "INNER JOIN conta ON conta.id = receita.id_conta " +
+                "ORDER BY receita.id DESC";
             data = new DataTable();
             data=banco.RetdataTable(comando);
             return data;
@@ -47,7 +48,7 @@ namespace BLL
             string comando = "UPDATE receita SET desc_receita = '" + dto.Descricao + "'" +
                 ", valor = '" + dto.Valor + "', id_categoria_receita = '" + dto.CategoriaReceita + "'" +
                 ", id_conta = '" + dto.Conta + "', data_vencimento = '" + dto.DataVencimento + "'" +
-                ", obeservacao = '" + dto.Observacao + "' WHERE id = '"+dto.Id+"'";
+                ", observacao = '" + dto.Observacao + "' WHERE id = '"+dto.Id+"'";
             banco.ExecutarComandoSql(comando);       
         }
         #endregion

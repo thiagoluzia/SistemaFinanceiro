@@ -1,22 +1,16 @@
-﻿using DAL;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BLL;
+﻿using BLL;
 using DTO;
+using System;
+using System.Windows.Forms;
 
 namespace UI
 {
     public partial class FrmReceitas : Form
     {
+        #region Instancias
         ReceitaBLL bll = new ReceitaBLL();
         ReceitaDTO dto = new ReceitaDTO();
+        #endregion
 
         public FrmReceitas()
         {
@@ -28,38 +22,46 @@ namespace UI
             FrmCadReceita frm = new FrmCadReceita();
         }
 
+        #region Botões
         private void CadReceita_Click(object sender, EventArgs e)
         {
             FrmCadReceita receita = new FrmCadReceita();
             receita.ShowDialog();
             CarregarGrid();
         }
-       
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             dto.Id = (int)DgvCadListReceita.CurrentRow.Cells[0].Value;
             dto.Descricao = DgvCadListReceita.CurrentRow.Cells[1].Value.ToString();
-           // dto.Valor = (double)DgvCadListReceita.CurrentRow.Cells[2].Value;
-            //dto.CategoriaReceita = (int)DgvCadListReceita.CurrentRow.Cells[3].Value;
-            //dto.Conta = (int)DgvCadListReceita.CurrentRow.Cells[4].Value;
-            dto.DataVencimento = (DateTime)DgvCadListReceita.CurrentRow.Cells[5].Value;
-            dto.Observacao = DgvCadListReceita.CurrentRow.Cells[6].Value.ToString();
-            FrmCadReceita frm = new FrmCadReceita(dto);
+            dto.Valor = Convert.ToDouble(DgvCadListReceita.CurrentRow.Cells[2].Value);
+            //novo caso
+            dto.CategoriaReceita = (int)DgvCadListReceita.CurrentRow.Cells[3].Value;
+            dto.DescCategoria = DgvCadListReceita.CurrentRow.Cells[4].Value.ToString();
+            //novo Caso
+            dto.Conta = (int)DgvCadListReceita.CurrentRow.Cells[5].Value;
+            dto.DescConta = DgvCadListReceita.CurrentRow.Cells[6].Value.ToString();
 
+            dto.DataVencimento = (DateTime)DgvCadListReceita.CurrentRow.Cells[7].Value;
+            dto.Observacao = DgvCadListReceita.CurrentRow.Cells[8].Value.ToString();
+
+            FrmCadReceita frm = new FrmCadReceita(dto);
             frm.ShowDialog();
             CarregarGrid();
-
         }
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             CarregarDto();
             bll.Excluir(dto);
         }
+        #endregion
 
+        #region Procedimentos
         public void CarregarGrid()
         {
             DgvCadListReceita.DataSource = bll.Exibir();
-            this.DgvCadListReceita.Columns[0].Visible = false;
+            this.DgvCadListReceita.Columns[0].Visible = true;
+            this.DgvCadListReceita.Columns[3].Visible = true;
+            this.DgvCadListReceita.Columns[5].Visible = true;
         }
         public void CarregarDto()
         {
@@ -71,5 +73,6 @@ namespace UI
             dto.DataVencimento = Convert.ToDateTime(DgvCadListReceita.CurrentRow.Cells[5].Value.ToString());
             dto.Observacao = DgvCadListReceita.CurrentRow.Cells[6].Value.ToString();
         }
+        #endregion
     }
 }
