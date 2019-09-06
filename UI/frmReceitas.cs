@@ -16,6 +16,7 @@ namespace UI
         {
             InitializeComponent();
         }
+
         private void FrmReceitas_Load(object sender, EventArgs e)
         {
             CarregarGrid();
@@ -29,6 +30,7 @@ namespace UI
             receita.ShowDialog();
             CarregarGrid();
         }
+
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             dto.Id = (int)DgvCadListReceita.CurrentRow.Cells[0].Value;
@@ -40,7 +42,6 @@ namespace UI
             //novo Caso
             dto.Conta = (int)DgvCadListReceita.CurrentRow.Cells[5].Value;
             dto.DescConta = DgvCadListReceita.CurrentRow.Cells[6].Value.ToString();
-
             dto.DataVencimento = (DateTime)DgvCadListReceita.CurrentRow.Cells[7].Value;
             dto.Observacao = DgvCadListReceita.CurrentRow.Cells[8].Value.ToString();
 
@@ -48,6 +49,7 @@ namespace UI
             frm.ShowDialog();
             CarregarGrid();
         }
+
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             int id = (int)DgvCadListReceita.CurrentRow.Cells[0].Value;
@@ -55,7 +57,6 @@ namespace UI
             bll.Excluir(dto);
             MessageBox.Show("Receita excluida com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
             CarregarGrid();
-
         }
         #endregion
 
@@ -66,16 +67,7 @@ namespace UI
             this.DgvCadListReceita.Columns[0].Visible = false;
             this.DgvCadListReceita.Columns[3].Visible = false;
             this.DgvCadListReceita.Columns[5].Visible = false;
-        }
-        public void CarregarDto()
-        {
-            dto.Id = (int)DgvCadListReceita.CurrentRow.Cells[0].Value;
-            dto.Descricao = DgvCadListReceita.CurrentRow.Cells[1].Value.ToString();
-            dto.Valor = Convert.ToDouble(DgvCadListReceita.CurrentRow.Cells[2].Value);
-            dto.CategoriaReceita = Convert.ToInt32(DgvCadListReceita.CurrentRow.Cells[3].Value.ToString());
-            dto.Conta = Convert.ToInt32(DgvCadListReceita.CurrentRow.Cells[4].Value.ToString());
-            dto.DataVencimento = Convert.ToDateTime(DgvCadListReceita.CurrentRow.Cells[5].Value.ToString());
-            dto.Observacao = DgvCadListReceita.CurrentRow.Cells[6].Value.ToString();
+            //txtPesquisarReceita.Focus();
         }
         #endregion
     }

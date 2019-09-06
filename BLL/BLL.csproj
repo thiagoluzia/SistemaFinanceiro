@@ -44,6 +44,7 @@
     <Compile Include="CategoriaDespesaBLL.cs" />
     <Compile Include="CategoriaReceitaBLL.cs" />
     <Compile Include="ContaBLL.cs" />
+    <Compile Include="DespesaBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReceitaBLL.cs" />
     <Compile Include="UsuarioBLL.cs" />

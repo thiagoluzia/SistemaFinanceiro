@@ -18,7 +18,7 @@ namespace BLL
         #endregion
 
         #region Metodo Exibir
-        public DataTable SelecionarCategoria()
+        public DataTable Exibir()
         {
             dt = new DataTable();
             banco = new AcessoBancoDados();

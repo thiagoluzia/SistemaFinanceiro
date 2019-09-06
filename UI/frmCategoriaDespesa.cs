@@ -61,7 +61,7 @@ namespace UI
 
         private void CarregarCategoriasDespesa()
         {
-            dgvListDespesa.DataSource = bll.SelecionarCategoria();
+            dgvListDespesa.DataSource = bll.Exibir();
         }
         private void LimparCampos()
         {

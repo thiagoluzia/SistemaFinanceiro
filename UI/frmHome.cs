@@ -14,6 +14,7 @@ namespace UI
     public partial class FrmHome : Form
     {
         ReceitaBLL bll = new ReceitaBLL();
+        DespesaBLL bllDespesa = new DespesaBLL();
 
         public FrmHome()
         {
@@ -22,6 +23,7 @@ namespace UI
         private void FrmHome_Load(object sender, EventArgs e)
         {
             CarregarGrid();
+            CarregarGridDespesas();
             
         }
 
@@ -62,11 +64,13 @@ namespace UI
         {
             FrmReceitas cadReceita = new FrmReceitas();
             cadReceita.ShowDialog();
+            CarregarGrid();
         }
         private void BtnDespesa_Click_1(object sender, EventArgs e)
         {
             frmDespesas Despesa = new frmDespesas();
             Despesa.ShowDialog();
+            CarregarGridDespesas();
         }
         #endregion
 
@@ -90,6 +94,15 @@ namespace UI
             this.dgvResumoReceitaHome.Columns[5].Visible = false;
             this.dgvResumoReceitaHome.Columns[6].Visible = false;
             this.dgvResumoReceitaHome.Columns[8].Visible = false;
+        }
+        private void CarregarGridDespesas()
+        {
+            dgvResumoDespesaHome.DataSource = bllDespesa.Exibir();
+            this.dgvResumoDespesaHome.Columns[0].Visible = false;
+            this.dgvResumoDespesaHome.Columns[3].Visible = false;
+            this.dgvResumoDespesaHome.Columns[5].Visible = false;
+            this.dgvResumoDespesaHome.Columns[6].Visible = false;
+            this.dgvResumoDespesaHome.Columns[8].Visible = false;
         }
 
 

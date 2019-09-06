@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DTO
 {
@@ -11,8 +7,11 @@ namespace DTO
         #region Atributos
         private int id;
         private string descricao;
-        private List<CategoriaDespesaDTO> listCategoria;
-        private List<ContaDTO> listConta;
+        private double valor;
+        private string descCategoria;
+        private int categoriaDespesa;
+        private string descConta;
+        private int conta;
         private DateTime dataVencimanto;
         private string observacao;
         #endregion
@@ -20,8 +19,11 @@ namespace DTO
         #region Propriedades
         public int Id { get => id; set => id = value; }
         public string Descricao { get => descricao; set => descricao = value; }
-        public List<CategoriaDespesaDTO> ListCategoria { get => listCategoria; set => listCategoria = value; }
-        public List<ContaDTO> ListConta { get => listConta; set => listConta = value; }
+        public double Valor { get => valor; set => valor = value; }
+        public string DescCategoria { get => descCategoria; set => descCategoria = value; }
+        public int CategoriaDespesa { get => categoriaDespesa; set => categoriaDespesa = value; }
+        public string DescConta { get => descConta; set => descConta = value; }
+        public int Conta { get => conta; set => conta = value; }
         public DateTime DataVencimanto { get => dataVencimanto; set => dataVencimanto = value; }
         public string Observacao { get => observacao; set => observacao = value; }
         #endregion

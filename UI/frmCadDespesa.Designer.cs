@@ -83,7 +83,7 @@
             this.BtnSalvarDespesa.Location = new System.Drawing.Point(10, 304);
             this.BtnSalvarDespesa.Name = "BtnSalvarDespesa";
             this.BtnSalvarDespesa.Size = new System.Drawing.Size(358, 35);
-            this.BtnSalvarDespesa.TabIndex = 28;
+            this.BtnSalvarDespesa.TabIndex = 14;
             this.BtnSalvarDespesa.Text = "Salvar Despesa";
             this.BtnSalvarDespesa.UseVisualStyleBackColor = false;
             this.BtnSalvarDespesa.Click += new System.EventHandler(this.BtnSalvarDespesa_Click);
@@ -98,7 +98,7 @@
             this.BtnCadastrarCategoriaDespesa.Location = new System.Drawing.Point(192, 129);
             this.BtnCadastrarCategoriaDespesa.Name = "BtnCadastrarCategoriaDespesa";
             this.BtnCadastrarCategoriaDespesa.Size = new System.Drawing.Size(30, 24);
-            this.BtnCadastrarCategoriaDespesa.TabIndex = 27;
+            this.BtnCadastrarCategoriaDespesa.TabIndex = 7;
             this.BtnCadastrarCategoriaDespesa.Text = "+";
             this.BtnCadastrarCategoriaDespesa.UseVisualStyleBackColor = false;
             this.BtnCadastrarCategoriaDespesa.Click += new System.EventHandler(this.BtnCategoriaDespesa_Click);
@@ -110,7 +110,7 @@
             this.label6.Location = new System.Drawing.Point(190, 156);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 16);
-            this.label6.TabIndex = 26;
+            this.label6.TabIndex = 10;
             this.label6.Text = "Vencimento";
             // 
             // dtpDataVencimentoDespesa
@@ -120,7 +120,7 @@
             this.dtpDataVencimentoDespesa.Location = new System.Drawing.Point(193, 175);
             this.dtpDataVencimentoDespesa.Name = "dtpDataVencimentoDespesa";
             this.dtpDataVencimentoDespesa.Size = new System.Drawing.Size(119, 23);
-            this.dtpDataVencimentoDespesa.TabIndex = 25;
+            this.dtpDataVencimentoDespesa.TabIndex = 11;
             // 
             // label5
             // 
@@ -129,7 +129,7 @@
             this.label5.Location = new System.Drawing.Point(8, 155);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 16);
-            this.label5.TabIndex = 22;
+            this.label5.TabIndex = 8;
             this.label5.Text = "Conta";
             // 
             // label4
@@ -139,7 +139,7 @@
             this.label4.Location = new System.Drawing.Point(7, 110);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 16);
-            this.label4.TabIndex = 21;
+            this.label4.TabIndex = 5;
             this.label4.Text = "Categoria";
             // 
             // cboConta
@@ -149,7 +149,7 @@
             this.cboConta.Location = new System.Drawing.Point(11, 174);
             this.cboConta.Name = "cboConta";
             this.cboConta.Size = new System.Drawing.Size(135, 24);
-            this.cboConta.TabIndex = 20;
+            this.cboConta.TabIndex = 9;
             // 
             // cboCategoriaDespesa
             // 
@@ -158,7 +158,7 @@
             this.cboCategoriaDespesa.Location = new System.Drawing.Point(10, 129);
             this.cboCategoriaDespesa.Name = "cboCategoriaDespesa";
             this.cboCategoriaDespesa.Size = new System.Drawing.Size(176, 24);
-            this.cboCategoriaDespesa.TabIndex = 19;
+            this.cboCategoriaDespesa.TabIndex = 6;
             // 
             // txtObservacaoDespesa
             // 
@@ -167,7 +167,7 @@
             this.txtObservacaoDespesa.Multiline = true;
             this.txtObservacaoDespesa.Name = "txtObservacaoDespesa";
             this.txtObservacaoDespesa.Size = new System.Drawing.Size(358, 80);
-            this.txtObservacaoDespesa.TabIndex = 14;
+            this.txtObservacaoDespesa.TabIndex = 13;
             // 
             // label7
             // 
@@ -176,7 +176,7 @@
             this.label7.Location = new System.Drawing.Point(7, 199);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 16);
-            this.label7.TabIndex = 13;
+            this.label7.TabIndex = 12;
             this.label7.Text = "Observações";
             // 
             // txtValorDespesa
@@ -185,7 +185,7 @@
             this.txtValorDespesa.Location = new System.Drawing.Point(236, 82);
             this.txtValorDespesa.Name = "txtValorDespesa";
             this.txtValorDespesa.Size = new System.Drawing.Size(132, 23);
-            this.txtValorDespesa.TabIndex = 6;
+            this.txtValorDespesa.TabIndex = 4;
             // 
             // label3
             // 
@@ -194,7 +194,7 @@
             this.label3.Location = new System.Drawing.Point(237, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 16);
-            this.label3.TabIndex = 5;
+            this.label3.TabIndex = 3;
             this.label3.Text = "Valor";
             // 
             // txtDescricaoDespesa
@@ -203,7 +203,7 @@
             this.txtDescricaoDespesa.Location = new System.Drawing.Point(10, 82);
             this.txtDescricaoDespesa.Name = "txtDescricaoDespesa";
             this.txtDescricaoDespesa.Size = new System.Drawing.Size(220, 23);
-            this.txtDescricaoDespesa.TabIndex = 4;
+            this.txtDescricaoDespesa.TabIndex = 2;
             // 
             // label2
             // 
@@ -212,7 +212,7 @@
             this.label2.Location = new System.Drawing.Point(7, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 16);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 1;
             this.label2.Text = "Descrição";
             // 
             // panel2
@@ -247,6 +247,7 @@
             this.Name = "FrmCadDespesa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Despesas";
+            this.Load += new System.EventHandler(this.FrmCadDespesa_Load);
             this.PnlCadDespesa.ResumeLayout(false);
             this.PnlCadDespesa.PerformLayout();
             this.panel2.ResumeLayout(false);
