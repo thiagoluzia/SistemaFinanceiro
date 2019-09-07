@@ -196,5 +196,11 @@
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\negativo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\positovo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -110,7 +110,21 @@ namespace UI
 
             lblReceitas.Text = string.Format(receita.ToString("C"));
             lblDespesas.Text = string.Format(despesa.ToString("C"));
-            lblTotalGeral.Text = string.Format(totalGeral.ToString("C"));            
+            lblTotalGeral.Text = string.Format(totalGeral.ToString("C"));    
+            
+            if(receita < despesa)
+            {
+                panel8.BackgroundImage = global::UI.Properties.Resources.negativo;
+            }
+            else if(receita > despesa)
+            {
+                panel8.BackgroundImage = global::UI.Properties.Resources.positovo;
+            }
+            else
+            {
+                panel8.BackgroundImage = global::UI.Properties.Resources.baseline_notification_important_white_36dp;
+            }
+            
         }
         private void CarregarGridReceita()
         {            
@@ -132,5 +146,12 @@ namespace UI
         }
 
         #endregion
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+            
+
+            
+        }
     }
 }
