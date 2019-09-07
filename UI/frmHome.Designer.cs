@@ -54,10 +54,10 @@
             this.PnlTopo = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblTotalGeral = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.LblReceiitas = new System.Windows.Forms.Label();
+            this.lblReceitas = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblDespesas = new System.Windows.Forms.Label();
@@ -413,22 +413,23 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.label6);
+            this.panel9.Controls.Add(this.lblTotalGeral);
             this.panel9.Location = new System.Drawing.Point(851, 50);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(267, 100);
             this.panel9.TabIndex = 10;
             // 
-            // label6
+            // lblTotalGeral
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(78)))), ((int)(((byte)(88)))));
-            this.label6.Location = new System.Drawing.Point(112, 67);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(152, 29);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "R$ 1200,00";
+            this.lblTotalGeral.AutoSize = true;
+            this.lblTotalGeral.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalGeral.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(78)))), ((int)(((byte)(88)))));
+            this.lblTotalGeral.Location = new System.Drawing.Point(70, 52);
+            this.lblTotalGeral.Name = "lblTotalGeral";
+            this.lblTotalGeral.Size = new System.Drawing.Size(118, 29);
+            this.lblTotalGeral.TabIndex = 9;
+            this.lblTotalGeral.Text = "1500000";
+            this.lblTotalGeral.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel6
             // 
@@ -445,22 +446,23 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.LblReceiitas);
+            this.panel7.Controls.Add(this.lblReceitas);
             this.panel7.Location = new System.Drawing.Point(458, 50);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(267, 100);
             this.panel7.TabIndex = 8;
             // 
-            // LblReceiitas
+            // lblReceitas
             // 
-            this.LblReceiitas.AutoSize = true;
-            this.LblReceiitas.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblReceiitas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(78)))), ((int)(((byte)(88)))));
-            this.LblReceiitas.Location = new System.Drawing.Point(112, 67);
-            this.LblReceiitas.Name = "LblReceiitas";
-            this.LblReceiitas.Size = new System.Drawing.Size(152, 29);
-            this.LblReceiitas.TabIndex = 9;
-            this.LblReceiitas.Text = "R$ 1200,00";
+            this.lblReceitas.AutoSize = true;
+            this.lblReceitas.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReceitas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(78)))), ((int)(((byte)(88)))));
+            this.lblReceitas.Location = new System.Drawing.Point(66, 52);
+            this.lblReceitas.Name = "lblReceitas";
+            this.lblReceitas.Size = new System.Drawing.Size(118, 29);
+            this.lblReceitas.TabIndex = 9;
+            this.lblReceitas.Text = "1500000";
+            this.lblReceitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel5
             // 
@@ -488,12 +490,12 @@
             this.lblDespesas.AutoSize = true;
             this.lblDespesas.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDespesas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(78)))), ((int)(((byte)(88)))));
-            this.lblDespesas.Location = new System.Drawing.Point(112, 67);
+            this.lblDespesas.Location = new System.Drawing.Point(67, 52);
             this.lblDespesas.Name = "lblDespesas";
-            this.lblDespesas.Size = new System.Drawing.Size(152, 29);
+            this.lblDespesas.Size = new System.Drawing.Size(118, 29);
             this.lblDespesas.TabIndex = 8;
-            this.lblDespesas.Text = "R$ 1200,00";
-            this.lblDespesas.Click += new System.EventHandler(this.label4_Click);
+            this.lblDespesas.Text = "1500000";
+            this.lblDespesas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2
             // 
@@ -617,10 +619,10 @@
         private System.Windows.Forms.Panel PnlTopo;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblTotalGeral;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label LblReceiitas;
+        private System.Windows.Forms.Label lblReceitas;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblDespesas;

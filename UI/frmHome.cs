@@ -1,12 +1,6 @@
 ﻿using BLL;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace UI
@@ -22,56 +16,57 @@ namespace UI
         }
         private void FrmHome_Load(object sender, EventArgs e)
         {
-            CarregarGrid();
-            CarregarGridDespesas();
-            
+            CarregarGridReceita();
+            CarregarGridDespesa();
+            ValoresLabelDash();
         }
 
         #region Botões
-        private void BtnReceitas_Click(object sender, EventArgs e)
+
+        private void BtnContas_Click(object sender, EventArgs e)
         {
-            FrmReceitas cadReceita = new FrmReceitas();
-            cadReceita.ShowDialog();
-            //nao esta funcionando ao fechar o form
-            //CarregarGrid();
-        }
-        private void BtnDespesas_Click(object sender, EventArgs e)
-        {
-            frmDespesas Despesa = new frmDespesas();
-            Despesa.ShowDialog();
-        }
-        private void BtnReceitaPainel_Click(object sender, EventArgs e)
-        {
-            FrmReceitas cadReceita = new FrmReceitas();
-            cadReceita.ShowDialog();
+            frmConta conta = new frmConta();
+            conta.ShowDialog();
         }
         private void BtnCategoriaReceita_Click(object sender, EventArgs e)
         {
             FrmCategoriaReceita categoriaReceita = new FrmCategoriaReceita();
             categoriaReceita.ShowDialog();
         }
+        private void BtnReceita_Click(object sender, EventArgs e)
+        {
+            FrmReceitas cadReceita = new FrmReceitas();
+            cadReceita.ShowDialog();
+            CarregarGridReceita();
+            ValoresLabelDash();
+        }
+        private void BtnReceitas_Click(object sender, EventArgs e)
+        {
+            FrmReceitas cadReceita = new FrmReceitas();
+            cadReceita.ShowDialog();
+            CarregarGridReceita();
+            ValoresLabelDash();
+        }
+
         private void BtnCategoriaDespesa_Click(object sender, EventArgs e)
         {
             FrmCategoriaDespesa categoriaDespesa = new FrmCategoriaDespesa();
             categoriaDespesa.ShowDialog();
         }
-        private void BtnContas_Click(object sender, EventArgs e)
-        {
-            frmConta conta = new frmConta();
-            conta.ShowDialog();
-        }
-        private void BtnReceita_Click(object sender, EventArgs e)
-        {
-            FrmReceitas cadReceita = new FrmReceitas();
-            cadReceita.ShowDialog();
-            CarregarGrid();
-        }
         private void BtnDespesa_Click_1(object sender, EventArgs e)
         {
             frmDespesas Despesa = new frmDespesas();
             Despesa.ShowDialog();
-            CarregarGridDespesas();
+            CarregarGridDespesa();
+            ValoresLabelDash();
         }
+        private void BtnDespesas_Click(object sender, EventArgs e)
+        {
+            frmDespesas Despesa = new frmDespesas();
+            Despesa.ShowDialog();
+            ValoresLabelDash();
+        }
+
         #endregion
 
         #region label links
@@ -86,16 +81,47 @@ namespace UI
         #endregion
 
         #region Procedimentos
-        private void CarregarGrid()
+
+        public void ValoresLabelDash()
         {
-            dgvResumoReceitaHome.DataSource = bll.Exibir();
-            this.dgvResumoReceitaHome.Columns[0].Visible = false;
-            this.dgvResumoReceitaHome.Columns[3].Visible = false;
-            this.dgvResumoReceitaHome.Columns[5].Visible = false;
-            this.dgvResumoReceitaHome.Columns[6].Visible = false;
-            this.dgvResumoReceitaHome.Columns[8].Visible = false;
+            double preco = 0;
+            double totalReceita = 0;
+            double totalDespesa = 0;
+            double despesa = 0;
+            double receita = 0;
+            double totalGeral = 0;
+            //Despesa
+            for (int i = 0; i < dgvResumoReceitaHome.Rows.Count; i++)
+            {
+                preco = Convert.ToDouble(dgvResumoDespesaHome.Rows[i].Cells[2].Value);
+                totalDespesa += preco;
+                lblDespesas.Text = string.Format(totalDespesa.ToString());
+                despesa = totalDespesa;
+            }
+            //Receita
+            for (int i = 0; i < dgvResumoReceitaHome.Rows.Count; i++)
+            {
+                preco = Convert.ToDouble(dgvResumoReceitaHome.Rows[i].Cells[2].Value);
+                totalReceita = totalReceita + preco;
+                lblReceitas.Text = string.Format(totalReceita.ToString());
+                receita = totalReceita;
+            }
+            totalGeral = receita - despesa;
+
+            lblReceitas.Text = string.Format(receita.ToString("C"));
+            lblDespesas.Text = string.Format(despesa.ToString("C"));
+            lblTotalGeral.Text = string.Format(totalGeral.ToString("C"));            
         }
-        private void CarregarGridDespesas()
+        private void CarregarGridReceita()
+        {            
+                dgvResumoReceitaHome.DataSource = bll.Exibir();
+                this.dgvResumoReceitaHome.Columns[0].Visible = false;
+                this.dgvResumoReceitaHome.Columns[3].Visible = false;
+                this.dgvResumoReceitaHome.Columns[5].Visible = false;
+                this.dgvResumoReceitaHome.Columns[6].Visible = false;
+                this.dgvResumoReceitaHome.Columns[8].Visible = false;            
+        }
+        private void CarregarGridDespesa()
         {
             dgvResumoDespesaHome.DataSource = bllDespesa.Exibir();
             this.dgvResumoDespesaHome.Columns[0].Visible = false;
@@ -105,12 +131,6 @@ namespace UI
             this.dgvResumoDespesaHome.Columns[8].Visible = false;
         }
 
-
         #endregion
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
