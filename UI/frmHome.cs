@@ -91,7 +91,7 @@ namespace UI
             double receita = 0;
             double totalGeral = 0;
             //Despesa
-            for (int i = 0; i < dgvResumoReceitaHome.Rows.Count; i++)
+            for (int i = 0; i < dgvResumoDespesaHome.Rows.Count; i++)
             {
                 preco = Convert.ToDouble(dgvResumoDespesaHome.Rows[i].Cells[2].Value);
                 totalDespesa += preco;
