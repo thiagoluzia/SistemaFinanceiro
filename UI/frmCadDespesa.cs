@@ -75,7 +75,7 @@ namespace UI
             {
                 this.dto.Descricao = txtDescricaoDespesa.Text;
                 this.dto.Valor = Convert.ToDouble(txtValorDespesa.Text);
-                this.CarregarCombos();
+                //this.CarregarCombos();
                 this.dto.CategoriaDespesa = (int)cboCategoriaDespesa.SelectedValue;
                 this.dto.Conta = (int)cboConta.SelectedValue;
                 this.dto.DataVencimanto = Convert.ToDateTime(dtpDataVencimentoDespesa.Text);
