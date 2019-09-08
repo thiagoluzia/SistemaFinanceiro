@@ -110,13 +110,13 @@ namespace UI
 
             lblReceitas.Text = string.Format(receita.ToString("C"));
             lblDespesas.Text = string.Format(despesa.ToString("C"));
-            lblTotalGeral.Text = string.Format(totalGeral.ToString("C"));    
-            
-            if(receita < despesa)
+            lblTotalGeral.Text = string.Format(totalGeral.ToString("C"));
+
+            if (receita < despesa)
             {
                 panel8.BackgroundImage = global::UI.Properties.Resources.negativo;
             }
-            else if(receita > despesa)
+            else if (receita > despesa)
             {
                 panel8.BackgroundImage = global::UI.Properties.Resources.positovo;
             }
@@ -124,21 +124,23 @@ namespace UI
             {
                 panel8.BackgroundImage = global::UI.Properties.Resources.baseline_notification_important_white_36dp;
             }
-            
+
         }
         private void CarregarGridReceita()
-        {            
-                dgvResumoReceitaHome.DataSource = bll.Exibir();
-                this.dgvResumoReceitaHome.Columns[0].Visible = false;
-                this.dgvResumoReceitaHome.Columns[3].Visible = false;
-                this.dgvResumoReceitaHome.Columns[5].Visible = false;
-                this.dgvResumoReceitaHome.Columns[6].Visible = false;
-                this.dgvResumoReceitaHome.Columns[8].Visible = false;            
+        {
+            dgvResumoReceitaHome.DataSource = bll.Exibir();
+            this.dgvResumoReceitaHome.Columns[0].Visible = false;
+            this.dgvResumoReceitaHome.Columns[2].DefaultCellStyle.Format = "C";
+            this.dgvResumoReceitaHome.Columns[3].Visible = false;
+            this.dgvResumoReceitaHome.Columns[5].Visible = false;
+            this.dgvResumoReceitaHome.Columns[6].Visible = false;
+            this.dgvResumoReceitaHome.Columns[8].Visible = false;
         }
         private void CarregarGridDespesa()
         {
             dgvResumoDespesaHome.DataSource = bllDespesa.Exibir();
             this.dgvResumoDespesaHome.Columns[0].Visible = false;
+            this.dgvResumoDespesaHome.Columns[2].DefaultCellStyle.Format = "C";
             this.dgvResumoDespesaHome.Columns[3].Visible = false;
             this.dgvResumoDespesaHome.Columns[5].Visible = false;
             this.dgvResumoDespesaHome.Columns[6].Visible = false;
@@ -149,9 +151,9 @@ namespace UI
 
         private void panel8_Paint(object sender, PaintEventArgs e)
         {
-            
 
-            
+
+
         }
     }
 }

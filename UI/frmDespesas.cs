@@ -63,6 +63,7 @@ namespace UI
         {
             DgvListDespesa.DataSource = bll.Exibir();
             this.DgvListDespesa.Columns[0].Visible = false;
+            this.DgvListDespesa.Columns[2].DefaultCellStyle.Format = "C";
             this.DgvListDespesa.Columns[3].Visible = false;
             this.DgvListDespesa.Columns[5].Visible = false;
             //txtPesquisarDespesa.Focus();

@@ -65,6 +65,7 @@ namespace UI
         {
             DgvCadListReceita.DataSource = bll.Exibir();
             this.DgvCadListReceita.Columns[0].Visible = false;
+            this.DgvCadListReceita.Columns[2].DefaultCellStyle.Format = "C";
             this.DgvCadListReceita.Columns[3].Visible = false;
             this.DgvCadListReceita.Columns[5].Visible = false;
             //txtPesquisarReceita.Focus();

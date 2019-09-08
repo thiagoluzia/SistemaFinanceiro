@@ -63,5 +63,9 @@ namespace BLL
             banco.ExecutarComandoSql(comando);
         }
         #endregion
+
+        #region Procedimento remover espaços
+
+        #endregion
     }
 }
