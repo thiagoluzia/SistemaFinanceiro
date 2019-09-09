@@ -71,5 +71,11 @@ namespace UI
             //txtPesquisarReceita.Focus();
         }
         #endregion
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string descricao = txtPesquisarReceita.Text;
+            DgvCadListReceita.DataSource = bll.Buscar(descricao);
+        }
     }
 }

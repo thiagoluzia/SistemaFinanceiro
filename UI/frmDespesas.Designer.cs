@@ -128,6 +128,7 @@
             this.btnPesquisarDespesa.TabIndex = 3;
             this.btnPesquisarDespesa.Text = "Buscar";
             this.btnPesquisarDespesa.UseVisualStyleBackColor = false;
+            this.btnPesquisarDespesa.Click += new System.EventHandler(this.btnPesquisarDespesa_Click);
             // 
             // txtPesquisarDespesa
             // 

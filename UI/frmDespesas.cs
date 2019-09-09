@@ -69,5 +69,11 @@ namespace UI
             //txtPesquisarDespesa.Focus();
         }
         #endregion
+
+        private void btnPesquisarDespesa_Click(object sender, EventArgs e)
+        {
+            string descricao = txtPesquisarDespesa.Text;
+            DgvListDespesa.DataSource = bll.Buscar(descricao);
+        }
     }
 }
