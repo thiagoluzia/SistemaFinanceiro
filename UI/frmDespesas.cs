@@ -50,11 +50,15 @@ namespace UI
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            int id = (int)DgvListDespesa.CurrentRow.Cells[0].Value;
-            dto.Id = id;
-            bll.Exluir(dto);
-            MessageBox.Show("Despesa Exluida com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            CarregarGrid();
+            DialogResult = MessageBox.Show("Deseja relamente excluir a despesa selecionada?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (DialogResult == DialogResult.Yes)
+            {
+                int id = (int)DgvListDespesa.CurrentRow.Cells[0].Value;
+                dto.Id = id;
+                bll.Exluir(dto);
+                MessageBox.Show("Despesa Exluida com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CarregarGrid();
+            }
         }
         #endregion
 
@@ -68,12 +72,13 @@ namespace UI
             this.DgvListDespesa.Columns[5].Visible = false;
             //txtPesquisarDespesa.Focus();
         }
-        #endregion
 
         private void btnPesquisarDespesa_Click(object sender, EventArgs e)
         {
             string descricao = txtPesquisarDespesa.Text;
             DgvListDespesa.DataSource = bll.Buscar(descricao);
         }
+        #endregion
+
     }
 }

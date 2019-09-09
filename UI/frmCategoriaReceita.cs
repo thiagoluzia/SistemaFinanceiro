@@ -51,10 +51,14 @@ namespace UI
         }
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            dto.Id = (int)dgvLisCategoriaReceita.CurrentRow.Cells[0].Value;
-            dto.Descricao = dgvLisCategoriaReceita.CurrentRow.Cells[1].Value.ToString();
-            bll.Excluir(dto);
-            CarregarGrid();
+            DialogResult = MessageBox.Show("Deseja realmente excluir essa categoria? Caso ela esteja vinculada a algum lançamento, não poderá ser excluida", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (DialogResult == DialogResult.Yes)
+            {
+                dto.Id = (int)dgvLisCategoriaReceita.CurrentRow.Cells[0].Value;
+                dto.Descricao = dgvLisCategoriaReceita.CurrentRow.Cells[1].Value.ToString();
+                bll.Excluir(dto);
+                CarregarGrid();
+            }
         }
 
         private void LimparCampos()

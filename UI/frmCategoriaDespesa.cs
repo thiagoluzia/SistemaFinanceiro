@@ -53,10 +53,14 @@ namespace UI
         }
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            dto.Id = (int)dgvListDespesa.CurrentRow.Cells[0].Value;
-            dto.Descricao = dgvListDespesa.CurrentRow.Cells[1].ToString();
-            bll.Excluir(dto);
-            CarregarCategoriasDespesa();
+            DialogResult = MessageBox.Show("Deseja realmente excluir essa Categoria? Caso ela esteja vinculada a algum lançamento, não poderá ser excluida", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (DialogResult == DialogResult.Yes)
+            {
+                dto.Id = (int)dgvListDespesa.CurrentRow.Cells[0].Value;
+                dto.Descricao = dgvListDespesa.CurrentRow.Cells[1].ToString();
+                bll.Excluir(dto);
+                CarregarCategoriasDespesa();
+            }
         }
 
         private void CarregarCategoriasDespesa()

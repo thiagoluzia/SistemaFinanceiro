@@ -52,11 +52,15 @@ namespace UI
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            int id = (int)DgvCadListReceita.CurrentRow.Cells[0].Value;
-            dto.Id = id;
-            bll.Excluir(dto);
-            MessageBox.Show("Receita excluida com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            CarregarGrid();
+            DialogResult  = MessageBox.Show("Deseja realmente excluir a receita selecionada?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(DialogResult == DialogResult.Yes)
+            {
+                int id = (int)DgvCadListReceita.CurrentRow.Cells[0].Value;
+                dto.Id = id;
+                bll.Excluir(dto);
+                MessageBox.Show("Receita excluida com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CarregarGrid();
+            }                        
         }
         #endregion
 
@@ -68,14 +72,13 @@ namespace UI
             this.DgvCadListReceita.Columns[2].DefaultCellStyle.Format = "C";
             this.DgvCadListReceita.Columns[3].Visible = false;
             this.DgvCadListReceita.Columns[5].Visible = false;
-            //txtPesquisarReceita.Focus();
         }
-        #endregion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             string descricao = txtPesquisarReceita.Text;
             DgvCadListReceita.DataSource = bll.Buscar(descricao);
         }
+        #endregion
     }
 }

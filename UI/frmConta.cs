@@ -21,7 +21,7 @@ namespace UI
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if(dto.Id > 0)
+            if (dto.Id > 0)
             {
                 dto.Descricao = txtDescricaoCadConta.Text;
                 bll.Atulaizar(dto);
@@ -39,10 +39,15 @@ namespace UI
         }
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            dto.Id = (int)DgvListConta.CurrentRow.Cells[0].Value;
-            dto.Descricao = DgvListConta.CurrentRow.Cells[1].Value.ToString();
-            bll.Excluir(dto);
-            CarregarGrid();
+            DialogResult = MessageBox.Show("Deseja realmente excluir essa conta? Caso ela esteja vinculada a algum lançamento, não poderá ser excluida", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (DialogResult == DialogResult.Yes)
+            {
+                dto.Id = (int)DgvListConta.CurrentRow.Cells[0].Value;
+                dto.Descricao = DgvListConta.CurrentRow.Cells[1].Value.ToString();
+                bll.Excluir(dto);
+                CarregarGrid();
+            }
         }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
