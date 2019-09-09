@@ -101,7 +101,7 @@ namespace UI
 
         private void LimparCampos()
         {
-            txtIdReceita.Text = string.Empty;
+            //txtIdReceita.Text = string.Empty;
             txtDescricaoReceita.Text = string.Empty;
             txtValorReceita.Text = string.Empty;
             CarregarCombos();

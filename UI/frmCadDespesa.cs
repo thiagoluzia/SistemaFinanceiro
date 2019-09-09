@@ -107,6 +107,7 @@ namespace UI
             dtpDataVencimentoDespesa.Text = string.Empty;
             txtObservacaoDespesa.Text = string.Empty;
         }
+
         #endregion
     }
 }

@@ -126,6 +126,7 @@ namespace UI
             }
 
         }
+
         private void CarregarGridReceita()
         {
             dgvResumoReceitaHome.DataSource = bll.Exibir();
@@ -136,6 +137,7 @@ namespace UI
             this.dgvResumoReceitaHome.Columns[6].Visible = false;
             this.dgvResumoReceitaHome.Columns[8].Visible = false;
         }
+
         private void CarregarGridDespesa()
         {
             dgvResumoDespesaHome.DataSource = bllDespesa.Exibir();
@@ -148,12 +150,5 @@ namespace UI
         }
 
         #endregion
-
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
-
-
-
-        }
     }
 }

@@ -12,9 +12,15 @@ namespace BLL
         #region Inserir
         public void Inserir(ReceitaDTO dto)
         {
+            dto.Descricao.Trim();
+            string descricao = dto.Descricao.Replace("'", "''");
+
+            dto.Observacao.Trim();
+            string observacao = dto.Observacao.Replace("'", "''");
+
             banco = new AcessoBancoDados();
             banco.Conectar();
-            string comando = "INSERT INTO receita(desc_receita, valor, id_categoria_receita, id_conta, data_vencimento, observacao) VALUES('"+dto.Descricao+"','"+dto.Valor+"','"+dto.CategoriaReceita+"', '"+dto.Conta+"', '"+dto.DataVencimento+"', '"+dto.Observacao+"')";
+            string comando = "INSERT INTO receita(desc_receita, valor, id_categoria_receita, id_conta, data_vencimento, observacao) VALUES('"+descricao+"','"+dto.Valor+"','"+dto.CategoriaReceita+"', '"+dto.Conta+"', '"+dto.DataVencimento+"', '"+observacao+"')";
             banco.ExecutarComandoSql(comando);
         }
         #endregion
@@ -38,12 +44,18 @@ namespace BLL
         #region Atualizar
         public void Atualizar(ReceitaDTO dto)
         {
+            dto.Descricao.Trim();
+            string descricao = dto.Descricao.Replace("'", "''");
+
+            dto.Observacao.Trim();
+            string observacao = dto.Observacao.Replace("'", "''");
+
             banco = new AcessoBancoDados();
             banco.Conectar();
-            string comando = "UPDATE receita SET desc_receita = '" + dto.Descricao + "'" +
+            string comando = "UPDATE receita SET desc_receita = '" + descricao + "'" +
                 ", valor = '" + dto.Valor + "', id_categoria_receita = '" + dto.CategoriaReceita + "'" +
                 ", id_conta = '" + dto.Conta + "', data_vencimento = '" + dto.DataVencimento + "'" +
-                ", observacao = '" + dto.Observacao + "' WHERE id = '"+dto.Id+"'";
+                ", observacao = '" + observacao + "' WHERE id = '"+dto.Id+"'";
             banco.ExecutarComandoSql(comando);       
         }
         #endregion

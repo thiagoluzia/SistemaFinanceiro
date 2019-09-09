@@ -13,13 +13,20 @@ namespace BLL
     {
         AcessoBancoDados banco = new AcessoBancoDados();
         DataTable data = new DataTable();
+        
 
         #region Inserir
         public void Inserir(DespesaDTO dto)
         {
+            dto.Descricao.Trim();
+            string descricao = dto.Descricao.Replace("'", "''");
+
+            dto.Observacao.Trim();
+            string observacao = dto.Observacao.Replace("'", "''");
+
             banco = new AcessoBancoDados();
             banco.Conectar();
-            string comando = "INSERT INTO despesa(desc_despesa, valor, id_categoria_despesa, id_conta, data_vencimento, observacao) VALUES('" + dto.Descricao + "', '" + dto.Valor + "', '" + dto.CategoriaDespesa + "', '" + dto.Conta + "', '" + dto.DataVencimanto + "', '" + dto.Observacao + "')";
+            string comando = "INSERT INTO despesa(desc_despesa, valor, id_categoria_despesa, id_conta, data_vencimento, observacao) VALUES('" + descricao + "', '" + dto.Valor  + "', '" + dto.CategoriaDespesa + "', '" + dto.Conta + "', '" + dto.DataVencimanto.ToString("yyyy-MM-dd") + "', '" + observacao + "')";
             banco.ExecutarComandoSql(comando);
         }
         #endregion
@@ -47,9 +54,15 @@ namespace BLL
         #region Atualizar
         public void Atualizar(DespesaDTO dto)
         {
+            dto.Descricao.Trim();
+            string descricao = dto.Descricao.Replace("'", "''");
+
+            dto.Observacao.Trim();
+            string observacao = dto.Observacao.Replace("'", "''");
+
             banco = new AcessoBancoDados();
             banco.Conectar();
-            string comando = "UPDATE despesa SET desc_despesa = '" + dto.Descricao + "', valor = '" + dto.Valor + "', id_categoria_despesa = '" + dto.CategoriaDespesa + "', id_conta = '" + dto.Conta + "', data_vencimento = '" + dto.DataVencimanto + "', observacao = '" + dto.Observacao + "' WHERE id = '" + dto.Id + "'";
+            string comando = "UPDATE despesa SET desc_despesa = '" + dto.Descricao + "', valor = '" + dto.Valor + "', id_categoria_despesa = '" + dto.CategoriaDespesa + "', id_conta = '" + dto.Conta + "', data_vencimento = '" + dto.DataVencimanto + "', observacao = '" + observacao + "' WHERE id = '" + dto.Id + "'";
             banco.ExecutarComandoSql(comando);
         }
         #endregion
@@ -62,10 +75,6 @@ namespace BLL
             string comando = "DELETE FROM despesa WHERE id = '" + dto.Id + "'";
             banco.ExecutarComandoSql(comando);
         }
-        #endregion
-
-        #region Procedimento remover espaços
-
         #endregion
     }
 }
