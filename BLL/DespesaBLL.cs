@@ -62,7 +62,7 @@ namespace BLL
 
             banco = new AcessoBancoDados();
             banco.Conectar();
-            string comando = "UPDATE despesa SET desc_despesa = '" + dto.Descricao + "', valor = '" + dto.Valor + "', id_categoria_despesa = '" + dto.CategoriaDespesa + "', id_conta = '" + dto.Conta + "', data_vencimento = '" + dto.DataVencimanto + "', observacao = '" + observacao + "' WHERE id = '" + dto.Id + "'";
+            string comando = "UPDATE despesa SET desc_despesa = '" + dto.Descricao + "', valor = '" + dto.Valor + "', id_categoria_despesa = '" + dto.CategoriaDespesa + "', id_conta = '" + dto.Conta + "', data_vencimento = '" + dto.DataVencimanto.ToString("yyyy-MM-dds") + "', observacao = '" + observacao + "' WHERE id = '" + dto.Id + "'";
             banco.ExecutarComandoSql(comando);
         }
         #endregion

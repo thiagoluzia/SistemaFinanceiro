@@ -38,7 +38,7 @@ namespace UI
                 CarregarCombos();//carregar o combo com os dados de update
                 cboCategoriaReceita.SelectedValue = dto.CategoriaReceita;
                 cboConta.SelectedValue = dto.Conta;
-                dtpDataVencimentoReceita.Text = dto.DataVencimento.ToString();
+                mskVencimento.Text = dto.DataVencimento.ToString();
                 txtObservacaoReceita.Text = dto.Observacao;
             }
             else
@@ -58,7 +58,7 @@ namespace UI
                 dto.Valor = Convert.ToDouble(txtValorReceita.Text);
                 dto.CategoriaReceita = (int)cboCategoriaReceita.SelectedValue;
                 dto.Conta = (int)cboConta.SelectedValue;
-                dto.DataVencimento = DateTime.Parse(dtpDataVencimentoReceita.Text);
+                dto.DataVencimento = Convert.ToDateTime(mskVencimento.Text);
                 dto.Observacao = txtObservacaoReceita.Text;
                 bll.Inserir(dto);
                 MessageBox.Show("Receita cadastrada com sucesso! ", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -69,7 +69,8 @@ namespace UI
                 this.dto.Valor = Convert.ToDouble(txtValorReceita.Text);
                 this.dto.CategoriaReceita = (int)cboCategoriaReceita.SelectedValue;
                 this.dto.Conta = (int)cboConta.SelectedValue;
-                this.dto.DataVencimento = DateTime.Parse(dtpDataVencimentoReceita.Text);
+                //this.dto.DataVencimento = DateTime.Parse(dtpDataVencimentoReceita.Text);
+                this.dto.DataVencimento = DateTime.Parse(mskVencimento.Text);
                 this.dto.Observacao = txtObservacaoReceita.Text;
                 bll.Atualizar(this.dto);
                 MessageBox.Show("Receita atualizada com sucesso! ", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -105,7 +106,7 @@ namespace UI
             txtDescricaoReceita.Text = string.Empty;
             txtValorReceita.Text = string.Empty;
             CarregarCombos();
-            dtpDataVencimentoReceita.Text = string.Empty;
+            mskVencimento.Text = string.Empty;
             txtObservacaoReceita.Text = string.Empty;
             txtDescricaoReceita.Focus();
 

@@ -20,7 +20,7 @@ namespace BLL
 
             banco = new AcessoBancoDados();
             banco.Conectar();
-            string comando = "INSERT INTO receita(desc_receita, valor, id_categoria_receita, id_conta, data_vencimento, observacao) VALUES('" + descricao + "','" + dto.Valor + "','" + dto.CategoriaReceita + "', '" + dto.Conta + "', '" + dto.DataVencimento + "', '" + observacao + "')";
+            string comando = "INSERT INTO receita(desc_receita, valor, id_categoria_receita, id_conta, data_vencimento, observacao) VALUES('" + descricao + "','" + dto.Valor + "','" + dto.CategoriaReceita + "', '" + dto.Conta + "', '" + dto.DataVencimento.ToString("yyyy-MM-dd") + "', '" + observacao + "')";
             banco.ExecutarComandoSql(comando);
         }
         #endregion

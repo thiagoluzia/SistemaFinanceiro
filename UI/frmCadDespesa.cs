@@ -37,7 +37,8 @@ namespace UI
                 CarregarCombos();
                 cboCategoriaDespesa.SelectedValue = dto.CategoriaDespesa;
                 cboConta.SelectedValue = dto.Conta;
-                dtpDataVencimentoDespesa.Text = dto.DataVencimanto.ToString();
+                //dtpDataVencimentoDespesa.Text = dto.DataVencimanto.ToString();
+                mskVencimento.Text = dto.DataVencimanto.ToString();
                 txtObservacaoDespesa.Text = dto.Observacao.ToString();
             }
             else
@@ -64,7 +65,7 @@ namespace UI
                 dto.Valor = Convert.ToDouble(txtValorDespesa.Text);
                 dto.CategoriaDespesa = (int)cboCategoriaDespesa.SelectedValue;
                 dto.Conta = (int)cboConta.SelectedValue;
-                dto.DataVencimanto = Convert.ToDateTime(dtpDataVencimentoDespesa.Text);
+                dto.DataVencimanto = Convert.ToDateTime(mskVencimento.Text);
                 dto.Observacao = txtObservacaoDespesa.Text;
                 bll.Inserir(dto);
                 LimparCampos();
@@ -77,7 +78,7 @@ namespace UI
                 this.dto.Valor = Convert.ToDouble(txtValorDespesa.Text);
                 this.dto.CategoriaDespesa = (int)cboCategoriaDespesa.SelectedValue;
                 this.dto.Conta = (int)cboConta.SelectedValue;
-                this.dto.DataVencimanto = Convert.ToDateTime(dtpDataVencimentoDespesa.Text);
+                this.dto.DataVencimanto = Convert.ToDateTime(mskVencimento.Text);
                 this.dto.Observacao = txtObservacaoDespesa.Text;
                 bll.Atualizar(this.dto);
                 LimparCampos();
@@ -104,7 +105,7 @@ namespace UI
             txtDescricaoDespesa.Text = string.Empty;
             txtValorDespesa.Text = string.Empty;
             CarregarCombos();
-            dtpDataVencimentoDespesa.Text = string.Empty;
+            mskVencimento.Text = string.Empty;
             txtObservacaoDespesa.Text = string.Empty;
         }
 

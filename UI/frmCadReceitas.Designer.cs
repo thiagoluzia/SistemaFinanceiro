@@ -44,7 +44,7 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCadastrarCategoriaReceita = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.dtpDataVencimentoReceita = new System.Windows.Forms.DateTimePicker();
+            this.mskVencimento = new System.Windows.Forms.MaskedTextBox();
             this.panel2.SuspendLayout();
             this.PnlCadReceita.SuspendLayout();
             this.SuspendLayout();
@@ -118,7 +118,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(237, 63);
+            this.label3.Location = new System.Drawing.Point(233, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 16);
             this.label3.TabIndex = 5;
@@ -167,10 +167,10 @@
             // 
             this.PnlCadReceita.BackColor = System.Drawing.Color.White;
             this.PnlCadReceita.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PnlCadReceita.Controls.Add(this.mskVencimento);
             this.PnlCadReceita.Controls.Add(this.btnSalvar);
             this.PnlCadReceita.Controls.Add(this.btnCadastrarCategoriaReceita);
             this.PnlCadReceita.Controls.Add(this.label6);
-            this.PnlCadReceita.Controls.Add(this.dtpDataVencimentoReceita);
             this.PnlCadReceita.Controls.Add(this.txtObservacaoReceita);
             this.PnlCadReceita.Controls.Add(this.label7);
             this.PnlCadReceita.Controls.Add(this.label5);
@@ -221,20 +221,21 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(190, 154);
+            this.label6.Location = new System.Drawing.Point(233, 108);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 16);
             this.label6.TabIndex = 18;
             this.label6.Text = "Vencimento";
             // 
-            // dtpDataVencimentoReceita
+            // mskVencimento
             // 
-            this.dtpDataVencimentoReceita.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDataVencimentoReceita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataVencimentoReceita.Location = new System.Drawing.Point(193, 173);
-            this.dtpDataVencimentoReceita.Name = "dtpDataVencimentoReceita";
-            this.dtpDataVencimentoReceita.Size = new System.Drawing.Size(119, 23);
-            this.dtpDataVencimentoReceita.TabIndex = 17;
+            this.mskVencimento.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskVencimento.Location = new System.Drawing.Point(236, 127);
+            this.mskVencimento.Mask = "00/00/0000";
+            this.mskVencimento.Name = "mskVencimento";
+            this.mskVencimento.Size = new System.Drawing.Size(100, 23);
+            this.mskVencimento.TabIndex = 21;
+            this.mskVencimento.ValidatingType = typeof(System.DateTime);
             // 
             // FrmCadReceita
             // 
@@ -271,8 +272,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel PnlCadReceita;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dtpDataVencimentoReceita;
         private System.Windows.Forms.Button btnCadastrarCategoriaReceita;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.MaskedTextBox mskVencimento;
     }
 }

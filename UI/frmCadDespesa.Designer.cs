@@ -32,7 +32,6 @@
             this.BtnSalvarDespesa = new System.Windows.Forms.Button();
             this.BtnCadastrarCategoriaDespesa = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.dtpDataVencimentoDespesa = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cboConta = new System.Windows.Forms.ComboBox();
@@ -45,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.mskVencimento = new System.Windows.Forms.MaskedTextBox();
             this.PnlCadDespesa.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -53,10 +53,10 @@
             // 
             this.PnlCadDespesa.BackColor = System.Drawing.Color.White;
             this.PnlCadDespesa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PnlCadDespesa.Controls.Add(this.mskVencimento);
             this.PnlCadDespesa.Controls.Add(this.BtnSalvarDespesa);
             this.PnlCadDespesa.Controls.Add(this.BtnCadastrarCategoriaDespesa);
             this.PnlCadDespesa.Controls.Add(this.label6);
-            this.PnlCadDespesa.Controls.Add(this.dtpDataVencimentoDespesa);
             this.PnlCadDespesa.Controls.Add(this.label5);
             this.PnlCadDespesa.Controls.Add(this.label4);
             this.PnlCadDespesa.Controls.Add(this.cboConta);
@@ -107,20 +107,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(190, 156);
+            this.label6.Location = new System.Drawing.Point(233, 108);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 16);
             this.label6.TabIndex = 10;
             this.label6.Text = "Vencimento";
-            // 
-            // dtpDataVencimentoDespesa
-            // 
-            this.dtpDataVencimentoDespesa.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDataVencimentoDespesa.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataVencimentoDespesa.Location = new System.Drawing.Point(193, 175);
-            this.dtpDataVencimentoDespesa.Name = "dtpDataVencimentoDespesa";
-            this.dtpDataVencimentoDespesa.Size = new System.Drawing.Size(119, 23);
-            this.dtpDataVencimentoDespesa.TabIndex = 11;
             // 
             // label5
             // 
@@ -191,7 +182,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(237, 63);
+            this.label3.Location = new System.Drawing.Point(233, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 16);
             this.label3.TabIndex = 3;
@@ -236,6 +227,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Despesa";
             // 
+            // mskVencimento
+            // 
+            this.mskVencimento.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskVencimento.Location = new System.Drawing.Point(236, 129);
+            this.mskVencimento.Mask = "00/00/0000";
+            this.mskVencimento.Name = "mskVencimento";
+            this.mskVencimento.Size = new System.Drawing.Size(100, 23);
+            this.mskVencimento.TabIndex = 15;
+            this.mskVencimento.ValidatingType = typeof(System.DateTime);
+            // 
             // FrmCadDespesa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,12 +269,12 @@
         private System.Windows.Forms.TextBox txtDescricaoDespesa;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dtpDataVencimentoDespesa;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboConta;
         private System.Windows.Forms.ComboBox cboCategoriaDespesa;
         private System.Windows.Forms.Button BtnCadastrarCategoriaDespesa;
         private System.Windows.Forms.Button BtnSalvarDespesa;
+        private System.Windows.Forms.MaskedTextBox mskVencimento;
     }
 }
