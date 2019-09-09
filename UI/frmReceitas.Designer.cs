@@ -90,9 +90,13 @@
             // 
             // DgvCadListReceita
             // 
+            this.DgvCadListReceita.AllowUserToAddRows = false;
+            this.DgvCadListReceita.AllowUserToDeleteRows = false;
             this.DgvCadListReceita.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvCadListReceita.Location = new System.Drawing.Point(7, 109);
             this.DgvCadListReceita.Name = "DgvCadListReceita";
+            this.DgvCadListReceita.ReadOnly = true;
+            this.DgvCadListReceita.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvCadListReceita.Size = new System.Drawing.Size(959, 273);
             this.DgvCadListReceita.TabIndex = 4;
             // 

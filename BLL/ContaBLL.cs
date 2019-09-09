@@ -12,9 +12,13 @@ namespace BLL
         #region Inserir
         public void Inserir(ContaDTO dto)
         {
+            string descricao = dto.Descricao;
+            descricao.Trim();
+            descricao.Replace("'", "''").Replace("  ", " ");
+
             banco = new AcessoBancoDados();
             banco.Conectar();
-            string comando = "INSERT INTO conta(desc_conta) VALUES('" + dto.Descricao + "')";
+            string comando = "INSERT INTO conta(desc_conta) VALUES('" + descricao + "')";
             banco.ExecutarComandoSql(comando);
         }
         #endregion
@@ -24,7 +28,7 @@ namespace BLL
         {
             banco = new AcessoBancoDados();
             banco.Conectar();
-            string comando = "SELECT * FROM conta";
+            string comando = "SELECT id, desc_conta AS 'DESCRIÇÃO' FROM conta";
             dt = new DataTable();
             dt = banco.RetdataTable(comando);
             return dt;
@@ -34,9 +38,13 @@ namespace BLL
         #region Atulaizar
         public void Atulaizar(ContaDTO dto)
         {
+            string descricao = dto.Descricao;
+            descricao.Trim();
+            descricao.Replace("'", "''").Replace("  ", " ");
+
             banco = new AcessoBancoDados();
             banco.Conectar();
-            string comando = "UPDATE conta SET desc_conta = '" + dto.Descricao + "' WHERE id = '" + dto.Id + "'";
+            string comando = "UPDATE conta SET desc_conta = '" + descricao + "' WHERE id = '" + dto.Id + "'";
             banco.ExecutarComandoSql(comando);
         }
         #endregion

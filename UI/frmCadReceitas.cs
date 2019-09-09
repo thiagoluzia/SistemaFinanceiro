@@ -91,11 +91,11 @@ namespace UI
         private void CarregarCombos()
         {
             cboCategoriaReceita.DataSource = catBll.Exibir();
-            cboCategoriaReceita.DisplayMember = "des_categoria_receita";
+            cboCategoriaReceita.DisplayMember = "DESCRIÇÃO";
             cboCategoriaReceita.ValueMember = "id";
 
             cboConta.DataSource = contBll.Exibir();
-            cboConta.DisplayMember = "desc_conta";
+            cboConta.DisplayMember = "DESCRIÇÃO";
             cboConta.ValueMember = "id";
         }
 

@@ -29,8 +29,14 @@
         private void InitializeComponent()
         {
             this.PnlMenuLateral = new System.Windows.Forms.Panel();
+            this.btnCategoriaDespesa = new System.Windows.Forms.Button();
+            this.btnContas = new System.Windows.Forms.Button();
+            this.Receitas = new System.Windows.Forms.Button();
+            this.btnCategoriaReceita = new System.Windows.Forms.Button();
+            this.BtnDespesas = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnDashboard = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.PnlCentro = new System.Windows.Forms.Panel();
             this.PnlNovaReceitaHome = new System.Windows.Forms.Panel();
@@ -46,27 +52,21 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.PnlTopo = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.lblTotalGeral = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblReceitas = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblDespesas = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCategoriaDespesa = new System.Windows.Forms.Button();
-            this.btnContas = new System.Windows.Forms.Button();
-            this.Receitas = new System.Windows.Forms.Button();
-            this.btnCategoriaReceita = new System.Windows.Forms.Button();
-            this.BtnDespesas = new System.Windows.Forms.Button();
-            this.btnDashboard = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.PnlMenuLateral.SuspendLayout();
             this.panel3.SuspendLayout();
             this.PnlCentro.SuspendLayout();
@@ -103,359 +103,6 @@
             this.PnlMenuLateral.Name = "PnlMenuLateral";
             this.PnlMenuLateral.Size = new System.Drawing.Size(214, 689);
             this.PnlMenuLateral.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 97);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(199, 13);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "________________________________";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(78)))), ((int)(((byte)(88)))));
-            this.label2.Location = new System.Drawing.Point(42, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 29);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Finanças";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.panel3.Controls.Add(this.PnlCentro);
-            this.panel3.Controls.Add(this.PnlTopo);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(214, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1138, 654);
-            this.panel3.TabIndex = 6;
-            // 
-            // PnlCentro
-            // 
-            this.PnlCentro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
-            this.PnlCentro.Controls.Add(this.PnlNovaReceitaHome);
-            this.PnlCentro.Controls.Add(this.PnlNovaDespesaHome);
-            this.PnlCentro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PnlCentro.Location = new System.Drawing.Point(0, 168);
-            this.PnlCentro.Name = "PnlCentro";
-            this.PnlCentro.Size = new System.Drawing.Size(1138, 486);
-            this.PnlCentro.TabIndex = 7;
-            // 
-            // PnlNovaReceitaHome
-            // 
-            this.PnlNovaReceitaHome.BackColor = System.Drawing.Color.White;
-            this.PnlNovaReceitaHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PnlNovaReceitaHome.Controls.Add(this.BtnReceita);
-            this.PnlNovaReceitaHome.Controls.Add(this.panel12);
-            this.PnlNovaReceitaHome.Location = new System.Drawing.Point(65, 27);
-            this.PnlNovaReceitaHome.Name = "PnlNovaReceitaHome";
-            this.PnlNovaReceitaHome.Size = new System.Drawing.Size(516, 424);
-            this.PnlNovaReceitaHome.TabIndex = 8;
-            // 
-            // BtnReceita
-            // 
-            this.BtnReceita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(167)))), ((int)(((byte)(80)))));
-            this.BtnReceita.FlatAppearance.BorderSize = 0;
-            this.BtnReceita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnReceita.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnReceita.ForeColor = System.Drawing.Color.White;
-            this.BtnReceita.Location = new System.Drawing.Point(18, 14);
-            this.BtnReceita.Name = "BtnReceita";
-            this.BtnReceita.Size = new System.Drawing.Size(161, 39);
-            this.BtnReceita.TabIndex = 10;
-            this.BtnReceita.Text = "Nova Transação";
-            this.BtnReceita.UseVisualStyleBackColor = false;
-            this.BtnReceita.Click += new System.EventHandler(this.BtnReceita_Click);
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.Controls.Add(this.dgvResumoReceitaHome);
-            this.panel12.Controls.Add(this.panel13);
-            this.panel12.Location = new System.Drawing.Point(18, 59);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(481, 351);
-            this.panel12.TabIndex = 9;
-            // 
-            // dgvResumoReceitaHome
-            // 
-            this.dgvResumoReceitaHome.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResumoReceitaHome.Location = new System.Drawing.Point(0, 67);
-            this.dgvResumoReceitaHome.Name = "dgvResumoReceitaHome";
-            this.dgvResumoReceitaHome.Size = new System.Drawing.Size(481, 284);
-            this.dgvResumoReceitaHome.TabIndex = 4;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(128)))), ((int)(((byte)(227)))));
-            this.panel13.Controls.Add(this.label1);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(481, 57);
-            this.panel13.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(4, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Lançamentos de Receita";
-            // 
-            // PnlNovaDespesaHome
-            // 
-            this.PnlNovaDespesaHome.BackColor = System.Drawing.Color.White;
-            this.PnlNovaDespesaHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PnlNovaDespesaHome.Controls.Add(this.BtnDespesa);
-            this.PnlNovaDespesaHome.Controls.Add(this.panel14);
-            this.PnlNovaDespesaHome.Location = new System.Drawing.Point(602, 27);
-            this.PnlNovaDespesaHome.Name = "PnlNovaDespesaHome";
-            this.PnlNovaDespesaHome.Size = new System.Drawing.Size(516, 424);
-            this.PnlNovaDespesaHome.TabIndex = 7;
-            // 
-            // BtnDespesa
-            // 
-            this.BtnDespesa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(63)))), ((int)(((byte)(59)))));
-            this.BtnDespesa.FlatAppearance.BorderSize = 0;
-            this.BtnDespesa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnDespesa.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDespesa.ForeColor = System.Drawing.Color.White;
-            this.BtnDespesa.Location = new System.Drawing.Point(16, 14);
-            this.BtnDespesa.Name = "BtnDespesa";
-            this.BtnDespesa.Size = new System.Drawing.Size(161, 39);
-            this.BtnDespesa.TabIndex = 11;
-            this.BtnDespesa.Text = "Nova Transação";
-            this.BtnDespesa.UseVisualStyleBackColor = false;
-            this.BtnDespesa.Click += new System.EventHandler(this.BtnDespesa_Click_1);
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.White;
-            this.panel14.Controls.Add(this.dgvResumoDespesaHome);
-            this.panel14.Controls.Add(this.panel15);
-            this.panel14.Location = new System.Drawing.Point(16, 59);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(484, 351);
-            this.panel14.TabIndex = 10;
-            // 
-            // dgvResumoDespesaHome
-            // 
-            this.dgvResumoDespesaHome.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResumoDespesaHome.Location = new System.Drawing.Point(0, 67);
-            this.dgvResumoDespesaHome.Name = "dgvResumoDespesaHome";
-            this.dgvResumoDespesaHome.Size = new System.Drawing.Size(484, 284);
-            this.dgvResumoDespesaHome.TabIndex = 4;
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(128)))), ((int)(((byte)(227)))));
-            this.panel15.Controls.Add(this.label8);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel15.Location = new System.Drawing.Point(0, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(484, 57);
-            this.panel15.TabIndex = 0;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(3, 18);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(223, 18);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Lançamentos de Depesa";
-            // 
-            // PnlTopo
-            // 
-            this.PnlTopo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
-            this.PnlTopo.Controls.Add(this.panel8);
-            this.PnlTopo.Controls.Add(this.panel9);
-            this.PnlTopo.Controls.Add(this.panel6);
-            this.PnlTopo.Controls.Add(this.panel7);
-            this.PnlTopo.Controls.Add(this.panel5);
-            this.PnlTopo.Controls.Add(this.panel4);
-            this.PnlTopo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PnlTopo.Location = new System.Drawing.Point(0, 0);
-            this.PnlTopo.Name = "PnlTopo";
-            this.PnlTopo.Size = new System.Drawing.Size(1138, 168);
-            this.PnlTopo.TabIndex = 6;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Controls.Add(this.lblTotalGeral);
-            this.panel9.Location = new System.Drawing.Point(851, 50);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(267, 100);
-            this.panel9.TabIndex = 10;
-            // 
-            // lblTotalGeral
-            // 
-            this.lblTotalGeral.AutoSize = true;
-            this.lblTotalGeral.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalGeral.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(78)))), ((int)(((byte)(88)))));
-            this.lblTotalGeral.Location = new System.Drawing.Point(70, 52);
-            this.lblTotalGeral.Name = "lblTotalGeral";
-            this.lblTotalGeral.Size = new System.Drawing.Size(118, 29);
-            this.lblTotalGeral.TabIndex = 9;
-            this.lblTotalGeral.Text = "1500000";
-            this.lblTotalGeral.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.lblReceitas);
-            this.panel7.Location = new System.Drawing.Point(458, 50);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(267, 100);
-            this.panel7.TabIndex = 8;
-            // 
-            // lblReceitas
-            // 
-            this.lblReceitas.AutoSize = true;
-            this.lblReceitas.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReceitas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(78)))), ((int)(((byte)(88)))));
-            this.lblReceitas.Location = new System.Drawing.Point(66, 52);
-            this.lblReceitas.Name = "lblReceitas";
-            this.lblReceitas.Size = new System.Drawing.Size(118, 29);
-            this.lblReceitas.TabIndex = 9;
-            this.lblReceitas.Text = "1500000";
-            this.lblReceitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.lblDespesas);
-            this.panel4.Location = new System.Drawing.Point(65, 50);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(267, 100);
-            this.panel4.TabIndex = 6;
-            // 
-            // lblDespesas
-            // 
-            this.lblDespesas.AutoSize = true;
-            this.lblDespesas.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDespesas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(78)))), ((int)(((byte)(88)))));
-            this.lblDespesas.Location = new System.Drawing.Point(67, 52);
-            this.lblDespesas.Name = "lblDespesas";
-            this.lblDespesas.Size = new System.Drawing.Size(118, 29);
-            this.lblDespesas.TabIndex = 8;
-            this.lblDespesas.Text = "1500000";
-            this.lblDespesas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.linkLabel2);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.linkLabel1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(214, 654);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1138, 35);
-            this.panel2.TabIndex = 5;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(78)))), ((int)(((byte)(88)))));
-            this.label7.Location = new System.Drawing.Point(6, 3);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(400, 29);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Desenvolvido Por: Thiago Moura";
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(905, 10);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(213, 13);
-            this.linkLabel2.TabIndex = 2;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "https://www.linkedin.com/in/thiago-moura/";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkLinkDin_LinkClicked);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(650, 10);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(150, 13);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "https://github.com/thiagoluzia";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkGithub_LinkClicked);
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(145)))), ((int)(((byte)(7)))));
-            this.panel8.BackgroundImage = global::UI.Properties.Resources.baseline_notification_important_white_36dp;
-            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Location = new System.Drawing.Point(869, 12);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(99, 83);
-            this.panel8.TabIndex = 11;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(167)))), ((int)(((byte)(80)))));
-            this.panel6.BackgroundImage = global::UI.Properties.Resources.baseline_trending_up_white_36dp;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Location = new System.Drawing.Point(476, 12);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(99, 83);
-            this.panel6.TabIndex = 9;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(63)))), ((int)(((byte)(59)))));
-            this.panel5.BackgroundImage = global::UI.Properties.Resources.baseline_trending_down_white_36dp;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Location = new System.Drawing.Point(83, 12);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(99, 83);
-            this.panel5.TabIndex = 7;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::UI.Properties.Resources._61109;
-            this.pictureBox2.Location = new System.Drawing.Point(873, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(26, 20);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::UI.Properties.Resources.github_logo_318_10832;
-            this.pictureBox1.Location = new System.Drawing.Point(619, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // btnCategoriaDespesa
             // 
@@ -547,6 +194,26 @@
             this.BtnDespesas.UseVisualStyleBackColor = true;
             this.BtnDespesas.Click += new System.EventHandler(this.BtnDespesas_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 97);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(199, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "________________________________";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(78)))), ((int)(((byte)(88)))));
+            this.label2.Location = new System.Drawing.Point(42, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 29);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Finanças";
+            // 
             // btnDashboard
             // 
             this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -563,6 +230,343 @@
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.panel3.Controls.Add(this.PnlCentro);
+            this.panel3.Controls.Add(this.PnlTopo);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(214, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1138, 654);
+            this.panel3.TabIndex = 6;
+            // 
+            // PnlCentro
+            // 
+            this.PnlCentro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
+            this.PnlCentro.Controls.Add(this.PnlNovaReceitaHome);
+            this.PnlCentro.Controls.Add(this.PnlNovaDespesaHome);
+            this.PnlCentro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PnlCentro.Location = new System.Drawing.Point(0, 168);
+            this.PnlCentro.Name = "PnlCentro";
+            this.PnlCentro.Size = new System.Drawing.Size(1138, 486);
+            this.PnlCentro.TabIndex = 7;
+            // 
+            // PnlNovaReceitaHome
+            // 
+            this.PnlNovaReceitaHome.BackColor = System.Drawing.Color.White;
+            this.PnlNovaReceitaHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PnlNovaReceitaHome.Controls.Add(this.BtnReceita);
+            this.PnlNovaReceitaHome.Controls.Add(this.panel12);
+            this.PnlNovaReceitaHome.Location = new System.Drawing.Point(65, 27);
+            this.PnlNovaReceitaHome.Name = "PnlNovaReceitaHome";
+            this.PnlNovaReceitaHome.Size = new System.Drawing.Size(516, 424);
+            this.PnlNovaReceitaHome.TabIndex = 8;
+            // 
+            // BtnReceita
+            // 
+            this.BtnReceita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(167)))), ((int)(((byte)(80)))));
+            this.BtnReceita.FlatAppearance.BorderSize = 0;
+            this.BtnReceita.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnReceita.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnReceita.ForeColor = System.Drawing.Color.White;
+            this.BtnReceita.Location = new System.Drawing.Point(18, 14);
+            this.BtnReceita.Name = "BtnReceita";
+            this.BtnReceita.Size = new System.Drawing.Size(161, 39);
+            this.BtnReceita.TabIndex = 10;
+            this.BtnReceita.Text = "Nova Transação";
+            this.BtnReceita.UseVisualStyleBackColor = false;
+            this.BtnReceita.Click += new System.EventHandler(this.BtnReceita_Click);
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Controls.Add(this.dgvResumoReceitaHome);
+            this.panel12.Controls.Add(this.panel13);
+            this.panel12.Location = new System.Drawing.Point(18, 59);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(481, 351);
+            this.panel12.TabIndex = 9;
+            // 
+            // dgvResumoReceitaHome
+            // 
+            this.dgvResumoReceitaHome.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResumoReceitaHome.Location = new System.Drawing.Point(0, 67);
+            this.dgvResumoReceitaHome.Name = "dgvResumoReceitaHome";
+            this.dgvResumoReceitaHome.ReadOnly = true;
+            this.dgvResumoReceitaHome.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvResumoReceitaHome.Size = new System.Drawing.Size(481, 284);
+            this.dgvResumoReceitaHome.TabIndex = 4;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(128)))), ((int)(((byte)(227)))));
+            this.panel13.Controls.Add(this.label1);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(481, 57);
+            this.panel13.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(4, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(223, 18);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Lançamentos de Receita";
+            // 
+            // PnlNovaDespesaHome
+            // 
+            this.PnlNovaDespesaHome.BackColor = System.Drawing.Color.White;
+            this.PnlNovaDespesaHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PnlNovaDespesaHome.Controls.Add(this.BtnDespesa);
+            this.PnlNovaDespesaHome.Controls.Add(this.panel14);
+            this.PnlNovaDespesaHome.Location = new System.Drawing.Point(602, 27);
+            this.PnlNovaDespesaHome.Name = "PnlNovaDespesaHome";
+            this.PnlNovaDespesaHome.Size = new System.Drawing.Size(516, 424);
+            this.PnlNovaDespesaHome.TabIndex = 7;
+            // 
+            // BtnDespesa
+            // 
+            this.BtnDespesa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(63)))), ((int)(((byte)(59)))));
+            this.BtnDespesa.FlatAppearance.BorderSize = 0;
+            this.BtnDespesa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDespesa.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDespesa.ForeColor = System.Drawing.Color.White;
+            this.BtnDespesa.Location = new System.Drawing.Point(16, 14);
+            this.BtnDespesa.Name = "BtnDespesa";
+            this.BtnDespesa.Size = new System.Drawing.Size(161, 39);
+            this.BtnDespesa.TabIndex = 11;
+            this.BtnDespesa.Text = "Nova Transação";
+            this.BtnDespesa.UseVisualStyleBackColor = false;
+            this.BtnDespesa.Click += new System.EventHandler(this.BtnDespesa_Click_1);
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.White;
+            this.panel14.Controls.Add(this.dgvResumoDespesaHome);
+            this.panel14.Controls.Add(this.panel15);
+            this.panel14.Location = new System.Drawing.Point(16, 59);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(484, 351);
+            this.panel14.TabIndex = 10;
+            // 
+            // dgvResumoDespesaHome
+            // 
+            this.dgvResumoDespesaHome.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResumoDespesaHome.Location = new System.Drawing.Point(0, 67);
+            this.dgvResumoDespesaHome.Name = "dgvResumoDespesaHome";
+            this.dgvResumoDespesaHome.ReadOnly = true;
+            this.dgvResumoDespesaHome.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvResumoDespesaHome.Size = new System.Drawing.Size(484, 284);
+            this.dgvResumoDespesaHome.TabIndex = 4;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(128)))), ((int)(((byte)(227)))));
+            this.panel15.Controls.Add(this.label8);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel15.Location = new System.Drawing.Point(0, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(484, 57);
+            this.panel15.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(3, 18);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(223, 18);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Lançamentos de Depesa";
+            // 
+            // PnlTopo
+            // 
+            this.PnlTopo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
+            this.PnlTopo.Controls.Add(this.panel8);
+            this.PnlTopo.Controls.Add(this.panel9);
+            this.PnlTopo.Controls.Add(this.panel6);
+            this.PnlTopo.Controls.Add(this.panel7);
+            this.PnlTopo.Controls.Add(this.panel5);
+            this.PnlTopo.Controls.Add(this.panel4);
+            this.PnlTopo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PnlTopo.Location = new System.Drawing.Point(0, 0);
+            this.PnlTopo.Name = "PnlTopo";
+            this.PnlTopo.Size = new System.Drawing.Size(1138, 168);
+            this.PnlTopo.TabIndex = 6;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(145)))), ((int)(((byte)(7)))));
+            this.panel8.BackgroundImage = global::UI.Properties.Resources.baseline_notification_important_white_36dp;
+            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Location = new System.Drawing.Point(869, 12);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(99, 83);
+            this.panel8.TabIndex = 11;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Controls.Add(this.lblTotalGeral);
+            this.panel9.Location = new System.Drawing.Point(851, 50);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(267, 100);
+            this.panel9.TabIndex = 10;
+            // 
+            // lblTotalGeral
+            // 
+            this.lblTotalGeral.AutoSize = true;
+            this.lblTotalGeral.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalGeral.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(78)))), ((int)(((byte)(88)))));
+            this.lblTotalGeral.Location = new System.Drawing.Point(70, 52);
+            this.lblTotalGeral.Name = "lblTotalGeral";
+            this.lblTotalGeral.Size = new System.Drawing.Size(118, 29);
+            this.lblTotalGeral.TabIndex = 9;
+            this.lblTotalGeral.Text = "1500000";
+            this.lblTotalGeral.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(167)))), ((int)(((byte)(80)))));
+            this.panel6.BackgroundImage = global::UI.Properties.Resources.baseline_trending_up_white_36dp;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel6.Location = new System.Drawing.Point(476, 12);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(99, 83);
+            this.panel6.TabIndex = 9;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.lblReceitas);
+            this.panel7.Location = new System.Drawing.Point(458, 50);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(267, 100);
+            this.panel7.TabIndex = 8;
+            // 
+            // lblReceitas
+            // 
+            this.lblReceitas.AutoSize = true;
+            this.lblReceitas.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReceitas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(78)))), ((int)(((byte)(88)))));
+            this.lblReceitas.Location = new System.Drawing.Point(66, 52);
+            this.lblReceitas.Name = "lblReceitas";
+            this.lblReceitas.Size = new System.Drawing.Size(118, 29);
+            this.lblReceitas.TabIndex = 9;
+            this.lblReceitas.Text = "1500000";
+            this.lblReceitas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(63)))), ((int)(((byte)(59)))));
+            this.panel5.BackgroundImage = global::UI.Properties.Resources.baseline_trending_down_white_36dp;
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Location = new System.Drawing.Point(83, 12);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(99, 83);
+            this.panel5.TabIndex = 7;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.lblDespesas);
+            this.panel4.Location = new System.Drawing.Point(65, 50);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(267, 100);
+            this.panel4.TabIndex = 6;
+            // 
+            // lblDespesas
+            // 
+            this.lblDespesas.AutoSize = true;
+            this.lblDespesas.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDespesas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(78)))), ((int)(((byte)(88)))));
+            this.lblDespesas.Location = new System.Drawing.Point(67, 52);
+            this.lblDespesas.Name = "lblDespesas";
+            this.lblDespesas.Size = new System.Drawing.Size(118, 29);
+            this.lblDespesas.TabIndex = 8;
+            this.lblDespesas.Text = "1500000";
+            this.lblDespesas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.linkLabel2);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.linkLabel1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(214, 654);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1138, 35);
+            this.panel2.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(78)))), ((int)(((byte)(88)))));
+            this.label7.Location = new System.Drawing.Point(6, 3);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(400, 29);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Desenvolvido Por: Thiago Moura";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::UI.Properties.Resources._61109;
+            this.pictureBox2.Location = new System.Drawing.Point(873, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(26, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(905, 10);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(213, 13);
+            this.linkLabel2.TabIndex = 2;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "https://www.linkedin.com/in/thiago-moura/";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkLinkDin_LinkClicked);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::UI.Properties.Resources.github_logo_318_10832;
+            this.pictureBox1.Location = new System.Drawing.Point(619, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(26, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(650, 10);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(150, 13);
+            this.linkLabel1.TabIndex = 0;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "https://github.com/thiagoluzia";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkGithub_LinkClicked);
             // 
             // FrmHome
             // 

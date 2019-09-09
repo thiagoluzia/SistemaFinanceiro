@@ -53,7 +53,7 @@
             this.PnlCadCategoriaReceita.Controls.Add(this.panel15);
             this.PnlCadCategoriaReceita.Location = new System.Drawing.Point(14, 12);
             this.PnlCadCategoriaReceita.Name = "PnlCadCategoriaReceita";
-            this.PnlCadCategoriaReceita.Size = new System.Drawing.Size(476, 396);
+            this.PnlCadCategoriaReceita.Size = new System.Drawing.Size(349, 396);
             this.PnlCadCategoriaReceita.TabIndex = 11;
             // 
             // btnSalvar
@@ -86,7 +86,7 @@
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.White;
-            this.btnExcluir.Location = new System.Drawing.Point(245, 353);
+            this.btnExcluir.Location = new System.Drawing.Point(105, 353);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(110, 28);
             this.btnExcluir.TabIndex = 14;
@@ -101,7 +101,7 @@
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.ForeColor = System.Drawing.Color.White;
-            this.btnAlterar.Location = new System.Drawing.Point(361, 353);
+            this.btnAlterar.Location = new System.Drawing.Point(221, 353);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(110, 28);
             this.btnAlterar.TabIndex = 13;
@@ -111,10 +111,14 @@
             // 
             // dgvLisCategoriaReceita
             // 
+            this.dgvLisCategoriaReceita.AllowUserToAddRows = false;
+            this.dgvLisCategoriaReceita.AllowUserToDeleteRows = false;
             this.dgvLisCategoriaReceita.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLisCategoriaReceita.Location = new System.Drawing.Point(3, 144);
             this.dgvLisCategoriaReceita.Name = "dgvLisCategoriaReceita";
-            this.dgvLisCategoriaReceita.Size = new System.Drawing.Size(468, 203);
+            this.dgvLisCategoriaReceita.ReadOnly = true;
+            this.dgvLisCategoriaReceita.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvLisCategoriaReceita.Size = new System.Drawing.Size(328, 203);
             this.dgvLisCategoriaReceita.TabIndex = 4;
             // 
             // panel15
@@ -124,7 +128,7 @@
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(0, 0);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(474, 57);
+            this.panel15.Size = new System.Drawing.Size(347, 57);
             this.panel15.TabIndex = 0;
             // 
             // label8
@@ -143,7 +147,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.ClientSize = new System.Drawing.Size(505, 421);
+            this.ClientSize = new System.Drawing.Size(378, 421);
             this.Controls.Add(this.PnlCadCategoriaReceita);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmCategoriaReceita";

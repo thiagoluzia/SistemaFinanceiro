@@ -105,9 +105,13 @@
             // 
             // DgvListDespesa
             // 
+            this.DgvListDespesa.AllowUserToAddRows = false;
+            this.DgvListDespesa.AllowUserToDeleteRows = false;
             this.DgvListDespesa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvListDespesa.Location = new System.Drawing.Point(7, 109);
             this.DgvListDespesa.Name = "DgvListDespesa";
+            this.DgvListDespesa.ReadOnly = true;
+            this.DgvListDespesa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvListDespesa.Size = new System.Drawing.Size(959, 273);
             this.DgvListDespesa.TabIndex = 4;
             // 

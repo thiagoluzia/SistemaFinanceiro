@@ -30,8 +30,6 @@
         {
             this.PnlCadConta = new System.Windows.Forms.Panel();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.txtObservacaoCadConta = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtDescricaoCadConta = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -48,15 +46,16 @@
             // 
             this.PnlCadConta.BackColor = System.Drawing.Color.White;
             this.PnlCadConta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PnlCadConta.Controls.Add(this.btnExcluir);
             this.PnlCadConta.Controls.Add(this.btnSalvar);
-            this.PnlCadConta.Controls.Add(this.txtObservacaoCadConta);
-            this.PnlCadConta.Controls.Add(this.label7);
+            this.PnlCadConta.Controls.Add(this.btnAlterar);
+            this.PnlCadConta.Controls.Add(this.DgvListConta);
             this.PnlCadConta.Controls.Add(this.txtDescricaoCadConta);
             this.PnlCadConta.Controls.Add(this.label2);
             this.PnlCadConta.Controls.Add(this.panel2);
             this.PnlCadConta.Location = new System.Drawing.Point(12, 12);
             this.PnlCadConta.Name = "PnlCadConta";
-            this.PnlCadConta.Size = new System.Drawing.Size(380, 282);
+            this.PnlCadConta.Size = new System.Drawing.Size(342, 376);
             this.PnlCadConta.TabIndex = 2;
             // 
             // btnSalvar
@@ -64,34 +63,15 @@
             this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(128)))), ((int)(((byte)(227)))));
             this.btnSalvar.FlatAppearance.BorderSize = 0;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(10, 234);
+            this.btnSalvar.Location = new System.Drawing.Point(236, 82);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(358, 35);
+            this.btnSalvar.Size = new System.Drawing.Size(90, 23);
             this.btnSalvar.TabIndex = 15;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // txtObservacaoCadConta
-            // 
-            this.txtObservacaoCadConta.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservacaoCadConta.Location = new System.Drawing.Point(10, 127);
-            this.txtObservacaoCadConta.Multiline = true;
-            this.txtObservacaoCadConta.Name = "txtObservacaoCadConta";
-            this.txtObservacaoCadConta.Size = new System.Drawing.Size(358, 80);
-            this.txtObservacaoCadConta.TabIndex = 14;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(7, 108);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 16);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Observações";
             // 
             // txtDescricaoCadConta
             // 
@@ -118,7 +98,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(378, 47);
+            this.panel2.Size = new System.Drawing.Size(340, 47);
             this.panel2.TabIndex = 0;
             // 
             // Conta
@@ -126,7 +106,7 @@
             this.Conta.AutoSize = true;
             this.Conta.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Conta.ForeColor = System.Drawing.Color.White;
-            this.Conta.Location = new System.Drawing.Point(96, 11);
+            this.Conta.Location = new System.Drawing.Point(70, 10);
             this.Conta.Name = "Conta";
             this.Conta.Size = new System.Drawing.Size(186, 23);
             this.Conta.TabIndex = 0;
@@ -139,7 +119,7 @@
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.White;
-            this.btnExcluir.Location = new System.Drawing.Point(647, 254);
+            this.btnExcluir.Location = new System.Drawing.Point(100, 335);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(110, 28);
             this.btnExcluir.TabIndex = 17;
@@ -154,7 +134,7 @@
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.ForeColor = System.Drawing.Color.White;
-            this.btnAlterar.Location = new System.Drawing.Point(763, 254);
+            this.btnAlterar.Location = new System.Drawing.Point(216, 335);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(110, 28);
             this.btnAlterar.TabIndex = 16;
@@ -164,10 +144,15 @@
             // 
             // DgvListConta
             // 
+            this.DgvListConta.AllowUserToAddRows = false;
+            this.DgvListConta.AllowUserToDeleteRows = false;
+            this.DgvListConta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.DgvListConta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvListConta.Location = new System.Drawing.Point(403, 45);
+            this.DgvListConta.Location = new System.Drawing.Point(10, 126);
             this.DgvListConta.Name = "DgvListConta";
-            this.DgvListConta.Size = new System.Drawing.Size(470, 203);
+            this.DgvListConta.ReadOnly = true;
+            this.DgvListConta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvListConta.Size = new System.Drawing.Size(316, 203);
             this.DgvListConta.TabIndex = 15;
             // 
             // frmConta
@@ -175,10 +160,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.ClientSize = new System.Drawing.Size(889, 305);
-            this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnAlterar);
-            this.Controls.Add(this.DgvListConta);
+            this.ClientSize = new System.Drawing.Size(367, 399);
             this.Controls.Add(this.PnlCadConta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmConta";
@@ -197,8 +179,6 @@
         #endregion
 
         private System.Windows.Forms.Panel PnlCadConta;
-        private System.Windows.Forms.TextBox txtObservacaoCadConta;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDescricaoCadConta;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;

@@ -90,12 +90,12 @@ namespace UI
         private void CarregarCombos()
         {
             cboCategoriaDespesa.DataSource = catBll.Exibir();
-            cboCategoriaDespesa.DisplayMember = "desc_categoria_despesa";
+            cboCategoriaDespesa.DisplayMember = "DESCRIÇÃO";
             cboCategoriaDespesa.ValueMember = "id";
 
 
             cboConta.DataSource = contaBll.Exibir();
-            cboConta.DisplayMember = "desc_conta";
+            cboConta.DisplayMember = "DESCRIÇÃO";
             cboConta.ValueMember = "id";
         }
 

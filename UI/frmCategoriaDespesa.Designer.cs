@@ -53,7 +53,7 @@
             this.PnlCadCategoriaDespesa.Controls.Add(this.panel15);
             this.PnlCadCategoriaDespesa.Location = new System.Drawing.Point(15, 12);
             this.PnlCadCategoriaDespesa.Name = "PnlCadCategoriaDespesa";
-            this.PnlCadCategoriaDespesa.Size = new System.Drawing.Size(476, 396);
+            this.PnlCadCategoriaDespesa.Size = new System.Drawing.Size(345, 396);
             this.PnlCadCategoriaDespesa.TabIndex = 10;
             // 
             // btnSalvar
@@ -86,7 +86,7 @@
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.White;
-            this.btnExcluir.Location = new System.Drawing.Point(245, 353);
+            this.btnExcluir.Location = new System.Drawing.Point(105, 353);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(110, 28);
             this.btnExcluir.TabIndex = 14;
@@ -101,7 +101,7 @@
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.ForeColor = System.Drawing.Color.White;
-            this.btnAlterar.Location = new System.Drawing.Point(361, 353);
+            this.btnAlterar.Location = new System.Drawing.Point(221, 353);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(110, 28);
             this.btnAlterar.TabIndex = 13;
@@ -114,7 +114,9 @@
             this.dgvListDespesa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvListDespesa.Location = new System.Drawing.Point(3, 144);
             this.dgvListDespesa.Name = "dgvListDespesa";
-            this.dgvListDespesa.Size = new System.Drawing.Size(468, 203);
+            this.dgvListDespesa.ReadOnly = true;
+            this.dgvListDespesa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvListDespesa.Size = new System.Drawing.Size(328, 203);
             this.dgvListDespesa.TabIndex = 4;
             // 
             // panel15
@@ -124,7 +126,7 @@
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(0, 0);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(474, 57);
+            this.panel15.Size = new System.Drawing.Size(343, 57);
             this.panel15.TabIndex = 0;
             // 
             // label8
@@ -143,7 +145,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.ClientSize = new System.Drawing.Size(505, 421);
+            this.ClientSize = new System.Drawing.Size(367, 421);
             this.Controls.Add(this.PnlCadCategoriaDespesa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmCategoriaDespesa";
