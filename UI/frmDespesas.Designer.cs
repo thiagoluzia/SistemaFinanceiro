@@ -70,7 +70,7 @@
             this.PnlListDespesa.Controls.Add(this.panel2);
             this.PnlListDespesa.Location = new System.Drawing.Point(15, 131);
             this.PnlListDespesa.Name = "PnlListDespesa";
-            this.PnlListDespesa.Size = new System.Drawing.Size(971, 428);
+            this.PnlListDespesa.Size = new System.Drawing.Size(687, 428);
             this.PnlListDespesa.TabIndex = 4;
             // 
             // btnExcluir
@@ -80,7 +80,7 @@
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.White;
-            this.btnExcluir.Location = new System.Drawing.Point(740, 388);
+            this.btnExcluir.Location = new System.Drawing.Point(446, 388);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(110, 28);
             this.btnExcluir.TabIndex = 19;
@@ -95,7 +95,7 @@
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.ForeColor = System.Drawing.Color.White;
-            this.btnAlterar.Location = new System.Drawing.Point(856, 388);
+            this.btnAlterar.Location = new System.Drawing.Point(562, 388);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(110, 28);
             this.btnAlterar.TabIndex = 18;
@@ -112,7 +112,7 @@
             this.DgvListDespesa.Name = "DgvListDespesa";
             this.DgvListDespesa.ReadOnly = true;
             this.DgvListDespesa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvListDespesa.Size = new System.Drawing.Size(959, 273);
+            this.DgvListDespesa.Size = new System.Drawing.Size(665, 273);
             this.DgvListDespesa.TabIndex = 4;
             // 
             // btnPesquisarDespesa
@@ -122,7 +122,7 @@
             this.btnPesquisarDespesa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPesquisarDespesa.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisarDespesa.ForeColor = System.Drawing.Color.White;
-            this.btnPesquisarDespesa.Location = new System.Drawing.Point(885, 62);
+            this.btnPesquisarDespesa.Location = new System.Drawing.Point(591, 62);
             this.btnPesquisarDespesa.Name = "btnPesquisarDespesa";
             this.btnPesquisarDespesa.Size = new System.Drawing.Size(81, 27);
             this.btnPesquisarDespesa.TabIndex = 3;
@@ -133,7 +133,7 @@
             // txtPesquisarDespesa
             // 
             this.txtPesquisarDespesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisarDespesa.Location = new System.Drawing.Point(672, 63);
+            this.txtPesquisarDespesa.Location = new System.Drawing.Point(378, 63);
             this.txtPesquisarDespesa.Name = "txtPesquisarDespesa";
             this.txtPesquisarDespesa.Size = new System.Drawing.Size(207, 26);
             this.txtPesquisarDespesa.TabIndex = 1;
@@ -146,7 +146,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(969, 57);
+            this.panel2.Size = new System.Drawing.Size(685, 57);
             this.panel2.TabIndex = 0;
             // 
             // label1
@@ -175,7 +175,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.ClientSize = new System.Drawing.Size(996, 576);
+            this.ClientSize = new System.Drawing.Size(715, 576);
             this.Controls.Add(this.BtnCadDespesa);
             this.Controls.Add(this.PnlListDespesa);
             this.Controls.Add(this.label2);

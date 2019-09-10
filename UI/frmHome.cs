@@ -114,7 +114,7 @@ namespace UI
 
             if (receita < despesa)
             {
-                panel8.BackgroundImage = global::UI.Properties.Resources.negativo;
+                panel8.BackgroundImage = global::UI.Properties.Resources.negativo; 
             }
             else if (receita > despesa)
             {

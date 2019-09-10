@@ -80,6 +80,9 @@
             this.mskValor.Name = "mskValor";
             this.mskValor.Size = new System.Drawing.Size(132, 23);
             this.mskValor.TabIndex = 1;
+            this.mskValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.mskValor.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskValor_MaskInputRejected);
+            this.mskValor.TextChanged += new System.EventHandler(this.mskValor_TextChanged);
             // 
             // mskVencimento
             // 

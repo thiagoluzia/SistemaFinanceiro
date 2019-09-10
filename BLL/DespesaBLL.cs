@@ -21,7 +21,6 @@ namespace BLL
             dto.Descricao.Trim();
             string descricao = dto.Descricao.Replace("'", "''");
 
-            dto.Valor.Trim();
             string valor = dto.Valor.Replace(",", ".");
 
             dto.Observacao.Trim();
@@ -60,7 +59,6 @@ namespace BLL
             dto.Descricao.Trim();
             string descricao = dto.Descricao.Replace("'", "''");
 
-            dto.Valor.Trim();
             string valor = dto.Valor.Replace(",", ".");
 
             dto.Observacao.Trim();
@@ -68,7 +66,7 @@ namespace BLL
 
             banco = new AcessoBancoDados();
             banco.Conectar();
-            string comando = "UPDATE despesa SET desc_despesa = '" + dto.Descricao + "', valor = '" + valor + "', id_categoria_despesa = '" + dto.CategoriaDespesa + "', id_conta = '" + dto.Conta + "', data_vencimento = '" + dto.DataVencimanto.ToString("yyyy-MM-dds") + "', observacao = '" + observacao + "' WHERE id = '" + dto.Id + "'";
+            string comando = "UPDATE despesa SET desc_despesa = '" + dto.Descricao + "', valor = '" + valor + "', id_categoria_despesa = '" + dto.CategoriaDespesa + "', id_conta = '" + dto.Conta + "', data_vencimento = '" + dto.DataVencimanto.ToString("yyyy-MM-dd") + "', observacao = '" + observacao + "' WHERE id = '" + dto.Id + "'";
             banco.ExecutarComandoSql(comando);
         }
         #endregion

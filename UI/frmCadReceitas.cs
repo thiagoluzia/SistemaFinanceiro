@@ -66,10 +66,10 @@ namespace UI
             else//Alterar
             {
                 this.dto.Descricao = txtDescricaoReceita.Text;
+                //o uso de mascara faz mais sentido
                 this.dto.Valor = mskValor.Text;
                 this.dto.CategoriaReceita = (int)cboCategoriaReceita.SelectedValue;
                 this.dto.Conta = (int)cboConta.SelectedValue;
-                //this.dto.DataVencimento = DateTime.Parse(dtpDataVencimentoReceita.Text);
                 this.dto.DataVencimento = DateTime.Parse(mskVencimento.Text);
                 this.dto.Observacao = txtObservacaoReceita.Text;
                 bll.Atualizar(this.dto);
@@ -114,21 +114,23 @@ namespace UI
         }
         #endregion
 
+        //Trabalhando com mask para valor decimal, ou seja so aceita numero.
         public void mskValor_TextChanged(object sender, EventArgs e)
         {
+            //TextChanged ou texto alterado,  neste caso estamos tratando para que seja aceito somente valores numerico, ponto e virgula. Pois os mesmos receberão um tratamento antes de enviar para o banco
             char[] vet = mskValor.Text.ToCharArray();
             string novoValor = "";
             double result = 0;
 
             for (int i = 0; i < vet.Length; i++)
             {
-                if (double.TryParse(vet[i].ToString(), out result) == true)
+                if (double.TryParse(vet[i].ToString(), out result) == true || vet[i].ToString() == "," || vet[i].ToString() == ".")
                 {
                     novoValor += vet[i];
                 }
-
             }
             mskValor.Text = novoValor;
+            //foi feito no evento MaskInputRejected um procedimento par ao statrt da digitação da direita para esquerda
         }
 
         private void mskValor_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -138,7 +140,7 @@ namespace UI
 
         private void mskValor_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //SEMELHANTE AO QUE O BRENO PASSOU 
+            //SEMELHANTE AO QUE O BRENO PASSOU ESTUDAR MELHOR
 
             //if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
             //{
@@ -151,5 +153,6 @@ namespace UI
             //    MessageBox.Show("este campo aceita somente uma virgula");
             //}
         }
+
     }
 }

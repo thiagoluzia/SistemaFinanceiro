@@ -37,7 +37,6 @@ namespace UI
                 CarregarCombos();
                 cboCategoriaDespesa.SelectedValue = dto.CategoriaDespesa;
                 cboConta.SelectedValue = dto.Conta;
-                //dtpDataVencimentoDespesa.Text = dto.DataVencimanto.ToString();
                 mskVencimento.Text = dto.DataVencimanto.ToString();
                 txtObservacaoDespesa.Text = dto.Observacao.ToString();
             }
@@ -110,5 +109,23 @@ namespace UI
         }
 
         #endregion
+
+        private void mskValor_TextChanged(object sender, EventArgs e)
+        {
+            char[] vet = mskValor.Text.ToCharArray();
+            string novoValor = "";
+            double result = 0;
+            for(int i = 0; i < vet.Length; i++)
+            {
+                if (double.TryParse(vet[i].ToString(), out result) == true || vet[i].ToString() == "." || vet[i].ToString() == "," )
+                    novoValor += vet[i];
+            }
+            mskValor.Text = novoValor;
+        }
+
+        private void mskValor_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            mskValor.SelectionStart = mskValor.Text.Length + 1;
+        }
     }
 }

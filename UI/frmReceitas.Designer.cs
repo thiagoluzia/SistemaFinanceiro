@@ -55,7 +55,7 @@
             this.PnlListReceita.Controls.Add(this.panel2);
             this.PnlListReceita.Location = new System.Drawing.Point(13, 130);
             this.PnlListReceita.Name = "PnlListReceita";
-            this.PnlListReceita.Size = new System.Drawing.Size(971, 428);
+            this.PnlListReceita.Size = new System.Drawing.Size(687, 428);
             this.PnlListReceita.TabIndex = 0;
             // 
             // btnExcluir
@@ -65,7 +65,7 @@
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.White;
-            this.btnExcluir.Location = new System.Drawing.Point(740, 388);
+            this.btnExcluir.Location = new System.Drawing.Point(446, 388);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(110, 28);
             this.btnExcluir.TabIndex = 19;
@@ -80,7 +80,7 @@
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.ForeColor = System.Drawing.Color.White;
-            this.btnAlterar.Location = new System.Drawing.Point(856, 388);
+            this.btnAlterar.Location = new System.Drawing.Point(562, 388);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(110, 28);
             this.btnAlterar.TabIndex = 18;
@@ -97,7 +97,7 @@
             this.DgvCadListReceita.Name = "DgvCadListReceita";
             this.DgvCadListReceita.ReadOnly = true;
             this.DgvCadListReceita.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvCadListReceita.Size = new System.Drawing.Size(959, 273);
+            this.DgvCadListReceita.Size = new System.Drawing.Size(665, 273);
             this.DgvCadListReceita.TabIndex = 4;
             // 
             // btnBuscar
@@ -107,7 +107,7 @@
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(885, 62);
+            this.btnBuscar.Location = new System.Drawing.Point(591, 62);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(81, 27);
             this.btnBuscar.TabIndex = 3;
@@ -118,7 +118,7 @@
             // txtPesquisarReceita
             // 
             this.txtPesquisarReceita.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesquisarReceita.Location = new System.Drawing.Point(672, 63);
+            this.txtPesquisarReceita.Location = new System.Drawing.Point(378, 63);
             this.txtPesquisarReceita.Name = "txtPesquisarReceita";
             this.txtPesquisarReceita.Size = new System.Drawing.Size(207, 26);
             this.txtPesquisarReceita.TabIndex = 1;
@@ -131,7 +131,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(969, 57);
+            this.panel2.Size = new System.Drawing.Size(685, 57);
             this.panel2.TabIndex = 0;
             // 
             // label1
@@ -175,7 +175,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
-            this.ClientSize = new System.Drawing.Size(996, 576);
+            this.ClientSize = new System.Drawing.Size(715, 576);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnNovaReceita);
             this.Controls.Add(this.PnlListReceita);
