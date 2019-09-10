@@ -15,12 +15,15 @@ namespace BLL
             dto.Descricao.Trim();
             string descricao = dto.Descricao.Replace("'", "''");
 
+            dto.Valor.Trim();
+            string valor = dto.Valor.Replace(",", ".");
+
             dto.Observacao.Trim();
             string observacao = dto.Observacao.Replace("'", "''");
 
             banco = new AcessoBancoDados();
             banco.Conectar();
-            string comando = "INSERT INTO receita(desc_receita, valor, id_categoria_receita, id_conta, data_vencimento, observacao) VALUES('" + descricao + "','" + dto.Valor + "','" + dto.CategoriaReceita + "', '" + dto.Conta + "', '" + dto.DataVencimento.ToString("yyyy-MM-dd") + "', '" + observacao + "')";
+            string comando = "INSERT INTO receita(desc_receita, valor, id_categoria_receita, id_conta, data_vencimento, observacao) VALUES('" + descricao + "','" + valor + "','" + dto.CategoriaReceita + "', '" + dto.Conta + "', '" + dto.DataVencimento.ToString("yyyy-MM-dd") + "', '" + observacao + "')";
             banco.ExecutarComandoSql(comando);
         }
         #endregion
@@ -47,13 +50,16 @@ namespace BLL
             dto.Descricao.Trim();
             string descricao = dto.Descricao.Replace("'", "''");
 
+            dto.Valor.Trim();
+            string valor = dto.Valor.Replace(",", ".");
+
             dto.Observacao.Trim();
             string observacao = dto.Observacao.Replace("'", "''");
 
             banco = new AcessoBancoDados();
             banco.Conectar();
             string comando = "UPDATE receita SET desc_receita = '" + descricao + "'" +
-                ", valor = '" + dto.Valor + "', id_categoria_receita = '" + dto.CategoriaReceita + "'" +
+                ", valor = '" + valor + "', id_categoria_receita = '" + dto.CategoriaReceita + "'" +
                 ", id_conta = '" + dto.Conta + "', data_vencimento = '" + dto.DataVencimento + "'" +
                 ", observacao = '" + observacao + "' WHERE id = '" + dto.Id + "'";
             banco.ExecutarComandoSql(comando);

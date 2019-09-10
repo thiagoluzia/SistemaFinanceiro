@@ -7,7 +7,7 @@ namespace DTO
         #region Atributos
         private int id;
         private string descricao;
-        private double valor;
+        private string valor;
         private string descCategoria;
         private int categoriaDespesa;
         private string descConta;
@@ -19,7 +19,7 @@ namespace DTO
         #region Propriedades
         public int Id { get => id; set => id = value; }
         public string Descricao { get => descricao; set => descricao = value; }
-        public double Valor { get => valor; set => valor = value; }
+        public string Valor { get => valor; set => valor = value; }
         public string DescCategoria { get => descCategoria; set => descCategoria = value; }
         public int CategoriaDespesa { get => categoriaDespesa; set => categoriaDespesa = value; }
         public string DescConta { get => descConta; set => descConta = value; }

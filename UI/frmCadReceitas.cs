@@ -34,7 +34,7 @@ namespace UI
             if (this.dto != null)//sinifica que ele esta preenchido, com isso os campos sao preenchidos para update
             {
                 txtDescricaoReceita.Text = dto.Descricao;
-                txtValorReceita.Text = Convert.ToString(dto.Valor);
+                mskValor.Text = dto.Valor;
                 CarregarCombos();//carregar o combo com os dados de update
                 cboCategoriaReceita.SelectedValue = dto.CategoriaReceita;
                 cboConta.SelectedValue = dto.Conta;
@@ -55,7 +55,8 @@ namespace UI
             {
                 ReceitaDTO dto = new ReceitaDTO();
                 dto.Descricao = txtDescricaoReceita.Text;
-                dto.Valor = Convert.ToDouble(txtValorReceita.Text);
+                string valor = mskValor.Text;
+                dto.Valor = valor;
                 dto.CategoriaReceita = (int)cboCategoriaReceita.SelectedValue;
                 dto.Conta = (int)cboConta.SelectedValue;
                 dto.DataVencimento = Convert.ToDateTime(mskVencimento.Text);
@@ -66,7 +67,7 @@ namespace UI
             else//Alterar
             {
                 this.dto.Descricao = txtDescricaoReceita.Text;
-                this.dto.Valor = Convert.ToDouble(txtValorReceita.Text);
+                this.dto.Valor = mskValor.Text;
                 this.dto.CategoriaReceita = (int)cboCategoriaReceita.SelectedValue;
                 this.dto.Conta = (int)cboConta.SelectedValue;
                 //this.dto.DataVencimento = DateTime.Parse(dtpDataVencimentoReceita.Text);
@@ -104,7 +105,7 @@ namespace UI
         {
             //txtIdReceita.Text = string.Empty;
             txtDescricaoReceita.Text = string.Empty;
-            txtValorReceita.Text = string.Empty;
+            mskValor.Text = string.Empty;
             CarregarCombos();
             mskVencimento.Text = string.Empty;
             txtObservacaoReceita.Text = string.Empty;

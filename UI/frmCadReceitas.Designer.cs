@@ -34,7 +34,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cboConta = new System.Windows.Forms.ComboBox();
             this.cboCategoriaReceita = new System.Windows.Forms.ComboBox();
-            this.txtValorReceita = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDescricaoReceita = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.btnCadastrarCategoriaReceita = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.mskVencimento = new System.Windows.Forms.MaskedTextBox();
+            this.mskValor = new System.Windows.Forms.MaskedTextBox();
             this.panel2.SuspendLayout();
             this.PnlCadReceita.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +56,7 @@
             this.txtObservacaoReceita.Multiline = true;
             this.txtObservacaoReceita.Name = "txtObservacaoReceita";
             this.txtObservacaoReceita.Size = new System.Drawing.Size(358, 80);
-            this.txtObservacaoReceita.TabIndex = 14;
+            this.txtObservacaoReceita.TabIndex = 5;
             // 
             // label7
             // 
@@ -65,7 +65,7 @@
             this.label7.Location = new System.Drawing.Point(7, 199);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 16);
-            this.label7.TabIndex = 13;
+            this.label7.TabIndex = 7;
             this.label7.Text = "Observações";
             // 
             // label5
@@ -75,7 +75,7 @@
             this.label5.Location = new System.Drawing.Point(8, 153);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 16);
-            this.label5.TabIndex = 10;
+            this.label5.TabIndex = 8;
             this.label5.Text = "Conta";
             // 
             // label4
@@ -85,7 +85,7 @@
             this.label4.Location = new System.Drawing.Point(7, 108);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 16);
-            this.label4.TabIndex = 9;
+            this.label4.TabIndex = 11;
             this.label4.Text = "Categoria";
             // 
             // cboConta
@@ -95,7 +95,7 @@
             this.cboConta.Location = new System.Drawing.Point(11, 172);
             this.cboConta.Name = "cboConta";
             this.cboConta.Size = new System.Drawing.Size(135, 24);
-            this.cboConta.TabIndex = 8;
+            this.cboConta.TabIndex = 4;
             // 
             // cboCategoriaReceita
             // 
@@ -104,15 +104,7 @@
             this.cboCategoriaReceita.Location = new System.Drawing.Point(10, 127);
             this.cboCategoriaReceita.Name = "cboCategoriaReceita";
             this.cboCategoriaReceita.Size = new System.Drawing.Size(176, 24);
-            this.cboCategoriaReceita.TabIndex = 7;
-            // 
-            // txtValorReceita
-            // 
-            this.txtValorReceita.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorReceita.Location = new System.Drawing.Point(236, 82);
-            this.txtValorReceita.Name = "txtValorReceita";
-            this.txtValorReceita.Size = new System.Drawing.Size(132, 23);
-            this.txtValorReceita.TabIndex = 6;
+            this.cboCategoriaReceita.TabIndex = 2;
             // 
             // label3
             // 
@@ -121,7 +113,7 @@
             this.label3.Location = new System.Drawing.Point(233, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 16);
-            this.label3.TabIndex = 5;
+            this.label3.TabIndex = 12;
             this.label3.Text = "Valor";
             // 
             // txtDescricaoReceita
@@ -130,7 +122,7 @@
             this.txtDescricaoReceita.Location = new System.Drawing.Point(10, 82);
             this.txtDescricaoReceita.Name = "txtDescricaoReceita";
             this.txtDescricaoReceita.Size = new System.Drawing.Size(220, 23);
-            this.txtDescricaoReceita.TabIndex = 4;
+            this.txtDescricaoReceita.TabIndex = 0;
             // 
             // label2
             // 
@@ -139,7 +131,7 @@
             this.label2.Location = new System.Drawing.Point(7, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 16);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 13;
             this.label2.Text = "Descrição";
             // 
             // panel2
@@ -150,7 +142,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(378, 47);
-            this.panel2.TabIndex = 0;
+            this.panel2.TabIndex = 14;
             // 
             // label1
             // 
@@ -167,6 +159,7 @@
             // 
             this.PnlCadReceita.BackColor = System.Drawing.Color.White;
             this.PnlCadReceita.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PnlCadReceita.Controls.Add(this.mskValor);
             this.PnlCadReceita.Controls.Add(this.mskVencimento);
             this.PnlCadReceita.Controls.Add(this.btnSalvar);
             this.PnlCadReceita.Controls.Add(this.btnCadastrarCategoriaReceita);
@@ -177,7 +170,6 @@
             this.PnlCadReceita.Controls.Add(this.label4);
             this.PnlCadReceita.Controls.Add(this.cboConta);
             this.PnlCadReceita.Controls.Add(this.cboCategoriaReceita);
-            this.PnlCadReceita.Controls.Add(this.txtValorReceita);
             this.PnlCadReceita.Controls.Add(this.label3);
             this.PnlCadReceita.Controls.Add(this.txtDescricaoReceita);
             this.PnlCadReceita.Controls.Add(this.label2);
@@ -197,7 +189,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(10, 304);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(358, 35);
-            this.btnSalvar.TabIndex = 20;
+            this.btnSalvar.TabIndex = 6;
             this.btnSalvar.Text = "Salvar Receita";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -212,7 +204,7 @@
             this.btnCadastrarCategoriaReceita.Location = new System.Drawing.Point(192, 127);
             this.btnCadastrarCategoriaReceita.Name = "btnCadastrarCategoriaReceita";
             this.btnCadastrarCategoriaReceita.Size = new System.Drawing.Size(30, 24);
-            this.btnCadastrarCategoriaReceita.TabIndex = 19;
+            this.btnCadastrarCategoriaReceita.TabIndex = 9;
             this.btnCadastrarCategoriaReceita.Text = "+";
             this.btnCadastrarCategoriaReceita.UseVisualStyleBackColor = false;
             this.btnCadastrarCategoriaReceita.Click += new System.EventHandler(this.BtnCategoriaReceita_Click);
@@ -224,7 +216,7 @@
             this.label6.Location = new System.Drawing.Point(233, 108);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 16);
-            this.label6.TabIndex = 18;
+            this.label6.TabIndex = 10;
             this.label6.Text = "Vencimento";
             // 
             // mskVencimento
@@ -234,8 +226,16 @@
             this.mskVencimento.Mask = "00/00/0000";
             this.mskVencimento.Name = "mskVencimento";
             this.mskVencimento.Size = new System.Drawing.Size(100, 23);
-            this.mskVencimento.TabIndex = 21;
+            this.mskVencimento.TabIndex = 3;
             this.mskVencimento.ValidatingType = typeof(System.DateTime);
+            // 
+            // mskValor
+            // 
+            this.mskValor.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskValor.Location = new System.Drawing.Point(236, 82);
+            this.mskValor.Name = "mskValor";
+            this.mskValor.Size = new System.Drawing.Size(132, 23);
+            this.mskValor.TabIndex = 1;
             // 
             // FrmCadReceita
             // 
@@ -264,7 +264,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboConta;
         private System.Windows.Forms.ComboBox cboCategoriaReceita;
-        private System.Windows.Forms.TextBox txtValorReceita;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDescricaoReceita;
         private System.Windows.Forms.Label label2;
@@ -275,5 +274,6 @@
         private System.Windows.Forms.Button btnCadastrarCategoriaReceita;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.MaskedTextBox mskVencimento;
+        private System.Windows.Forms.MaskedTextBox mskValor;
     }
 }

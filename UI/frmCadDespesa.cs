@@ -33,7 +33,7 @@ namespace UI
             if (this.dto != null)
             {
                 txtDescricaoDespesa.Text = dto.Descricao;
-                txtValorDespesa.Text = Convert.ToString(dto.Valor);
+                mskValor.Text = Convert.ToString(dto.Valor);
                 CarregarCombos();
                 cboCategoriaDespesa.SelectedValue = dto.CategoriaDespesa;
                 cboConta.SelectedValue = dto.Conta;
@@ -62,7 +62,7 @@ namespace UI
             {
                 DespesaDTO dto = new DespesaDTO();
                 dto.Descricao = txtDescricaoDespesa.Text;
-                dto.Valor = Convert.ToDouble(txtValorDespesa.Text);
+                dto.Valor = mskValor.Text;
                 dto.CategoriaDespesa = (int)cboCategoriaDespesa.SelectedValue;
                 dto.Conta = (int)cboConta.SelectedValue;
                 dto.DataVencimanto = Convert.ToDateTime(mskVencimento.Text);
@@ -75,7 +75,7 @@ namespace UI
             else//alterar
             {
                 this.dto.Descricao = txtDescricaoDespesa.Text;
-                this.dto.Valor = Convert.ToDouble(txtValorDespesa.Text);
+                this.dto.Valor = mskValor.Text;
                 this.dto.CategoriaDespesa = (int)cboCategoriaDespesa.SelectedValue;
                 this.dto.Conta = (int)cboConta.SelectedValue;
                 this.dto.DataVencimanto = Convert.ToDateTime(mskVencimento.Text);
@@ -103,7 +103,7 @@ namespace UI
         private void LimparCampos()
         {
             txtDescricaoDespesa.Text = string.Empty;
-            txtValorDespesa.Text = string.Empty;
+            mskValor.Text = string.Empty;
             CarregarCombos();
             mskVencimento.Text = string.Empty;
             txtObservacaoDespesa.Text = string.Empty;

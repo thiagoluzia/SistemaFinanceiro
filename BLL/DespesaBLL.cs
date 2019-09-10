@@ -21,12 +21,15 @@ namespace BLL
             dto.Descricao.Trim();
             string descricao = dto.Descricao.Replace("'", "''");
 
+            dto.Valor.Trim();
+            string valor = dto.Valor.Replace(",", ".");
+
             dto.Observacao.Trim();
             string observacao = dto.Observacao.Replace("'", "''");
 
             banco = new AcessoBancoDados();
             banco.Conectar();
-            string comando = "INSERT INTO despesa(desc_despesa, valor, id_categoria_despesa, id_conta, data_vencimento, observacao) VALUES('" + descricao + "', '" + dto.Valor + "', '" + dto.CategoriaDespesa + "', '" + dto.Conta + "', '" + dto.DataVencimanto.ToString("yyyy-MM-dd") + "', '" + observacao + "')";
+            string comando = "INSERT INTO despesa(desc_despesa, valor, id_categoria_despesa, id_conta, data_vencimento, observacao) VALUES('" + descricao + "', '" + valor + "', '" + dto.CategoriaDespesa + "', '" + dto.Conta + "', '" + dto.DataVencimanto.ToString("yyyy-MM-dd") + "', '" + observacao + "')";
             banco.ExecutarComandoSql(comando);
         }
         #endregion
@@ -57,12 +60,15 @@ namespace BLL
             dto.Descricao.Trim();
             string descricao = dto.Descricao.Replace("'", "''");
 
+            dto.Valor.Trim();
+            string valor = dto.Valor.Replace(",", ".");
+
             dto.Observacao.Trim();
             string observacao = dto.Observacao.Replace("'", "''");
 
             banco = new AcessoBancoDados();
             banco.Conectar();
-            string comando = "UPDATE despesa SET desc_despesa = '" + dto.Descricao + "', valor = '" + dto.Valor + "', id_categoria_despesa = '" + dto.CategoriaDespesa + "', id_conta = '" + dto.Conta + "', data_vencimento = '" + dto.DataVencimanto.ToString("yyyy-MM-dds") + "', observacao = '" + observacao + "' WHERE id = '" + dto.Id + "'";
+            string comando = "UPDATE despesa SET desc_despesa = '" + dto.Descricao + "', valor = '" + valor + "', id_categoria_despesa = '" + dto.CategoriaDespesa + "', id_conta = '" + dto.Conta + "', data_vencimento = '" + dto.DataVencimanto.ToString("yyyy-MM-dds") + "', observacao = '" + observacao + "' WHERE id = '" + dto.Id + "'";
             banco.ExecutarComandoSql(comando);
         }
         #endregion

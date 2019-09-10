@@ -11,7 +11,7 @@ namespace DTO
         #region Atributos
         private int id;
         private string descricao;
-        private double valor;
+        private string valor;
         private string descCategoria;
         private int categoriaReceita;
         private string descConta;
@@ -23,7 +23,7 @@ namespace DTO
         #region Propriedades
         public int Id { get => id; set => id = value; }
         public string Descricao { get => descricao; set => descricao = value; }
-        public double Valor { get => valor; set => valor = value; }
+        public string Valor { get => valor; set => valor = value; }
         public int CategoriaReceita { get => categoriaReceita; set => categoriaReceita = value; }
         public int Conta { get => conta; set => conta = value; }
         public DateTime DataVencimento { get => dataVencimento; set => dataVencimento = value; }

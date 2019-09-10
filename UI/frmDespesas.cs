@@ -33,7 +33,7 @@ namespace UI
         {
             dto.Id = Convert.ToInt32(DgvListDespesa.CurrentRow.Cells[0].Value);
             dto.Descricao = DgvListDespesa.CurrentRow.Cells[1].Value.ToString();
-            dto.Valor = Convert.ToDouble(DgvListDespesa.CurrentRow.Cells[2].Value);
+            dto.Valor = DgvListDespesa.CurrentRow.Cells[2].Value.ToString() ;
             //cbo Despesa
             dto.CategoriaDespesa = (int)DgvListDespesa.CurrentRow.Cells[3].Value;
             dto.DescCategoria = DgvListDespesa.CurrentRow.Cells[4].Value.ToString();

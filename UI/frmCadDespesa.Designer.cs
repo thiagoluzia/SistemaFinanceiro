@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.PnlCadDespesa = new System.Windows.Forms.Panel();
+            this.mskValor = new System.Windows.Forms.MaskedTextBox();
+            this.mskVencimento = new System.Windows.Forms.MaskedTextBox();
             this.BtnSalvarDespesa = new System.Windows.Forms.Button();
             this.BtnCadastrarCategoriaDespesa = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -38,13 +40,11 @@
             this.cboCategoriaDespesa = new System.Windows.Forms.ComboBox();
             this.txtObservacaoDespesa = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtValorDespesa = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtDescricaoDespesa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.mskVencimento = new System.Windows.Forms.MaskedTextBox();
             this.PnlCadDespesa.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +53,7 @@
             // 
             this.PnlCadDespesa.BackColor = System.Drawing.Color.White;
             this.PnlCadDespesa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PnlCadDespesa.Controls.Add(this.mskValor);
             this.PnlCadDespesa.Controls.Add(this.mskVencimento);
             this.PnlCadDespesa.Controls.Add(this.BtnSalvarDespesa);
             this.PnlCadDespesa.Controls.Add(this.BtnCadastrarCategoriaDespesa);
@@ -63,7 +64,6 @@
             this.PnlCadDespesa.Controls.Add(this.cboCategoriaDespesa);
             this.PnlCadDespesa.Controls.Add(this.txtObservacaoDespesa);
             this.PnlCadDespesa.Controls.Add(this.label7);
-            this.PnlCadDespesa.Controls.Add(this.txtValorDespesa);
             this.PnlCadDespesa.Controls.Add(this.label3);
             this.PnlCadDespesa.Controls.Add(this.txtDescricaoDespesa);
             this.PnlCadDespesa.Controls.Add(this.label2);
@@ -72,6 +72,24 @@
             this.PnlCadDespesa.Name = "PnlCadDespesa";
             this.PnlCadDespesa.Size = new System.Drawing.Size(380, 348);
             this.PnlCadDespesa.TabIndex = 0;
+            // 
+            // mskValor
+            // 
+            this.mskValor.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskValor.Location = new System.Drawing.Point(236, 82);
+            this.mskValor.Name = "mskValor";
+            this.mskValor.Size = new System.Drawing.Size(132, 23);
+            this.mskValor.TabIndex = 1;
+            // 
+            // mskVencimento
+            // 
+            this.mskVencimento.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskVencimento.Location = new System.Drawing.Point(236, 129);
+            this.mskVencimento.Mask = "00/00/0000";
+            this.mskVencimento.Name = "mskVencimento";
+            this.mskVencimento.Size = new System.Drawing.Size(100, 23);
+            this.mskVencimento.TabIndex = 3;
+            this.mskVencimento.ValidatingType = typeof(System.DateTime);
             // 
             // BtnSalvarDespesa
             // 
@@ -83,7 +101,7 @@
             this.BtnSalvarDespesa.Location = new System.Drawing.Point(10, 304);
             this.BtnSalvarDespesa.Name = "BtnSalvarDespesa";
             this.BtnSalvarDespesa.Size = new System.Drawing.Size(358, 35);
-            this.BtnSalvarDespesa.TabIndex = 14;
+            this.BtnSalvarDespesa.TabIndex = 6;
             this.BtnSalvarDespesa.Text = "Salvar Despesa";
             this.BtnSalvarDespesa.UseVisualStyleBackColor = false;
             this.BtnSalvarDespesa.Click += new System.EventHandler(this.BtnSalvarDespesa_Click);
@@ -98,7 +116,7 @@
             this.BtnCadastrarCategoriaDespesa.Location = new System.Drawing.Point(192, 129);
             this.BtnCadastrarCategoriaDespesa.Name = "BtnCadastrarCategoriaDespesa";
             this.BtnCadastrarCategoriaDespesa.Size = new System.Drawing.Size(30, 24);
-            this.BtnCadastrarCategoriaDespesa.TabIndex = 7;
+            this.BtnCadastrarCategoriaDespesa.TabIndex = 9;
             this.BtnCadastrarCategoriaDespesa.Text = "+";
             this.BtnCadastrarCategoriaDespesa.UseVisualStyleBackColor = false;
             this.BtnCadastrarCategoriaDespesa.Click += new System.EventHandler(this.BtnCategoriaDespesa_Click);
@@ -130,7 +148,7 @@
             this.label4.Location = new System.Drawing.Point(7, 110);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 16);
-            this.label4.TabIndex = 5;
+            this.label4.TabIndex = 11;
             this.label4.Text = "Categoria";
             // 
             // cboConta
@@ -140,7 +158,7 @@
             this.cboConta.Location = new System.Drawing.Point(11, 174);
             this.cboConta.Name = "cboConta";
             this.cboConta.Size = new System.Drawing.Size(135, 24);
-            this.cboConta.TabIndex = 9;
+            this.cboConta.TabIndex = 4;
             // 
             // cboCategoriaDespesa
             // 
@@ -149,7 +167,7 @@
             this.cboCategoriaDespesa.Location = new System.Drawing.Point(10, 129);
             this.cboCategoriaDespesa.Name = "cboCategoriaDespesa";
             this.cboCategoriaDespesa.Size = new System.Drawing.Size(176, 24);
-            this.cboCategoriaDespesa.TabIndex = 6;
+            this.cboCategoriaDespesa.TabIndex = 2;
             // 
             // txtObservacaoDespesa
             // 
@@ -158,7 +176,7 @@
             this.txtObservacaoDespesa.Multiline = true;
             this.txtObservacaoDespesa.Name = "txtObservacaoDespesa";
             this.txtObservacaoDespesa.Size = new System.Drawing.Size(358, 80);
-            this.txtObservacaoDespesa.TabIndex = 13;
+            this.txtObservacaoDespesa.TabIndex = 5;
             // 
             // label7
             // 
@@ -167,16 +185,8 @@
             this.label7.Location = new System.Drawing.Point(7, 199);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 16);
-            this.label7.TabIndex = 12;
+            this.label7.TabIndex = 7;
             this.label7.Text = "Observações";
-            // 
-            // txtValorDespesa
-            // 
-            this.txtValorDespesa.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorDespesa.Location = new System.Drawing.Point(236, 82);
-            this.txtValorDespesa.Name = "txtValorDespesa";
-            this.txtValorDespesa.Size = new System.Drawing.Size(132, 23);
-            this.txtValorDespesa.TabIndex = 4;
             // 
             // label3
             // 
@@ -185,7 +195,7 @@
             this.label3.Location = new System.Drawing.Point(233, 63);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 16);
-            this.label3.TabIndex = 3;
+            this.label3.TabIndex = 12;
             this.label3.Text = "Valor";
             // 
             // txtDescricaoDespesa
@@ -194,7 +204,7 @@
             this.txtDescricaoDespesa.Location = new System.Drawing.Point(10, 82);
             this.txtDescricaoDespesa.Name = "txtDescricaoDespesa";
             this.txtDescricaoDespesa.Size = new System.Drawing.Size(220, 23);
-            this.txtDescricaoDespesa.TabIndex = 2;
+            this.txtDescricaoDespesa.TabIndex = 0;
             // 
             // label2
             // 
@@ -203,7 +213,7 @@
             this.label2.Location = new System.Drawing.Point(7, 63);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 16);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 13;
             this.label2.Text = "Descrição";
             // 
             // panel2
@@ -214,7 +224,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(378, 47);
-            this.panel2.TabIndex = 0;
+            this.panel2.TabIndex = 14;
             // 
             // label1
             // 
@@ -226,16 +236,6 @@
             this.label1.Size = new System.Drawing.Size(90, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Despesa";
-            // 
-            // mskVencimento
-            // 
-            this.mskVencimento.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskVencimento.Location = new System.Drawing.Point(236, 129);
-            this.mskVencimento.Mask = "00/00/0000";
-            this.mskVencimento.Name = "mskVencimento";
-            this.mskVencimento.Size = new System.Drawing.Size(100, 23);
-            this.mskVencimento.TabIndex = 15;
-            this.mskVencimento.ValidatingType = typeof(System.DateTime);
             // 
             // FrmCadDespesa
             // 
@@ -264,7 +264,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtObservacaoDespesa;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtValorDespesa;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDescricaoDespesa;
         private System.Windows.Forms.Label label2;
@@ -276,5 +275,6 @@
         private System.Windows.Forms.Button BtnCadastrarCategoriaDespesa;
         private System.Windows.Forms.Button BtnSalvarDespesa;
         private System.Windows.Forms.MaskedTextBox mskVencimento;
+        private System.Windows.Forms.MaskedTextBox mskValor;
     }
 }
