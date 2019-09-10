@@ -60,6 +60,12 @@ namespace UI
                 CarregarGrid();
             }
         }
+
+        private void btnPesquisarDespesa_Click(object sender, EventArgs e)
+        {
+            string descricao = txtPesquisarDespesa.Text;
+            DgvListDespesa.DataSource = bll.Buscar(descricao);
+        }
         #endregion
 
         #region Procedimentos
@@ -73,12 +79,12 @@ namespace UI
             //txtPesquisarDespesa.Focus();
         }
 
-        private void btnPesquisarDespesa_Click(object sender, EventArgs e)
+        private void txtPesquisarDespesa_TextChanged(object sender, EventArgs e)
         {
             string descricao = txtPesquisarDespesa.Text;
             DgvListDespesa.DataSource = bll.Buscar(descricao);
         }
-        #endregion
 
+        #endregion
     }
 }

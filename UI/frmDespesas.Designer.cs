@@ -137,6 +137,7 @@
             this.txtPesquisarDespesa.Name = "txtPesquisarDespesa";
             this.txtPesquisarDespesa.Size = new System.Drawing.Size(207, 26);
             this.txtPesquisarDespesa.TabIndex = 1;
+            this.txtPesquisarDespesa.TextChanged += new System.EventHandler(this.txtPesquisarDespesa_TextChanged);
             // 
             // panel2
             // 

@@ -80,5 +80,11 @@ namespace UI
             DgvCadListReceita.DataSource = bll.Buscar(descricao);
         }
         #endregion
+
+        private void txtPesquisarReceita_TextChanged(object sender, EventArgs e)
+        {
+            string descricao = txtPesquisarReceita.Text;
+            DgvCadListReceita.DataSource = bll.Buscar(descricao);
+        }
     }
 }

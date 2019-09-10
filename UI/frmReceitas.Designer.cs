@@ -122,6 +122,7 @@
             this.txtPesquisarReceita.Name = "txtPesquisarReceita";
             this.txtPesquisarReceita.Size = new System.Drawing.Size(207, 26);
             this.txtPesquisarReceita.TabIndex = 1;
+            this.txtPesquisarReceita.TextChanged += new System.EventHandler(this.txtPesquisarReceita_TextChanged);
             // 
             // panel2
             // 
