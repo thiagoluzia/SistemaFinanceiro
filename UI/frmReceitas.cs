@@ -35,7 +35,7 @@ namespace UI
         {
             dto.Id = (int)DgvCadListReceita.CurrentRow.Cells[0].Value;
             dto.Descricao = DgvCadListReceita.CurrentRow.Cells[1].Value.ToString();
-            dto.Valor = DgvCadListReceita.CurrentRow.Cells[2].Value.ToString(); ;
+            dto.Valor = DgvCadListReceita.CurrentRow.Cells[2].Value.ToString();
             //novo caso
             dto.CategoriaReceita = (int)DgvCadListReceita.CurrentRow.Cells[3].Value;
             dto.DescCategoria = DgvCadListReceita.CurrentRow.Cells[4].Value.ToString();

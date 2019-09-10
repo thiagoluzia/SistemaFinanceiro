@@ -40,11 +40,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.PnlCadReceita = new System.Windows.Forms.Panel();
+            this.mskValor = new System.Windows.Forms.MaskedTextBox();
+            this.mskVencimento = new System.Windows.Forms.MaskedTextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCadastrarCategoriaReceita = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.mskVencimento = new System.Windows.Forms.MaskedTextBox();
-            this.mskValor = new System.Windows.Forms.MaskedTextBox();
             this.panel2.SuspendLayout();
             this.PnlCadReceita.SuspendLayout();
             this.SuspendLayout();
@@ -179,6 +179,28 @@
             this.PnlCadReceita.Size = new System.Drawing.Size(380, 348);
             this.PnlCadReceita.TabIndex = 1;
             // 
+            // mskValor
+            // 
+            this.mskValor.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskValor.Location = new System.Drawing.Point(236, 82);
+            this.mskValor.Name = "mskValor";
+            this.mskValor.Size = new System.Drawing.Size(132, 23);
+            this.mskValor.TabIndex = 1;
+            this.mskValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.mskValor.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskValor_MaskInputRejected);
+            this.mskValor.TextChanged += new System.EventHandler(this.mskValor_TextChanged);
+            this.mskValor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mskValor_KeyPress);
+            // 
+            // mskVencimento
+            // 
+            this.mskVencimento.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskVencimento.Location = new System.Drawing.Point(236, 127);
+            this.mskVencimento.Mask = "00/00/0000";
+            this.mskVencimento.Name = "mskVencimento";
+            this.mskVencimento.Size = new System.Drawing.Size(100, 23);
+            this.mskVencimento.TabIndex = 3;
+            this.mskVencimento.ValidatingType = typeof(System.DateTime);
+            // 
             // btnSalvar
             // 
             this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(128)))), ((int)(((byte)(227)))));
@@ -218,24 +240,6 @@
             this.label6.Size = new System.Drawing.Size(84, 16);
             this.label6.TabIndex = 10;
             this.label6.Text = "Vencimento";
-            // 
-            // mskVencimento
-            // 
-            this.mskVencimento.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskVencimento.Location = new System.Drawing.Point(236, 127);
-            this.mskVencimento.Mask = "00/00/0000";
-            this.mskVencimento.Name = "mskVencimento";
-            this.mskVencimento.Size = new System.Drawing.Size(100, 23);
-            this.mskVencimento.TabIndex = 3;
-            this.mskVencimento.ValidatingType = typeof(System.DateTime);
-            // 
-            // mskValor
-            // 
-            this.mskValor.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskValor.Location = new System.Drawing.Point(236, 82);
-            this.mskValor.Name = "mskValor";
-            this.mskValor.Size = new System.Drawing.Size(132, 23);
-            this.mskValor.TabIndex = 1;
             // 
             // FrmCadReceita
             // 

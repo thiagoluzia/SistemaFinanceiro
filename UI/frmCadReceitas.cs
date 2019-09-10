@@ -55,8 +55,7 @@ namespace UI
             {
                 ReceitaDTO dto = new ReceitaDTO();
                 dto.Descricao = txtDescricaoReceita.Text;
-                string valor = mskValor.Text;
-                dto.Valor = valor;
+                dto.Valor = mskValor.Text;
                 dto.CategoriaReceita = (int)cboCategoriaReceita.SelectedValue;
                 dto.Conta = (int)cboConta.SelectedValue;
                 dto.DataVencimento = Convert.ToDateTime(mskVencimento.Text);
@@ -90,6 +89,7 @@ namespace UI
         #endregion
 
         #region Procedimentos
+
         private void CarregarCombos()
         {
             cboCategoriaReceita.DataSource = catBll.Exibir();
@@ -113,5 +113,43 @@ namespace UI
 
         }
         #endregion
+
+        public void mskValor_TextChanged(object sender, EventArgs e)
+        {
+            char[] vet = mskValor.Text.ToCharArray();
+            string novoValor = "";
+            double result = 0;
+
+            for (int i = 0; i < vet.Length; i++)
+            {
+                if (double.TryParse(vet[i].ToString(), out result) == true)
+                {
+                    novoValor += vet[i];
+                }
+
+            }
+            mskValor.Text = novoValor;
+        }
+
+        private void mskValor_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            mskValor.SelectionStart = mskValor.Text.Length + 1;
+        }
+
+        private void mskValor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //SEMELHANTE AO QUE O BRENO PASSOU 
+
+            //if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            //{
+            //    e.Handled = true;
+            //    MessageBox.Show("este campo aceita somente numero e virgula");
+            //}
+            //if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf(',') > -1))
+            //{
+            //    e.Handled = true;
+            //    MessageBox.Show("este campo aceita somente uma virgula");
+            //}
+        }
     }
 }
