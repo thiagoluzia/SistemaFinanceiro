@@ -43,6 +43,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
+                
                 throw new Exception("Erro ao executar uma intrução Sql " + ex.Message);
             }
         }

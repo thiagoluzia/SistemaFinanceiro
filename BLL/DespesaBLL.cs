@@ -44,12 +44,27 @@ namespace BLL
                 "INNER JOIN conta ON conta.id = despesa.id_conta " +
                 "ORDER BY despesa.id DESC";
 
-
-
-
             data = new DataTable();
             data = banco.RetdataTable(comando);
             return data;
+        }
+
+        public DataTable ExibirMes(string data)
+        {
+            banco = new AcessoBancoDados();
+            banco.Conectar();
+            string comando = "SELECT despesa.id, despesa.desc_despesa as 'DESPESA', despesa.valor as 'VALOR', " +
+                "categoria_despesa.id as 'ID CATEGORIA', categoria_despesa.desc_categoria_despesa as 'CATEGORIA', " +
+                "conta.id as 'CONTA ID', conta.desc_conta as 'CONTA', despesa.data_vencimento as 'VENCIMENTO', " +
+                "despesa.observacao as 'OBSERVAÇÃO' " +
+                "FROM despesa " +
+                "INNER JOIN categoria_despesa ON categoria_despesa.id = despesa.id_categoria_despesa " +
+                "INNER JOIN conta ON conta.id = despesa.id_conta " +
+                "WHERE convert(char(2),month(data_vencimento)) = '" + data + "'" +
+                "ORDER BY despesa.id ASC";
+            DataTable datat = new DataTable();
+            datat = banco.RetdataTable(comando);
+            return datat;
         }
         #endregion
 

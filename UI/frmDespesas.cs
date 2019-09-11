@@ -51,14 +51,24 @@ namespace UI
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             DialogResult = MessageBox.Show("Deseja relamente excluir a despesa selecionada?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (DialogResult == DialogResult.Yes)
+
+            try
             {
-                int id = (int)DgvListDespesa.CurrentRow.Cells[0].Value;
-                dto.Id = id;
-                bll.Exluir(dto);
-                MessageBox.Show("Despesa Exluida com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                CarregarGrid();
+                if (DialogResult == DialogResult.Yes)
+                {
+                    int id = (int)DgvListDespesa.CurrentRow.Cells[0].Value;
+                    dto.Id = id;
+                    bll.Exluir(dto);
+                    MessageBox.Show("Despesa Exluida com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    CarregarGrid();
+                }
             }
+            catch (Exception)
+            {
+                MessageBox.Show($"Nenhum registro foi selecionado para ser excluido\nSelecione um registro e tente novamente.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtPesquisarDespesa.Focus();
+            }
+            
         }
 
         private void btnPesquisarDespesa_Click(object sender, EventArgs e)
@@ -71,7 +81,11 @@ namespace UI
         #region Procedimentos
         public void CarregarGrid()
         {
-            DgvListDespesa.DataSource = bll.Exibir();
+            DateTime dataAtual = Convert.ToDateTime(dtpData.Text);
+            string data = dataAtual.Month.ToString();
+
+
+            DgvListDespesa.DataSource = bll.ExibirMes(data);
             this.DgvListDespesa.Columns[0].Visible = false;
             this.DgvListDespesa.Columns[2].DefaultCellStyle.Format = "C";
             this.DgvListDespesa.Columns[3].Visible = false;
@@ -86,5 +100,10 @@ namespace UI
         }
 
         #endregion
+
+        private void btnCarregar_Click(object sender, EventArgs e)
+        {
+            CarregarGrid();
+        }
     }
 }

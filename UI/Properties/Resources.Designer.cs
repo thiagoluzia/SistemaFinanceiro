@@ -183,6 +183,16 @@ namespace UI.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fotoCorMaterial {
+            get {
+                object obj = ResourceManager.GetObject("fotoCorMaterial", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap github_logo_318_10832 {
             get {
                 object obj = ResourceManager.GetObject("github-logo_318-10832", resourceCulture);
@@ -203,9 +213,39 @@ namespace UI.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap piggy_bank_icon_design_vector {
+            get {
+                object obj = ResourceManager.GetObject("piggy-bank-icon-design-vector", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap positovo {
             get {
                 object obj = ResourceManager.GetObject("positovo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap poupar {
+            get {
+                object obj = ResourceManager.GetObject("poupar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vector_piggy_bank_icon_design {
+            get {
+                object obj = ResourceManager.GetObject("vector-piggy-bank-icon-design", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

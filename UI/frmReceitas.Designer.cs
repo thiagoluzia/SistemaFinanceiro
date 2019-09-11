@@ -38,9 +38,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnNovaReceita = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCarregar = new System.Windows.Forms.Button();
+            this.dtpData = new System.Windows.Forms.DateTimePicker();
             this.PnlListReceita.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCadListReceita)).BeginInit();
             this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlListReceita
@@ -170,12 +174,49 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Receitas Cadastradas";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnCarregar);
+            this.groupBox1.Controls.Add(this.dtpData);
+            this.groupBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(537, 9);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(162, 111);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Filtra";
+            // 
+            // btnCarregar
+            // 
+            this.btnCarregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnCarregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCarregar.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarregar.ForeColor = System.Drawing.Color.White;
+            this.btnCarregar.Location = new System.Drawing.Point(24, 64);
+            this.btnCarregar.Name = "btnCarregar";
+            this.btnCarregar.Size = new System.Drawing.Size(126, 29);
+            this.btnCarregar.TabIndex = 12;
+            this.btnCarregar.Text = "Filtrar por Mês";
+            this.btnCarregar.UseVisualStyleBackColor = false;
+            this.btnCarregar.Click += new System.EventHandler(this.btnCarregar_Click);
+            // 
+            // dtpData
+            // 
+            this.dtpData.CalendarFont = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpData.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpData.Location = new System.Drawing.Point(23, 29);
+            this.dtpData.Name = "dtpData";
+            this.dtpData.Size = new System.Drawing.Size(126, 23);
+            this.dtpData.TabIndex = 9;
+            // 
             // FrmReceitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.ClientSize = new System.Drawing.Size(715, 576);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnNovaReceita);
             this.Controls.Add(this.PnlListReceita);
@@ -189,6 +230,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvCadListReceita)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,6 +248,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAlterar;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnCarregar;
+        private System.Windows.Forms.DateTimePicker dtpData;
     }
 }
 

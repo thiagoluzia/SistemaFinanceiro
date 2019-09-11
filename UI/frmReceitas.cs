@@ -52,22 +52,37 @@ namespace UI
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            DialogResult  = MessageBox.Show("Deseja realmente excluir a receita selecionada?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(DialogResult == DialogResult.Yes)
+            DialogResult = MessageBox.Show("Deseja realmente excluir a receita selecionada?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            try
             {
-                int id = (int)DgvCadListReceita.CurrentRow.Cells[0].Value;
-                dto.Id = id;
-                bll.Excluir(dto);
-                MessageBox.Show("Receita excluida com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CarregarGrid();
-            }                        
+                if (DialogResult == DialogResult.Yes)
+                {
+                    int id = (int)DgvCadListReceita.CurrentRow.Cells[0].Value;
+                    dto.Id = id;
+                    bll.Excluir(dto);
+                    MessageBox.Show("Receita excluida com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CarregarGrid();
+                }
+            }
+            catch (Exception NullReferenceException)
+            {
+
+                MessageBox.Show($"Nenhum registro foi selecionado para ser excluido\nSelecione um registro e tente novamente.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtPesquisarReceita.Focus();
+            }
+
+                                 
         }
         #endregion
 
         #region Procedimentos
         public void CarregarGrid()
         {
-            DgvCadListReceita.DataSource = bll.Exibir();
+            DateTime dataAtual = Convert.ToDateTime(dtpData.Text);
+            string data = dataAtual.Month.ToString();
+
+            DgvCadListReceita.DataSource = bll.ExibirMes(data);
             this.DgvCadListReceita.Columns[0].Visible = false;
             this.DgvCadListReceita.Columns[2].DefaultCellStyle.Format = ("C");
             this.DgvCadListReceita.Columns[3].Visible = false;
@@ -85,6 +100,11 @@ namespace UI
         {
             string descricao = txtPesquisarReceita.Text;
             DgvCadListReceita.DataSource = bll.Buscar(descricao);
+        }
+
+        private void btnCarregar_Click(object sender, EventArgs e)
+        {
+            CarregarGrid();
         }
     }
 }

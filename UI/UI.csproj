@@ -202,5 +202,17 @@
   <ItemGroup>
     <None Include="Resources\positovo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poupar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vector-piggy-bank-icon-design.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotoCorMaterial.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\piggy-bank-icon-design-vector.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
