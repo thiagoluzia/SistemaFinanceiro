@@ -66,6 +66,7 @@ namespace UI
                     dto.Id = (int)dgvLisCategoriaReceita.CurrentRow.Cells[0].Value;
                     dto.Descricao = dgvLisCategoriaReceita.CurrentRow.Cells[1].Value.ToString();
                     bll.Excluir(dto);
+                    MessageBox.Show($"Categoria excluida com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CarregarGrid();
                 }
             }

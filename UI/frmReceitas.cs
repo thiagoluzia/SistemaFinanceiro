@@ -74,7 +74,6 @@ namespace UI
             }
             catch (Exception NullReferenceException)
             {
-
                 MessageBox.Show($"Nenhum registro foi selecionado para ser excluido\nSelecione um registro e tente novamente.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtPesquisarReceita.Focus();
             }

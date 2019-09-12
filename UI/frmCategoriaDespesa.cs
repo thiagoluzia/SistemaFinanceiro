@@ -68,6 +68,7 @@ namespace UI
                     dto.Id = (int)dgvListDespesa.CurrentRow.Cells[0].Value;
                     dto.Descricao = dgvListDespesa.CurrentRow.Cells[1].ToString();
                     bll.Excluir(dto);
+                    MessageBox.Show($"Categoria excluida com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CarregarCategoriasDespesa();
                 }
             }

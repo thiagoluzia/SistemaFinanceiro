@@ -46,6 +46,8 @@ namespace UI
                 {
                     dto.Id = (int)DgvListConta.CurrentRow.Cells[0].Value;
                     dto.Descricao = DgvListConta.CurrentRow.Cells[1].Value.ToString();
+                    MessageBox.Show($"Conta excluida com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     bll.Excluir(dto);
                 }
             }
