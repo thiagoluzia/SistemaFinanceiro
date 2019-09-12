@@ -178,6 +178,12 @@ namespace UI
             this.dgvResumoDespesaHome.Columns[8].Visible = false;
         }
 
+        private void CarregarCombo()
+        {
+
+
+        }
+
         #endregion
 
         private void btnCarregar_Click(object sender, EventArgs e)

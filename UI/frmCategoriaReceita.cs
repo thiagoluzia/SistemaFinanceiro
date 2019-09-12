@@ -46,19 +46,33 @@ namespace UI
         }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            dto.Id = (int)dgvLisCategoriaReceita.CurrentRow.Cells[0].Value;
-            txtCadastrarCategoriaReceita.Text = dgvLisCategoriaReceita.CurrentRow.Cells[1].Value.ToString();
+            try
+            {
+                dto.Id = (int)dgvLisCategoriaReceita.CurrentRow.Cells[0].Value;
+                txtCadastrarCategoriaReceita.Text = dgvLisCategoriaReceita.CurrentRow.Cells[1].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Nenhuma categoria foi selecionado. \nSelecione uma categoria para que possa ser feita a alteração:", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             DialogResult = MessageBox.Show("Deseja realmente excluir essa categoria? Caso ela esteja vinculada a algum lançamento, não poderá ser excluida", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (DialogResult == DialogResult.Yes)
+            try
             {
-                dto.Id = (int)dgvLisCategoriaReceita.CurrentRow.Cells[0].Value;
-                dto.Descricao = dgvLisCategoriaReceita.CurrentRow.Cells[1].Value.ToString();
-                bll.Excluir(dto);
-                CarregarGrid();
+                if (DialogResult == DialogResult.Yes)
+                {
+                    dto.Id = (int)dgvLisCategoriaReceita.CurrentRow.Cells[0].Value;
+                    dto.Descricao = dgvLisCategoriaReceita.CurrentRow.Cells[1].Value.ToString();
+                    bll.Excluir(dto);
+                    CarregarGrid();
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Nenhuma categoria foi selecionado. \nSelecione uma categoria para que possa ser feita a exclusão:", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            } 
         }
 
         private void LimparCampos()

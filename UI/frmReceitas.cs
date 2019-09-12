@@ -33,20 +33,27 @@ namespace UI
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            dto.Id = (int)DgvCadListReceita.CurrentRow.Cells[0].Value;
-            dto.Descricao = DgvCadListReceita.CurrentRow.Cells[1].Value.ToString();
-            dto.Valor = DgvCadListReceita.CurrentRow.Cells[2].Value.ToString();
-            //novo caso
-            dto.CategoriaReceita = (int)DgvCadListReceita.CurrentRow.Cells[3].Value;
-            dto.DescCategoria = DgvCadListReceita.CurrentRow.Cells[4].Value.ToString();
-            //novo Caso
-            dto.Conta = (int)DgvCadListReceita.CurrentRow.Cells[5].Value;
-            dto.DescConta = DgvCadListReceita.CurrentRow.Cells[6].Value.ToString();
-            dto.DataVencimento = (DateTime)DgvCadListReceita.CurrentRow.Cells[7].Value;
-            dto.Observacao = DgvCadListReceita.CurrentRow.Cells[8].Value.ToString();
+            try
+            {
+                dto.Id = (int)DgvCadListReceita.CurrentRow.Cells[0].Value;
+                dto.Descricao = DgvCadListReceita.CurrentRow.Cells[1].Value.ToString();
+                dto.Valor = DgvCadListReceita.CurrentRow.Cells[2].Value.ToString();
+                //novo caso
+                dto.CategoriaReceita = (int)DgvCadListReceita.CurrentRow.Cells[3].Value;
+                dto.DescCategoria = DgvCadListReceita.CurrentRow.Cells[4].Value.ToString();
+                //novo Caso
+                dto.Conta = (int)DgvCadListReceita.CurrentRow.Cells[5].Value;
+                dto.DescConta = DgvCadListReceita.CurrentRow.Cells[6].Value.ToString();
+                dto.DataVencimento = (DateTime)DgvCadListReceita.CurrentRow.Cells[7].Value;
+                dto.Observacao = DgvCadListReceita.CurrentRow.Cells[8].Value.ToString();
 
-            FrmCadReceita frm = new FrmCadReceita(dto);
-            frm.ShowDialog();
+                FrmCadReceita frm = new FrmCadReceita(dto);
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Nenhum lançamento foi selecionado. \nSelecione um lançamento para que possa ser feita a alteração:", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             CarregarGrid();
         }
 
@@ -72,7 +79,7 @@ namespace UI
                 txtPesquisarReceita.Focus();
             }
 
-                                 
+
         }
         #endregion
 

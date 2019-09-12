@@ -31,20 +31,27 @@ namespace UI
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            dto.Id = Convert.ToInt32(DgvListDespesa.CurrentRow.Cells[0].Value);
-            dto.Descricao = DgvListDespesa.CurrentRow.Cells[1].Value.ToString();
-            dto.Valor = DgvListDespesa.CurrentRow.Cells[2].Value.ToString() ;
-            //cbo Despesa
-            dto.CategoriaDespesa = (int)DgvListDespesa.CurrentRow.Cells[3].Value;
-            dto.DescCategoria = DgvListDespesa.CurrentRow.Cells[4].Value.ToString();
-            //cbo Conta
-            dto.Conta = (int)DgvListDespesa.CurrentRow.Cells[5].Value;
-            dto.DescConta = DgvListDespesa.CurrentRow.Cells[6].Value.ToString();
-            dto.DataVencimanto = Convert.ToDateTime(DgvListDespesa.CurrentRow.Cells[7].Value);
-            dto.Observacao = DgvListDespesa.CurrentRow.Cells[8].Value.ToString();
+            try
+            {
+                dto.Id = Convert.ToInt32(DgvListDespesa.CurrentRow.Cells[0].Value);
+                dto.Descricao = DgvListDespesa.CurrentRow.Cells[1].Value.ToString();
+                dto.Valor = DgvListDespesa.CurrentRow.Cells[2].Value.ToString();
+                //cbo Despesa
+                dto.CategoriaDespesa = (int)DgvListDespesa.CurrentRow.Cells[3].Value;
+                dto.DescCategoria = DgvListDespesa.CurrentRow.Cells[4].Value.ToString();
+                //cbo Conta
+                dto.Conta = (int)DgvListDespesa.CurrentRow.Cells[5].Value;
+                dto.DescConta = DgvListDespesa.CurrentRow.Cells[6].Value.ToString();
+                dto.DataVencimanto = Convert.ToDateTime(DgvListDespesa.CurrentRow.Cells[7].Value);
+                dto.Observacao = DgvListDespesa.CurrentRow.Cells[8].Value.ToString();
 
-            FrmCadDespesa alterarDespesa = new FrmCadDespesa(dto);
-            alterarDespesa.ShowDialog();
+                FrmCadDespesa alterarDespesa = new FrmCadDespesa(dto);
+                alterarDespesa.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Nenhum lançamento foi selecionado. \nSelecione um lançamento para que possa ser feita a alteração:", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             CarregarGrid();
         }
 
@@ -60,7 +67,6 @@ namespace UI
                     dto.Id = id;
                     bll.Exluir(dto);
                     MessageBox.Show("Despesa Exluida com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    CarregarGrid();
                 }
             }
             catch (Exception)
@@ -68,7 +74,8 @@ namespace UI
                 MessageBox.Show($"Nenhum registro foi selecionado para ser excluido\nSelecione um registro e tente novamente.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtPesquisarDespesa.Focus();
             }
-            
+            CarregarGrid();
+
         }
 
         private void btnPesquisarDespesa_Click(object sender, EventArgs e)
