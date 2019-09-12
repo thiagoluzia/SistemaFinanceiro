@@ -45,6 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnConta = new System.Windows.Forms.Button();
             this.PnlCadDespesa.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +54,7 @@
             // 
             this.PnlCadDespesa.BackColor = System.Drawing.Color.White;
             this.PnlCadDespesa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PnlCadDespesa.Controls.Add(this.btnConta);
             this.PnlCadDespesa.Controls.Add(this.mskValor);
             this.PnlCadDespesa.Controls.Add(this.mskVencimento);
             this.PnlCadDespesa.Controls.Add(this.BtnSalvarDespesa);
@@ -240,6 +242,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Despesa";
             // 
+            // btnConta
+            // 
+            this.btnConta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(167)))), ((int)(((byte)(80)))));
+            this.btnConta.FlatAppearance.BorderSize = 0;
+            this.btnConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConta.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConta.ForeColor = System.Drawing.Color.White;
+            this.btnConta.Location = new System.Drawing.Point(152, 174);
+            this.btnConta.Name = "btnConta";
+            this.btnConta.Size = new System.Drawing.Size(30, 24);
+            this.btnConta.TabIndex = 15;
+            this.btnConta.Text = "+";
+            this.btnConta.UseVisualStyleBackColor = false;
+            this.btnConta.Click += new System.EventHandler(this.btnConta_Click);
+            // 
             // FrmCadDespesa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,5 +296,6 @@
         private System.Windows.Forms.Button BtnSalvarDespesa;
         private System.Windows.Forms.MaskedTextBox mskVencimento;
         private System.Windows.Forms.MaskedTextBox mskValor;
+        private System.Windows.Forms.Button btnConta;
     }
 }

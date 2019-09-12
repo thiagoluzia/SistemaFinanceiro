@@ -60,9 +60,18 @@ namespace UI
                 dto.Conta = (int)cboConta.SelectedValue;
                 dto.DataVencimento = Convert.ToDateTime(mskVencimento.Text);
                 dto.Observacao = txtObservacaoReceita.Text;
-                bll.Inserir(dto);
-                MessageBox.Show("Receita cadastrada com sucesso! ", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                if (txtDescricaoReceita.Text == "" || mskValor.Text == "" || (int)cboCategoriaReceita.SelectedValue <= 0 || mskVencimento.Text == "" )
+                {
+                    MessageBox.Show("Não é possivel salvar essa conta, pois campos obrigatorios não foram preencido\n\nPreencha os campos com *.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    bll.Inserir(dto);
+                    MessageBox.Show("Receita cadastrada com sucesso! ", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
+            
             else//Alterar
             {
                 this.dto.Descricao = txtDescricaoReceita.Text;
@@ -77,6 +86,12 @@ namespace UI
                 this.Close();
             }
             LimparCampos();
+        }
+
+        private void btnConta_Click(object sender, EventArgs e)
+        {
+            frmConta frm = new frmConta();
+            frm.ShowDialog();
         }
 
         //cadastrar nova categoria no ato de inserir uma receita
@@ -154,5 +169,6 @@ namespace UI
             //}
         }
 
+        
     }
 }

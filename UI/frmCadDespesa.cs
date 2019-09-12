@@ -66,10 +66,18 @@ namespace UI
                 dto.Conta = (int)cboConta.SelectedValue;
                 dto.DataVencimanto = Convert.ToDateTime(mskVencimento.Text);
                 dto.Observacao = txtObservacaoDespesa.Text;
-                bll.Inserir(dto);
-                LimparCampos();
-                MessageBox.Show("Despesa cadastrada com sucesso", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtDescricaoDespesa.Focus();
+
+                if (txtDescricaoDespesa.Text == "" || mskValor.Text == "" || (int)cboCategoriaDespesa.SelectedValue <= 0 || mskVencimento.Text == "")
+                {
+                    MessageBox.Show("Não é possivel salvar essa despesa, pois campos obrigatorios não foram preencido\n\nPreencha os campos com *.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+                else
+                {
+                    bll.Inserir(dto);
+                    MessageBox.Show("Despesa cadastrada com sucesso! ", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimparCampos();
+                    txtDescricaoDespesa.Focus();
+                }
             }
             else//alterar
             {
@@ -83,6 +91,12 @@ namespace UI
                 LimparCampos();
                 this.Close();
             }
+        }
+
+        private void btnConta_Click(object sender, EventArgs e)
+        {
+            frmConta frm = new frmConta();
+            frm.ShowDialog();
         }
         #endregion
 
@@ -115,9 +129,9 @@ namespace UI
             char[] vet = mskValor.Text.ToCharArray();
             string novoValor = "";
             double result = 0;
-            for(int i = 0; i < vet.Length; i++)
+            for (int i = 0; i < vet.Length; i++)
             {
-                if (double.TryParse(vet[i].ToString(), out result) == true || vet[i].ToString() == "." || vet[i].ToString() == "," )
+                if (double.TryParse(vet[i].ToString(), out result) == true || vet[i].ToString() == "." || vet[i].ToString() == ",")
                     novoValor += vet[i];
             }
             mskValor.Text = novoValor;
@@ -127,5 +141,7 @@ namespace UI
         {
             mskValor.SelectionStart = mskValor.Text.Length + 1;
         }
+
+       
     }
 }

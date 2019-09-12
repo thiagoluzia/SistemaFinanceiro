@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.PnlCadConta = new System.Windows.Forms.Panel();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.DgvListConta = new System.Windows.Forms.DataGridView();
             this.txtDescricaoCadConta = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.Conta = new System.Windows.Forms.Label();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.DgvListConta = new System.Windows.Forms.DataGridView();
             this.PnlCadConta.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListConta)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlCadConta
@@ -58,60 +58,6 @@
             this.PnlCadConta.Size = new System.Drawing.Size(342, 376);
             this.PnlCadConta.TabIndex = 2;
             // 
-            // btnSalvar
-            // 
-            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(128)))), ((int)(((byte)(227)))));
-            this.btnSalvar.FlatAppearance.BorderSize = 0;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(236, 82);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(90, 23);
-            this.btnSalvar.TabIndex = 15;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // txtDescricaoCadConta
-            // 
-            this.txtDescricaoCadConta.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescricaoCadConta.Location = new System.Drawing.Point(10, 82);
-            this.txtDescricaoCadConta.Name = "txtDescricaoCadConta";
-            this.txtDescricaoCadConta.Size = new System.Drawing.Size(220, 23);
-            this.txtDescricaoCadConta.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Descrição";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(167)))), ((int)(((byte)(80)))));
-            this.panel2.Controls.Add(this.Conta);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(340, 47);
-            this.panel2.TabIndex = 0;
-            // 
-            // Conta
-            // 
-            this.Conta.AutoSize = true;
-            this.Conta.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Conta.ForeColor = System.Drawing.Color.White;
-            this.Conta.Location = new System.Drawing.Point(70, 10);
-            this.Conta.Name = "Conta";
-            this.Conta.Size = new System.Drawing.Size(186, 23);
-            this.Conta.TabIndex = 0;
-            this.Conta.Text = "Cadastro de Conta";
-            // 
             // btnExcluir
             // 
             this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(146)))), ((int)(((byte)(110)))));
@@ -126,6 +72,21 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(128)))), ((int)(((byte)(227)))));
+            this.btnSalvar.FlatAppearance.BorderSize = 0;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar.Location = new System.Drawing.Point(236, 82);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(90, 23);
+            this.btnSalvar.TabIndex = 15;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnAlterar
             // 
@@ -155,6 +116,45 @@
             this.DgvListConta.Size = new System.Drawing.Size(316, 203);
             this.DgvListConta.TabIndex = 15;
             // 
+            // txtDescricaoCadConta
+            // 
+            this.txtDescricaoCadConta.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescricaoCadConta.Location = new System.Drawing.Point(10, 82);
+            this.txtDescricaoCadConta.Name = "txtDescricaoCadConta";
+            this.txtDescricaoCadConta.Size = new System.Drawing.Size(220, 23);
+            this.txtDescricaoCadConta.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(7, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 16);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "*Descrição ";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(167)))), ((int)(((byte)(80)))));
+            this.panel2.Controls.Add(this.Conta);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(340, 47);
+            this.panel2.TabIndex = 0;
+            // 
+            // Conta
+            // 
+            this.Conta.AutoSize = true;
+            this.Conta.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Conta.ForeColor = System.Drawing.Color.White;
+            this.Conta.Location = new System.Drawing.Point(70, 10);
+            this.Conta.Name = "Conta";
+            this.Conta.Size = new System.Drawing.Size(186, 23);
+            this.Conta.TabIndex = 0;
+            this.Conta.Text = "Cadastro de Conta";
+            // 
             // frmConta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,9 +169,9 @@
             this.Load += new System.EventHandler(this.frmConta_Load);
             this.PnlCadConta.ResumeLayout(false);
             this.PnlCadConta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvListConta)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvListConta)).EndInit();
             this.ResumeLayout(false);
 
         }

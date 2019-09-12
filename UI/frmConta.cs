@@ -21,12 +21,18 @@ namespace UI
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+
             if (dto.Id > 0)
             {
                 dto.Descricao = txtDescricaoCadConta.Text;
                 bll.Atulaizar(dto);
                 MessageBox.Show("Conta atualizado com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dto.Id = 0;
+            }
+            else if (txtDescricaoCadConta.Text == "")
+            {
+                MessageBox.Show("Não é possivel salvar essa conta, pois o campo descrição não foi preencido.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                txtDescricaoCadConta.Focus();
             }
             else
             {
@@ -67,7 +73,7 @@ namespace UI
             catch (Exception ex)
             {
                 MessageBox.Show($"Nenhuma conta foi selecionado. \nSelecione uma conta para que possa ser feita a alteração:", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }  
+            }
         }
 
         private void LimparCampos()
