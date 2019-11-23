@@ -71,6 +71,7 @@
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label4 = new System.Windows.Forms.Label();
             this.PnlMenuLateral.SuspendLayout();
             this.panel3.SuspendLayout();
             this.PnlCentro.SuspendLayout();
@@ -95,6 +96,7 @@
             // PnlMenuLateral
             // 
             this.PnlMenuLateral.BackColor = System.Drawing.Color.White;
+            this.PnlMenuLateral.Controls.Add(this.label4);
             this.PnlMenuLateral.Controls.Add(this.btnCategoriaDespesa);
             this.PnlMenuLateral.Controls.Add(this.btnContas);
             this.PnlMenuLateral.Controls.Add(this.Receitas);
@@ -628,6 +630,17 @@
             this.linkLabel1.Text = "https://github.com/thiagoluzia";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LnkGithub_LinkClicked);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(78)))), ((int)(((byte)(88)))));
+            this.label4.Location = new System.Drawing.Point(42, 68);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(121, 29);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Update 2";
+            // 
             // FrmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -714,5 +727,6 @@
         private System.Windows.Forms.Button btnCarregar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnPoupar;
+        private System.Windows.Forms.Label label4;
     }
 }
