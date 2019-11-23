@@ -53,46 +53,57 @@ namespace UI
             categoriaDespesa.ShowDialog();
             CarregarCombos();
         }
-
         private void BtnSalvarDespesa_Click(object sender, EventArgs e)
         {
-            DespesaBLL bll = new DespesaBLL();
-            if (this.dto == null)//cadastrar
+            try
             {
-                DespesaDTO dto = new DespesaDTO();
-                dto.Descricao = txtDescricaoDespesa.Text;
-                dto.Valor = mskValor.Text;
-                dto.CategoriaDespesa = (int)cboCategoriaDespesa.SelectedValue;
-                dto.Conta = (int)cboConta.SelectedValue;
-                dto.DataVencimanto = Convert.ToDateTime(mskVencimento.Text);
-                dto.Observacao = txtObservacaoDespesa.Text;
+                DespesaBLL bll = new DespesaBLL();
 
-                if (txtDescricaoDespesa.Text == "" || mskValor.Text == "" || (int)cboCategoriaDespesa.SelectedValue <= 0 || mskVencimento.Text == "")
+                if (this.dto == null)//cadastrar
                 {
-                    MessageBox.Show("Não é possivel salvar essa despesa, pois campos obrigatorios não foram preencido\n\nPreencha os campos com *.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    DespesaDTO dto = new DespesaDTO();
+                    dto.Descricao = txtDescricaoDespesa.Text;
+                    dto.Valor = mskValor.Text;
+                    dto.CategoriaDespesa = (int)cboCategoriaDespesa.SelectedValue;
+                    dto.Conta = (int)cboConta.SelectedValue;
+                    dto.DataVencimanto = Convert.ToDateTime(mskVencimento.Text);
+                    dto.Observacao = txtObservacaoDespesa.Text;
+
+                    if (txtDescricaoDespesa.Text == "" || mskValor.Text == "" || (int)cboCategoriaDespesa.SelectedValue <= 0 || mskVencimento.Text == "")
+                    {
+                        MessageBox.Show("Não é possivel salvar essa despesa, pois campos obrigatorios não foram preencido\n\nPreencha os campos com *.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+                    else
+                    {
+                        bll.Inserir(dto);
+                        MessageBox.Show("Despesa cadastrada com sucesso! ", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LimparCampos();
+                        txtDescricaoDespesa.Focus();
+                    }
                 }
-                else
+                else//alterar
                 {
-                    bll.Inserir(dto);
-                    MessageBox.Show("Despesa cadastrada com sucesso! ", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.dto.Descricao = txtDescricaoDespesa.Text;
+                    this.dto.Valor = mskValor.Text;
+                    this.dto.CategoriaDespesa = (int)cboCategoriaDespesa.SelectedValue;
+                    this.dto.Conta = (int)cboConta.SelectedValue;
+                    this.dto.DataVencimanto = Convert.ToDateTime(mskVencimento.Text);
+                    this.dto.Observacao = txtObservacaoDespesa.Text;
+                    bll.Atualizar(this.dto);
                     LimparCampos();
-                    txtDescricaoDespesa.Focus();
+                    this.Close();
                 }
             }
-            else//alterar
+            catch (Exception ex)
             {
-                this.dto.Descricao = txtDescricaoDespesa.Text;
-                this.dto.Valor = mskValor.Text;
-                this.dto.CategoriaDespesa = (int)cboCategoriaDespesa.SelectedValue;
-                this.dto.Conta = (int)cboConta.SelectedValue;
-                this.dto.DataVencimanto = Convert.ToDateTime(mskVencimento.Text);
-                this.dto.Observacao = txtObservacaoDespesa.Text;
-                bll.Atualizar(this.dto);
-                LimparCampos();
-                this.Close();
+                MessageBox.Show($"Preencha os campos necessário.{ex.Message}", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
+            finally
+            {
+                LimparCampos();
+            }
 
+        }
         private void btnConta_Click(object sender, EventArgs e)
         {
             frmConta frm = new frmConta();
@@ -107,12 +118,10 @@ namespace UI
             cboCategoriaDespesa.DisplayMember = "DESCRIÇÃO";
             cboCategoriaDespesa.ValueMember = "id";
 
-
             cboConta.DataSource = contaBll.Exibir();
             cboConta.DisplayMember = "DESCRIÇÃO";
             cboConta.ValueMember = "id";
         }
-
         private void LimparCampos()
         {
             txtDescricaoDespesa.Text = string.Empty;
@@ -121,7 +130,6 @@ namespace UI
             mskVencimento.Text = string.Empty;
             txtObservacaoDespesa.Text = string.Empty;
         }
-
         #endregion
 
         private void mskValor_TextChanged(object sender, EventArgs e)

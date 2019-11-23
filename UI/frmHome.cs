@@ -1,24 +1,30 @@
 ﻿using BLL;
 using DTO;
 using System;
-using System.Globalization;
 using System.Windows.Forms;
 
 namespace UI
 {
     public partial class FrmHome : Form
     {
+        #region Objetos de BLL e DTO
         ReceitaBLL bll = new ReceitaBLL();
         ReceitaDTO dtoReceita = new ReceitaDTO();
 
         DespesaBLL bllDespesa = new DespesaBLL();
         DespesaDTO dtoDespesa = new DespesaDTO();
-
+        #endregion
 
         public FrmHome()
         {
             InitializeComponent();
         }
+        //frmDespesas despesa;
+        //public FrmHome(frmDespesas despesa)
+        //{
+        //    this.despesa = despesa;
+        //    InitializeComponent();
+        //}
         private void FrmHome_Load(object sender, EventArgs e)
         {
             CarregarGridReceita();
@@ -27,23 +33,77 @@ namespace UI
         }
 
         #region Botões
-
-        private void BtnContas_Click(object sender, EventArgs e)
+        //Dashboard
+        private void btnCarregar_Click(object sender, EventArgs e)
         {
-            frmConta conta = new frmConta();
-            conta.ShowDialog();
-        }
-        private void BtnCategoriaReceita_Click(object sender, EventArgs e)
-        {
-            FrmCategoriaReceita categoriaReceita = new FrmCategoriaReceita();
-            categoriaReceita.ShowDialog();
+            CarregarGridDespesa();
+            CarregarGridReceita();
+            ValoresLabelDash();
         }
         private void BtnReceita_Click(object sender, EventArgs e)
         {
             FrmReceitas cadReceita = new FrmReceitas();
-            cadReceita.ShowDialog();
-            CarregarGridReceita();
-            ValoresLabelDash();
+            Form frm = Application.OpenForms["FrmReceitas"];
+            if(frm != null)
+            {
+                frm.Close();
+                cadReceita.Show();
+            }
+            else
+            {
+                cadReceita.Show();
+                CarregarGridReceita();
+                ValoresLabelDash();
+            }
+        }
+        private void BtnDespesa_Click_1(object sender, EventArgs e)
+        {
+            frmDespesas Despesa = new frmDespesas();
+            Form frm = Application.OpenForms["frmDespesas"];
+            if(frm != null)
+            {
+                frm.Close();
+            }
+            else
+            {
+                Despesa.Show();
+                CarregarGridDespesa();
+                ValoresLabelDash();
+            } 
+        }
+       
+        //Menu
+        private void BtnContas_Click(object sender, EventArgs e)
+        {
+            frmConta conta = new frmConta();
+            Form cad = Application.OpenForms["frmConta"];
+            if(cad != null)
+            {
+                cad.Close();
+            }
+            conta.Show();
+        }
+        private void BtnCategoriaReceita_Click(object sender, EventArgs e)
+        {
+            FrmCategoriaReceita categoriaReceita = new FrmCategoriaReceita();
+
+            Form cad = Application.OpenForms["FrmCategoriaReceita"];
+            if (cad != null)
+            {
+                cad.Close();
+            }
+            categoriaReceita.Show();
+        }
+        private void BtnCategoriaDespesa_Click(object sender, EventArgs e)
+        {
+            FrmCategoriaDespesa categoriaDespesa = new FrmCategoriaDespesa();
+
+            Form cad = Application.OpenForms["FrmCategoriaDespesa"];
+            if (cad != null)
+            {
+                cad.Close();
+            }
+            categoriaDespesa.Show();
         }
         private void BtnReceitas_Click(object sender, EventArgs e)
         {
@@ -52,26 +112,13 @@ namespace UI
             CarregarGridReceita();
             ValoresLabelDash();
         }
-
-        private void BtnCategoriaDespesa_Click(object sender, EventArgs e)
+        private void BtnDespesas_Click(object sender, EventArgs e)
         {
-            FrmCategoriaDespesa categoriaDespesa = new FrmCategoriaDespesa();
-            categoriaDespesa.ShowDialog();
-        }
-        private void BtnDespesa_Click_1(object sender, EventArgs e)
-        {
-            frmDespesas Despesa = new frmDespesas();
-            Despesa.ShowDialog();
+            frmDespesas cadDespesa = new frmDespesas();
+            cadDespesa.ShowDialog();
             CarregarGridDespesa();
             ValoresLabelDash();
         }
-        private void BtnDespesas_Click(object sender, EventArgs e)
-        {
-            frmDespesas Despesa = new frmDespesas();
-            Despesa.ShowDialog();
-            ValoresLabelDash();
-        }
-
         #endregion
 
         #region label links
@@ -86,7 +133,6 @@ namespace UI
         #endregion
 
         #region Procedimentos
-
         public void ValoresLabelDash()
         {
             double preco = 0;
@@ -135,7 +181,7 @@ namespace UI
                 panel8.BackgroundImage = global::UI.Properties.Resources.baseline_notification_important_white_36dp;
                 panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             }
-            if(totalGeral > 0)
+            if (totalGeral > 0)
             {
                 btnPoupar.Visible = true;
             }
@@ -145,9 +191,8 @@ namespace UI
             }
 
         }
-
-        private void CarregarGridReceita()
-        {
+        public void CarregarGridReceita()
+        {            
             DateTime dataAtual = Convert.ToDateTime(dtpData.Text);
 
             string data = dataAtual.Month.ToString();
@@ -163,13 +208,13 @@ namespace UI
             this.dgvResumoReceitaHome.Columns[8].Visible = false;
 
         }
-
         private void CarregarGridDespesa()
         {
             DateTime dataAtual = Convert.ToDateTime(dtpData.Text);
 
             string data = dataAtual.Month.ToString();
             dgvResumoDespesaHome.DataSource = bllDespesa.ExibirMes(data);
+
             this.dgvResumoDespesaHome.Columns[0].Visible = false;
             this.dgvResumoDespesaHome.Columns[2].DefaultCellStyle.Format = "C";
             this.dgvResumoDespesaHome.Columns[3].Visible = false;
@@ -177,21 +222,11 @@ namespace UI
             this.dgvResumoDespesaHome.Columns[6].Visible = false;
             this.dgvResumoDespesaHome.Columns[8].Visible = false;
         }
-
         private void CarregarCombo()
         {
 
 
         }
-
         #endregion
-
-        private void btnCarregar_Click(object sender, EventArgs e)
-        {
-            CarregarGridDespesa();
-            CarregarGridReceita();
-            ValoresLabelDash();
-        }
-
     }
 }

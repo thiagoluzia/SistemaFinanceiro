@@ -1,13 +1,6 @@
 ﻿using BLL;
 using DTO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UI
@@ -16,7 +9,7 @@ namespace UI
     {
         CategoriaReceitaDTO dto = new CategoriaReceitaDTO();
         CategoriaReceitaBLL bll = new CategoriaReceitaBLL();
-        
+
         public FrmCategoriaReceita()
         {
             InitializeComponent();
@@ -28,21 +21,36 @@ namespace UI
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (dto.Id > 0)
+            try
             {
-                dto.Descricao = txtCadastrarCategoriaReceita.Text;
-                bll.Atualizar(dto);
-                MessageBox.Show("Categoria Atualizada com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (dto.Id > 0)
+                {
+                    dto.Descricao = txtCadastrarCategoriaReceita.Text;
+                    bll.Atualizar(dto);
+                    MessageBox.Show("Categoria Atualizada com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dto.Id = 0;
+                }
+                else if (txtCadastrarCategoriaReceita.Text == "")
+                {
+                    MessageBox.Show("Prencha o campo descrição antes de salvar!", "Informmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    dto.Descricao = txtCadastrarCategoriaReceita.Text;
+                    bll.Inserir(dto);
+                    MessageBox.Show("Categoria cadastrada com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao tentar salvar um registro! {ex.Message}", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
                 dto.Id = 0;
+                CarregarGrid();
+                LimparCampos();
             }
-            else
-            {
-                dto.Descricao = txtCadastrarCategoriaReceita.Text;
-                bll.Inserir(dto);
-                MessageBox.Show("Categoria cadastrada com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            CarregarGrid();
-            LimparCampos();
         }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
@@ -53,7 +61,7 @@ namespace UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Nenhuma categoria foi selecionado. \nSelecione uma categoria para que possa ser feita a alteração:", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Nenhuma categoria foi selecionado: {ex.Message}", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -72,13 +80,13 @@ namespace UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Nenhuma categoria foi selecionado. \nSelecione uma categoria para que possa ser feita a exclusão:", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            } 
+                MessageBox.Show($"Nenhuma categoria foi selecionado: {ex.Message}", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void LimparCampos()
         {
-            txtCadastrarCategoriaReceita.Text = "";
+            txtCadastrarCategoriaReceita.Text = String.Empty;
         }
         private void CarregarGrid()
         {

@@ -1,6 +1,5 @@
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\DTO\bin\Debug\DTO.dll
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\DTO\bin\Debug\DTO.pdb
-C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\DTO\obj\Debug\DTO.dll
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\DTO\obj\Debug\DTO.pdb

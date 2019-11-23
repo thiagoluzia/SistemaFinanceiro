@@ -56,7 +56,6 @@ namespace UI
             }
             CarregarGrid();
         }
-
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             DialogResult = MessageBox.Show("Deseja realmente excluir a receita selecionada?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -72,13 +71,11 @@ namespace UI
                     CarregarGrid();
                 }
             }
-            catch (Exception NullReferenceException)
+            catch (Exception ex)
             {
-                MessageBox.Show($"Nenhum registro foi selecionado para ser excluido\nSelecione um registro e tente novamente.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Nenhum registro foi selecionado para ser excluido: {ex.Message}", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtPesquisarReceita.Focus();
             }
-
-
         }
         #endregion
 
@@ -94,20 +91,17 @@ namespace UI
             this.DgvCadListReceita.Columns[3].Visible = false;
             this.DgvCadListReceita.Columns[5].Visible = false;
         }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             string descricao = txtPesquisarReceita.Text;
             DgvCadListReceita.DataSource = bll.Buscar(descricao);
         }
         #endregion
-
         private void txtPesquisarReceita_TextChanged(object sender, EventArgs e)
         {
             string descricao = txtPesquisarReceita.Text;
             DgvCadListReceita.DataSource = bll.Buscar(descricao);
         }
-
         private void btnCarregar_Click(object sender, EventArgs e)
         {
             CarregarGrid();

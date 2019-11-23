@@ -221,6 +221,7 @@
             this.Controls.Add(this.btnNovaReceita);
             this.Controls.Add(this.PnlListReceita);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "FrmReceitas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Receitas";

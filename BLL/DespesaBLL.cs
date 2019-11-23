@@ -1,11 +1,6 @@
 ﻿using DAL;
 using DTO;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BLL
 {
@@ -42,7 +37,7 @@ namespace BLL
                 "FROM despesa " +
                 "INNER JOIN categoria_despesa ON categoria_despesa.id = despesa.id_categoria_despesa " +
                 "INNER JOIN conta ON conta.id = despesa.id_conta " +
-                "ORDER BY despesa.id DESC";
+                "ORDER BY despesa.data_vencimento ASC";
 
             data = new DataTable();
             data = banco.RetdataTable(comando);
@@ -61,7 +56,7 @@ namespace BLL
                 "INNER JOIN categoria_despesa ON categoria_despesa.id = despesa.id_categoria_despesa " +
                 "INNER JOIN conta ON conta.id = despesa.id_conta " +
                 "WHERE convert(char(2),month(data_vencimento)) = '" + data + "'" +
-                "ORDER BY despesa.id ASC";
+                "ORDER BY despesa.data_vencimento ASC";
             DataTable datat = new DataTable();
             datat = banco.RetdataTable(comando);
             return datat;

@@ -22,3 +22,7 @@ C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\bin\Debug\BLL.pdb
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\bin\Debug\DTO.pdb
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\bin\Debug\DAL.pdb
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.csproj.CopyComplete
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\bin\Debug\UI.exe.manifest
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\bin\Debug\UI.application
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.exe.manifest
+C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\UI\obj\Debug\UI.application

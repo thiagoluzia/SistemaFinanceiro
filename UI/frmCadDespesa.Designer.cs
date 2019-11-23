@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.PnlCadDespesa = new System.Windows.Forms.Panel();
+            this.btnConta = new System.Windows.Forms.Button();
             this.mskValor = new System.Windows.Forms.MaskedTextBox();
             this.mskVencimento = new System.Windows.Forms.MaskedTextBox();
             this.BtnSalvarDespesa = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnConta = new System.Windows.Forms.Button();
             this.PnlCadDespesa.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +74,21 @@
             this.PnlCadDespesa.Name = "PnlCadDespesa";
             this.PnlCadDespesa.Size = new System.Drawing.Size(380, 348);
             this.PnlCadDespesa.TabIndex = 0;
+            // 
+            // btnConta
+            // 
+            this.btnConta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(167)))), ((int)(((byte)(80)))));
+            this.btnConta.FlatAppearance.BorderSize = 0;
+            this.btnConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConta.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConta.ForeColor = System.Drawing.Color.White;
+            this.btnConta.Location = new System.Drawing.Point(152, 174);
+            this.btnConta.Name = "btnConta";
+            this.btnConta.Size = new System.Drawing.Size(30, 24);
+            this.btnConta.TabIndex = 15;
+            this.btnConta.Text = "+";
+            this.btnConta.UseVisualStyleBackColor = false;
+            this.btnConta.Click += new System.EventHandler(this.btnConta_Click);
             // 
             // mskValor
             // 
@@ -132,9 +147,9 @@
             this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(233, 108);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 16);
+            this.label6.Size = new System.Drawing.Size(93, 16);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Vencimento";
+            this.label6.Text = "*Vencimento";
             // 
             // label5
             // 
@@ -142,9 +157,9 @@
             this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(8, 155);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 16);
+            this.label5.Size = new System.Drawing.Size(56, 16);
             this.label5.TabIndex = 8;
-            this.label5.Text = "Conta";
+            this.label5.Text = "*Conta";
             // 
             // label4
             // 
@@ -152,9 +167,9 @@
             this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(7, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 16);
+            this.label4.Size = new System.Drawing.Size(80, 16);
             this.label4.TabIndex = 11;
-            this.label4.Text = "Categoria";
+            this.label4.Text = "*Categoria";
             // 
             // cboConta
             // 
@@ -199,9 +214,9 @@
             this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(233, 63);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 16);
+            this.label3.Size = new System.Drawing.Size(49, 16);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Valor";
+            this.label3.Text = "*Valor";
             // 
             // txtDescricaoDespesa
             // 
@@ -217,9 +232,9 @@
             this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(7, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 16);
+            this.label2.Size = new System.Drawing.Size(81, 16);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Descrição";
+            this.label2.Text = "*Descrição";
             // 
             // panel2
             // 
@@ -241,21 +256,6 @@
             this.label1.Size = new System.Drawing.Size(90, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Despesa";
-            // 
-            // btnConta
-            // 
-            this.btnConta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(167)))), ((int)(((byte)(80)))));
-            this.btnConta.FlatAppearance.BorderSize = 0;
-            this.btnConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConta.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConta.ForeColor = System.Drawing.Color.White;
-            this.btnConta.Location = new System.Drawing.Point(152, 174);
-            this.btnConta.Name = "btnConta";
-            this.btnConta.Size = new System.Drawing.Size(30, 24);
-            this.btnConta.TabIndex = 15;
-            this.btnConta.Text = "+";
-            this.btnConta.UseVisualStyleBackColor = false;
-            this.btnConta.Click += new System.EventHandler(this.btnConta_Click);
             // 
             // FrmCadDespesa
             // 

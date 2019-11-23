@@ -17,7 +17,7 @@ namespace DAL
         {
             if (conn != null)
                 conn.Close();
-            string stringConexao = string.Format(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\thiag\Documents\Financeiro.mdf;Integrated Security=True;Connect Timeout=30");
+            string stringConexao = string.Format(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\Banco\Financeiro.mdf;Integrated Security=True;Connect Timeout=30");
 
             try
             {

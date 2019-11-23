@@ -16,11 +16,16 @@ namespace UI
         ContaDTO contDto = new ContaDTO();
         ContaBLL contBll = new ContaBLL();
         #endregion
-
         public FrmCadReceita()
         {
             InitializeComponent();
-            CarregarCombos();
+        }
+
+        FrmHome home;//Com isso, ao salvar uma receita o grid sera atualizdo, pois terei acesso ao metodo atualizar grid
+        public FrmCadReceita(FrmHome home)
+        {
+            this.home = home;
+            InitializeComponent();
         }
 
         private ReceitaDTO dto;
@@ -50,42 +55,54 @@ namespace UI
         #region Botões
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            ReceitaBLL bll = new ReceitaBLL();
-            if (this.dto == null)//Cadastrar
+            try
             {
-                ReceitaDTO dto = new ReceitaDTO();
-                dto.Descricao = txtDescricaoReceita.Text;
-                dto.Valor = mskValor.Text;
-                dto.CategoriaReceita = (int)cboCategoriaReceita.SelectedValue;
-                dto.Conta = (int)cboConta.SelectedValue;
-                dto.DataVencimento = Convert.ToDateTime(mskVencimento.Text);
-                dto.Observacao = txtObservacaoReceita.Text;
-                
-                if (txtDescricaoReceita.Text == "" || mskValor.Text == "" || (int)cboCategoriaReceita.SelectedValue <= 0 || mskVencimento.Text == "" )
+                ReceitaBLL bll = new ReceitaBLL();
+                if (this.dto == null)//Cadastrar
                 {
-                    MessageBox.Show("Não é possivel salvar essa conta, pois campos obrigatorios não foram preencido\n\nPreencha os campos com *.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    ReceitaDTO dto = new ReceitaDTO();
+                    dto.Descricao = txtDescricaoReceita.Text;
+                    dto.Valor = mskValor.Text;
+                    dto.CategoriaReceita = (int)cboCategoriaReceita.SelectedValue;
+                    dto.Conta = (int)cboConta.SelectedValue;
+                    //usar validação caso o usuario nao preencha a data, pegar data atual
+                    dto.DataVencimento = Convert.ToDateTime(mskVencimento.Text);
+                    dto.Observacao = txtObservacaoReceita.Text;
+                    //home.CarregarGridReceita();
+
+                    if (txtDescricaoReceita.Text == "" || mskValor.Text == "" || (int)cboCategoriaReceita.SelectedValue <= 0 || mskVencimento.Text == "")
+                    {
+                        MessageBox.Show("Não é possivel salvar essa conta, pois campos obrigatorios não foram preencido\n\nPreencha os campos com *.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+                    else
+                    {
+                        bll.Inserir(dto);
+                        MessageBox.Show("Receita cadastrada com sucesso! ", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                else
+
+                else//Alterar
                 {
-                    bll.Inserir(dto);
-                    MessageBox.Show("Receita cadastrada com sucesso! ", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.dto.Descricao = txtDescricaoReceita.Text;
+                    this.dto.Valor = mskValor.Text;
+                    this.dto.CategoriaReceita = (int)cboCategoriaReceita.SelectedValue;
+                    this.dto.Conta = (int)cboConta.SelectedValue;
+                    this.dto.DataVencimento = DateTime.Parse(mskVencimento.Text);
+                    this.dto.Observacao = txtObservacaoReceita.Text;
+                    bll.Atualizar(this.dto);
+                    MessageBox.Show("Receita atualizada com sucesso! ", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
             }
-            
-            else//Alterar
+            catch (Exception ex)
             {
-                this.dto.Descricao = txtDescricaoReceita.Text;
-                //o uso de mascara faz mais sentido
-                this.dto.Valor = mskValor.Text;
-                this.dto.CategoriaReceita = (int)cboCategoriaReceita.SelectedValue;
-                this.dto.Conta = (int)cboConta.SelectedValue;
-                this.dto.DataVencimento = DateTime.Parse(mskVencimento.Text);
-                this.dto.Observacao = txtObservacaoReceita.Text;
-                bll.Atualizar(this.dto);
-                MessageBox.Show("Receita atualizada com sucesso! ", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                MessageBox.Show($"Preencha os campos necessário.{ex.Message}", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            LimparCampos();
+            finally
+            {
+                LimparCampos();
+            }
+           
         }
 
         private void btnConta_Click(object sender, EventArgs e)
@@ -93,8 +110,6 @@ namespace UI
             frmConta frm = new frmConta();
             frm.ShowDialog();
         }
-
-        //cadastrar nova categoria no ato de inserir uma receita
         private void BtnCategoriaReceita_Click(object sender, EventArgs e)
         {
             FrmCategoriaReceita categoriaReceita = new FrmCategoriaReceita();
@@ -104,7 +119,6 @@ namespace UI
         #endregion
 
         #region Procedimentos
-
         private void CarregarCombos()
         {
             cboCategoriaReceita.DataSource = catBll.Exibir();
@@ -115,7 +129,6 @@ namespace UI
             cboConta.DisplayMember = "DESCRIÇÃO";
             cboConta.ValueMember = "id";
         }
-
         private void LimparCampos()
         {
             //txtIdReceita.Text = string.Empty;

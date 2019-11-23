@@ -1,6 +1,5 @@
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\DAL\bin\Debug\DAL.dll
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\DAL\bin\Debug\DAL.pdb
-C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\DAL\obj\Debug\DAL.dll
 C:\Projetos\SistemaFinanceiro\SistemaFinanceiro\DAL\obj\Debug\DAL.pdb

@@ -29,22 +29,39 @@ namespace UI
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (dto.Id > 0)
+            try
             {
-                dto.Id = (int)dgvListDespesa.CurrentRow.Cells[0].Value;
-                dto.Descricao = txtCadastrarDespesaReceita.Text;
-                bll.AtualizarCategoria(dto);
-                MessageBox.Show("Categoria Atualizado com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (dto.Id > 0)
+                {
+                    dto.Id = (int)dgvListDespesa.CurrentRow.Cells[0].Value;
+                    dto.Descricao = txtCadastrarDespesaReceita.Text;
+                    bll.AtualizarCategoria(dto);
+                    MessageBox.Show("Categoria Atualizado com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    if (txtCadastrarDespesaReceita.Text == "")
+                    {
+                        MessageBox.Show("Prencha o campo descrição antes de salvar!","Informmação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        dto.Descricao = txtCadastrarDespesaReceita.Text;
+                        bll.InserirCategoria(dto);
+                        MessageBox.Show("Categoria Cadastrada com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao tentar salvar um registro! {ex.Message}", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
                 dto.Id = 0;
+                CarregarCategoriasDespesa();
+                LimparCampos();
             }
-            else
-            {
-                dto.Descricao = txtCadastrarDespesaReceita.Text;
-                bll.InserirCategoria(dto);
-                MessageBox.Show("Categoria Cadastrada com sucesso!", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            CarregarCategoriasDespesa();
-            LimparCampos();
         }
         private void btnAlterar_Click(object sender, EventArgs e)
         {
@@ -53,10 +70,14 @@ namespace UI
                 dto.Id = (int)dgvListDespesa.CurrentRow.Cells[0].Value;
                 txtCadastrarDespesaReceita.Text = dgvListDespesa.CurrentRow.Cells[1].Value.ToString();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show($"Nenhuma categoria foi selecionado. \nSelecione uma categoria para que possa ser feita a alteração:", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            } 
+                MessageBox.Show($"Nenhuma categoria foi selecionado: {ex.Message}", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            finally
+            {
+
+            }
         }
         private void btnExcluir_Click(object sender, EventArgs e)
         {
@@ -74,7 +95,7 @@ namespace UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Nenhuma categoria foi selecionado. \nSelecione uma categoria para que possa ser feita a exclusão:", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Nenhuma categoria foi selecionado: {ex.Message}", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
